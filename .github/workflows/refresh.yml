@@ -31,6 +31,8 @@ jobs:
       - run: npm ci
 
       - name: Refresh live prices + promoter % and recompute wealth
+        env:
+          MUNSHOT_TOKEN: ${{ secrets.MUNSHOT_TOKEN }}
         run: npm run refresh
 
       - name: Commit refreshed data if changed

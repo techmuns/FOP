@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import { ChevronDown, Check } from 'lucide-react';
 
 export interface Option<T extends string = string> {
@@ -105,6 +105,40 @@ export function Segmented<T extends string>({
         );
       })}
     </div>
+  );
+}
+
+/** Styled range slider (coloured fill + thumb via the .mun-range class in index.css). */
+export function Slider({
+  value,
+  min,
+  max,
+  step = 1,
+  onChange,
+  color = '#6366F1',
+  ariaLabel,
+}: {
+  value: number;
+  min: number;
+  max: number;
+  step?: number;
+  onChange: (v: number) => void;
+  color?: string;
+  ariaLabel?: string;
+}) {
+  const pct = max > min ? ((value - min) / (max - min)) * 100 : 0;
+  return (
+    <input
+      type="range"
+      min={min}
+      max={max}
+      step={step}
+      value={value}
+      aria-label={ariaLabel}
+      onChange={(e) => onChange(Number(e.target.value))}
+      className="mun-range w-full"
+      style={{ ['--pct']: `${pct}%`, ['--mun-accent']: color } as CSSProperties}
+    />
   );
 }
 

@@ -15,7 +15,7 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
-    if (url.pathname === '/api/live-prices') return handleLivePrices(request);
+    if (url.pathname === '/api/live-prices') return handleLivePrices(request, env);
     if (url.pathname === '/api/health') return json({ ok: true, ts: new Date().toISOString() });
     if (url.pathname.startsWith('/api/')) return json({ error: 'Not found' }, 404);
 
@@ -31,7 +31,7 @@ function json(obj, status = 200) {
   });
 }
 
-async function handleLivePrices(request) {
+async function handleLivePrices(request, env) {
   if (request.method !== 'POST') return json({ error: 'POST only' }, 405);
 
   let tickers = [];
@@ -41,37 +41,40 @@ async function handleLivePrices(request) {
   } catch {
     return json({ error: 'Invalid JSON body' }, 400);
   }
-  tickers = [...new Set(tickers.filter((t) => typeof t === 'string' && t.trim()).map((t) => t.trim()))].slice(0, 400);
+  tickers = [...new Set(tickers.filter((t) => typeof t === 'string' && t.trim()).map((t) => t.trim()))].slice(0, 600);
   if (!tickers.length) return json({ prices: {}, updated: 0, source: 'munshot' });
 
+  const token = env?.MUNSHOT_TOKEN || null;
   const prices = {};
   const CONCURRENCY = 8;
   for (let i = 0; i < tickers.length; i += CONCURRENCY) {
     const batch = tickers.slice(i, i + CONCURRENCY);
-    const results = await Promise.all(batch.map(fetchQuoteForTicker));
+    const results = await Promise.all(batch.map((t) => fetchQuoteForTicker(t, token)));
     for (const r of results) if (r?.ticker) prices[r.ticker] = { current: r.current, marketCap: r.marketCap };
   }
 
   return json({ prices, updated: Object.keys(prices).length, source: 'munshot', ts: new Date().toISOString() });
 }
 
-/** Resolve a bare ticker as NSE (.NS) then BSE (.BO). */
-async function fetchQuoteForTicker(ticker) {
-  for (const suffix of ['.NS', '.BO']) {
-    const q = await fetchQuote(`${ticker}${suffix}`);
-    if (q && (q.current != null || q.marketCap != null)) return { ticker, ...q };
-  }
+/** Query Munshot with the BARE symbol (strip any .NS/.BO — the API 404s on suffixes). */
+async function fetchQuoteForTicker(ticker, token) {
+  const bare = String(ticker).replace(/\.(NS|BO)$/i, '').trim();
+  if (!bare) return null;
+  const q = await fetchQuote(bare, token);
+  if (q && (q.current != null || q.marketCap != null)) return { ticker, ...q };
   return null;
 }
 
-async function fetchQuote(symbol, retries = 2) {
+async function fetchQuote(symbol, token, retries = 2) {
+  const headers = { 'content-type': 'application/json' };
+  if (token) headers.authorization = `Bearer ${token}`;
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
       const ctrl = new AbortController();
       const timer = setTimeout(() => ctrl.abort(), 12000);
       const res = await fetch(MUNSHOT_API, {
         method: 'POST',
-        headers: { 'content-type': 'application/json' },
+        headers,
         body: JSON.stringify({ ticker_symbol: symbol, type: 'stockquote', country: 'India' }),
         signal: ctrl.signal,
       });
@@ -117,8 +120,8 @@ function parseQuote(text) {
   if (kv['Current Price'] == null && kv['Market Cap'] == null) return null;
   const current = n(kv['Current Price']);
   const mcapRaw = n(kv['Market Cap']);
-  // Munshot returns market cap in raw rupees → ₹ crore (guard values already in crore).
-  const marketCap = mcapRaw == null ? null : mcapRaw > 1e7 ? Math.round((mcapRaw / 1e7) * 100) / 100 : Math.round(mcapRaw * 100) / 100;
+  // Munshot returns market cap in raw rupees → ₹ crore.
+  const marketCap = mcapRaw == null ? null : Math.round((mcapRaw / 1e7) * 100) / 100;
   return { current, marketCap };
 }
 

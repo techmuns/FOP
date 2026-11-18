@@ -156,20 +156,25 @@ export function parseDetailHtml(html) {
     if (rows.length) tables.push(rows);
   });
 
-  // OFS per-seller table: header contains "Shares Offered" + "Name"
+  // OFS per-seller table: header contains "Shares Offered" + "Name". Column layout varies —
+  // some tables omit the "Amount (₹ cr.)" column, so detect columns by header and fall back to
+  // shares × issue_price_upper (the task's formula) when no amount is disclosed.
   const ofsTable = tables.find((rows) => rows[0] && /Shares Offered/i.test(rows[0].join(' ')) && /Name/i.test(rows[0].join(' ')));
-  const promoters = [];
+  const ofsRows = [];
   if (ofsTable) {
+    const head = ofsTable[0].map((h) => h.toLowerCase());
+    const nameIdx = Math.max(0, head.findIndex((h) => /name/.test(h)));
+    const catIdx = head.findIndex((h) => /category/.test(h));
+    const shrIdx = head.findIndex((h) => /shares offered/.test(h));
+    const amtIdx = head.findIndex((h) => /amount/.test(h));
     for (const row of ofsTable.slice(1)) {
-      const name = (row[0] || '').trim();
+      const name = (row[nameIdx] || '').trim();
       if (!name || /^total$/i.test(name)) continue;
-      const category = (row[1] || '').trim();
-      promoters.push({
+      ofsRows.push({
         name,
-        category,
-        is_promoter: /promoter/i.test(category),
-        ofs_shares: toNum(row[2]),
-        ofs_cr: toNum(row[row.length - 1]),
+        category: (catIdx >= 0 ? row[catIdx] : row[1] || '').trim(),
+        shares: toNum(shrIdx >= 0 ? row[shrIdx] : row[2]),
+        amtCr: amtIdx >= 0 ? toNum(row[amtIdx]) : null,
       });
     }
   }
@@ -210,10 +215,19 @@ export function parseDetailHtml(html) {
   const locM = html.match(/"addressLocality"\s*:\s*"([^"]+)"/);
   if (locM) city = guessCity(locM[1]);
 
+  const high = toNum(escField(html, 'issue_price_upper'));
+  const promoters = ofsRows.map((r) => ({
+    name: r.name,
+    category: r.category,
+    is_promoter: /promoter/i.test(r.category),
+    ofs_shares: r.shares,
+    ofs_cr: r.amtCr != null ? r.amtCr : r.shares != null && high != null ? Math.round((r.shares * high) / 1e7 * 100) / 100 : null,
+  }));
+
   return {
     ticker: ticker || null,
     issue_price_low: toNum(escField(html, 'issue_price_lower')),
-    issue_price_high: toNum(escField(html, 'issue_price_upper')),
+    issue_price_high: high,
     issue_size_cr: toCr(toNum(escField(html, 'issue_size_in_amt'))),
     fresh_cr: toCr(toNum(escField(html, 'issue_size_fresh_in_amt'))),
     ofs_cr: toCr(toNum(escField(html, 'issue_size_ofs_in_amt'))),

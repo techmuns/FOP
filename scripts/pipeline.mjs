@@ -1,18 +1,24 @@
 /**
  * Munshot data pipeline — builds public/data/{ipos,prospects,meta}.json.
  *
- *   node scripts/pipeline.mjs seed      # in-session / quick: capped universe + ~50 detail deep-scrapes
- *   node scripts/pipeline.mjs backfill  # full 3-year universe + every detail page (GitHub Actions)
- *   node scripts/pipeline.mjs refresh   # re-pull live prices + promoter%, pick up new IPOs, recompute
+ *   node scripts/pipeline.mjs seed      # reuse the committed universe, FULL resumable detail scrape + enrich-all
+ *   node scripts/pipeline.mjs backfill  # crawl the universe fresh + FULL detail scrape + enrich-all (GitHub Actions)
+ *   node scripts/pipeline.mjs refresh   # re-pull live prices + promoter%, pick up new IPOs, recompute (weekly)
+ *
+ * Resumable & idempotent: existing ipos.json is the detail cache — IPOs already deep-scraped are
+ * skipped, and ipos.json is checkpointed during the run so an interrupted run resumes where it left off.
  *
  * Sources: Chittorgarh (universe + promoter/OFS), Screener.in (today's promoter%/pledge/mcap),
  * Munshot API (live price/mcap). All FREE. Nothing is fabricated — missing figures stay null
  * and every record carries provenance flags + a scraped_at stamp.
+ *
+ * Env knobs: SKIP_CRAWL=1, FORCE_CRAWL=1, MAX_DETAILS=n, ENRICH_CAP=n, POLITE_MS=ms, CHECKPOINT=n,
+ *            MB_PAGES=n, SME_PAGES=n, MUNSHOT_TOKEN=...
  */
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { nowISO, todayISO, round, sleep, closePlaywright } from './lib/http.mjs';
+import { nowISO, sleep, closePlaywright } from './lib/http.mjs';
 import { collectUniverse, scrapeDetail } from './lib/chittorgarh.mjs';
 import { fetchScreener } from './lib/screener.mjs';
 import { fetchForTicker } from './lib/munshot.mjs';
@@ -20,58 +26,37 @@ import { computeCompanyWealth, rollUpProspects } from './lib/wealth.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = path.join(ROOT, 'public', 'data');
+const IPOS_PATH = path.join(DATA, 'ipos.json');
 const MODE = (process.argv[2] || 'seed').toLowerCase();
 
-const envInt = (k, d) => (process.env[k] ? parseInt(process.env[k], 10) : d);
-
-/** An explicit crawl plan: which { segment, financial-year, page-cap } steps to fetch. */
-function buildPlan(mode) {
-  const mb = envInt('MB_PAGES', mode === 'backfill' ? 400 : 40);
-  const sme = envInt('SME_PAGES', mode === 'backfill' ? 400 : 40);
-  const step = (segment, maxPages) => (fy) => ({ segment, fy, maxPages });
-  if (mode === 'backfill') {
-    const fys = ['2026-27', '2025-26', '2024-25', '2023-24', '2022-23'];
-    return [...fys.map(step('mainboard', mb)), ...fys.map(step('sme', sme))];
-  }
-  if (mode === 'refresh') {
-    const fys = ['2026-27', '2025-26'];
-    return [...fys.map(step('mainboard', mb)), ...fys.map(step('sme', sme))];
-  }
-  // seed: all mainboard years + the two most recent SME years (SME volume is large)
-  return [
-    ...['2026-27', '2025-26', '2024-25', '2023-24'].map(step('mainboard', mb)),
-    ...['2026-27', '2025-26'].map(step('sme', sme)),
-  ];
-}
-const DETAIL_SAMPLE = envInt('DETAIL_SAMPLE', MODE === 'backfill' ? 100000 : MODE === 'refresh' ? 60 : 50);
-const POLITE_MS = envInt('POLITE_MS', MODE === 'backfill' ? 1200 : 900);
-
+const FLOOR_CR = 25; // keep every promoter worth ≥ ₹25 Cr in prospects.json
+const QUALIFY_CR = 150; // the ideal-customer convenience flag
+const THRESHOLDS = [25, 50, 100, 150, 250, 500];
 const TARGET_YEARS = [2023, 2024, 2025, 2026];
+
+const envInt = (k, d) => (process.env[k] != null && process.env[k] !== '' ? parseInt(process.env[k], 10) : d);
+const POLITE_MS = envInt('POLITE_MS', 800);
+const CHECKPOINT = envInt('CHECKPOINT', 25);
 const log = (m) => console.log(m);
 
-function inTargetYears(row) {
-  if (!row.listing_date) return true; // keep not-yet-listed (upcoming) rows
+const isSme = (i) => String(i.exchange).includes('SME');
+const isListed = (i) => !i.listing_date || new Date(i.listing_date).getTime() <= Date.now();
+const needsDetail = (i) => !i.data_flags || i.data_flags.detail === 'list-only';
+const inTargetYears = (row) => {
+  if (!row.listing_date) return true;
   const y = new Date(row.listing_date).getUTCFullYear();
   return TARGET_YEARS.includes(y) || y > TARGET_YEARS[TARGET_YEARS.length - 1];
-}
+};
 
-/** Pick ~N recent detail targets, prioritising IPOs with an OFS (they yield prospects), mixed MB/SME. */
-function pickDetailTargets(rows, N) {
-  const score = (r) => ({ r, hasOfs: (r.ofs_cr || 0) > 0 ? 1 : 0, t: r.listing_date ? Date.parse(r.listing_date) : 0 });
-  const by = (a, b) => b.hasOfs - a.hasOfs || b.t - a.t;
-  const mb = rows.filter((r) => r.segment === 'mainboard').map(score).sort(by);
-  const sme = rows.filter((r) => r.segment === 'sme').map(score).sort(by);
-  const nMb = Math.round(N * 0.68);
-  const picked = [...mb.slice(0, nMb), ...sme.slice(0, N - nMb)].map((x) => x.r);
-  if (picked.length < N) {
-    const rest = [...mb.slice(nMb), ...sme.slice(N - nMb)].sort(by).map((x) => x.r);
-    picked.push(...rest.slice(0, N - picked.length));
-  }
-  return picked.slice(0, N);
+function buildPlan(mode) {
+  const mb = envInt('MB_PAGES', 400);
+  const sme = envInt('SME_PAGES', 400);
+  const step = (segment, maxPages) => (fy) => ({ segment, fy, maxPages });
+  const fys = mode === 'refresh' ? ['2026-27', '2025-26'] : ['2026-27', '2025-26', '2024-25', '2023-24', '2022-23'];
+  return [...fys.map(step('mainboard', mb)), ...fys.map(step('sme', sme))];
 }
 
 function listRowToIpo(row) {
-  // minimal IPO record for universe members we didn't deep-scrape
   return {
     id: row.id,
     company: row.company,
@@ -102,14 +87,28 @@ function listRowToIpo(row) {
   };
 }
 
-/** Enrich one listed IPO with live price (Munshot) + promoter%/pledge/mcap (Screener). */
-async function enrich(ipo, { politeMs, provenance }) {
-  if (!ipo.ticker) return;
-  const listed = !ipo.listing_date || new Date(ipo.listing_date).getTime() <= Date.now();
-  if (!listed) return;
+/** Reconstruct a list "row" (what scrapeDetail needs) from a stored IPO record. */
+function toRow(ipo) {
+  const m = String(ipo.source_url || '').match(/\/ipo\/([a-z0-9-]+)\/(\d+)\//i);
+  return {
+    id: ipo.id,
+    slug: m ? m[1] : ipo.id,
+    company: ipo.company,
+    exchange: ipo.exchange,
+    listing_date: ipo.listing_date,
+    issue_price_low: ipo.issue_price_low,
+    issue_price_high: ipo.issue_price_high,
+    issue_size_cr: ipo.issue_size_cr,
+    fresh_cr: ipo.fresh_cr,
+    ofs_cr: ipo.ofs_cr,
+    source_url: ipo.source_url,
+  };
+}
 
-  // Screener (promoter %, pledge, market cap)
-  const scr = await fetchScreener([ipo.ticker], { politeMs, log }).catch(() => null);
+/** Enrich one listed IPO with live price (Munshot) + promoter%/pledge/mcap (Screener). */
+async function enrich(ipo, { provenance }) {
+  if (!ipo.ticker || !isListed(ipo)) return;
+  const scr = await fetchScreener([ipo.ticker], { politeMs: POLITE_MS, log }).catch(() => null);
   if (scr) {
     provenance.screener++;
     if (scr.promoterPct != null) {
@@ -125,11 +124,10 @@ async function enrich(ipo, { politeMs, provenance }) {
       ipo.data_flags.market_cap = 'screener';
     }
   }
-
-  // Munshot (live price + market cap) — preferred for market cap when available
   const mun = await fetchForTicker(ipo.ticker, { politeMs: 0, log }).catch(() => null);
   if (mun) {
     provenance.munshot++;
+    if (mun.currentPrice != null) ipo.current_price = mun.currentPrice;
     if (mun.marketCapCr != null) {
       ipo.market_cap_cr = mun.marketCapCr;
       ipo.data_flags.market_cap = 'munshot-live';
@@ -137,141 +135,154 @@ async function enrich(ipo, { politeMs, provenance }) {
   } else {
     provenance.munshotFail++;
   }
-
-  // last-resort market cap: at-offer valuation from the prospectus (clearly flagged)
+  // last-resort market cap: the at-offer valuation from the prospectus (clearly flagged)
   if (ipo.market_cap_cr == null && ipo.offer_market_cap_cr != null) {
     ipo.market_cap_cr = ipo.offer_market_cap_cr;
     ipo.data_flags.market_cap = 'offer';
   }
-  await sleep(politeMs);
+  await sleep(POLITE_MS);
 }
 
-function writeData(ipos, prospects, meta) {
+function writeIpos(ipos) {
   mkdirSync(DATA, { recursive: true });
-  // compute wealth on every record before writing
   ipos.forEach(computeCompanyWealth);
-  writeFileSync(path.join(DATA, 'ipos.json'), JSON.stringify(ipos, null, 2));
+  writeFileSync(IPOS_PATH, JSON.stringify(ipos, null, 2));
+}
+
+function writeAll(ipos, prospects, meta) {
+  writeIpos(ipos);
   writeFileSync(path.join(DATA, 'prospects.json'), JSON.stringify(prospects, null, 2));
   writeFileSync(path.join(DATA, 'meta.json'), JSON.stringify(meta, null, 2));
 }
 
 async function run() {
-  const plan = buildPlan(MODE);
   const started = Date.now();
   log(`\n▶ Munshot pipeline — mode=${MODE}\n`);
-
   const provenance = { screener: 0, munshot: 0, munshotFail: 0, detailOk: 0, detailFail: 0 };
   const blocked = [];
 
-  // ---- existing data (for refresh / incremental) ----
-  const existing = MODE === 'refresh' && existsSync(path.join(DATA, 'ipos.json'))
-    ? JSON.parse(readFileSync(path.join(DATA, 'ipos.json'), 'utf8'))
-    : [];
-  const existingById = new Map(existing.map((i) => [i.id, i]));
+  // ---- load existing (universe base + resumable detail cache) ----
+  const existing = existsSync(IPOS_PATH) ? JSON.parse(readFileSync(IPOS_PATH, 'utf8')) : [];
+  const byId = new Map(existing.map((i) => [i.id, i]));
 
-  // ---- 1. universe (list) ----
-  log('① Collecting IPO universe from Chittorgarh…');
-  const { rows: allRows, perSegment } = await collectUniverse({ plan, politeMs: POLITE_MS, log });
-  const universe = allRows.filter(inTargetYears);
-  log(`   universe: ${universe.length} IPOs (${perSegment.mainboard || 0} mainboard rows, ${perSegment.sme || 0} sme rows fetched)\n`);
-
-  // ---- 2. choose detail targets ----
-  let targets;
-  if (MODE === 'refresh') {
-    // only NEW IPOs we haven't detailed before + currently-upcoming ones
-    const fresh = universe.filter((r) => !existingById.has(r.id));
-    targets = pickDetailTargets(fresh, DETAIL_SAMPLE);
-    log(`② Refresh: ${fresh.length} new IPOs; deep-scraping ${targets.length}.`);
+  // ---- 1. universe ----
+  const skipCrawl = process.env.FORCE_CRAWL === '1' ? false : process.env.SKIP_CRAWL === '1' || MODE === 'rollup' || (MODE === 'seed' && existing.length > 0);
+  if (skipCrawl && existing.length) {
+    log(`① Universe: reusing ${existing.length} IPOs from ipos.json (FORCE_CRAWL=1 to re-crawl)\n`);
   } else {
-    targets = pickDetailTargets(universe, DETAIL_SAMPLE);
-    log(`② Deep-scraping ${targets.length} detail pages (recent, OFS-weighted, MB/SME mix)…`);
+    log('① Collecting IPO universe from Chittorgarh…');
+    const { rows, perSegment } = await collectUniverse({ plan: buildPlan(MODE), politeMs: POLITE_MS, log });
+    let added = 0;
+    for (const row of rows.filter(inTargetYears)) {
+      if (!byId.has(row.id)) {
+        byId.set(row.id, listRowToIpo(row));
+        added++;
+      }
+    }
+    log(`   universe now ${byId.size} IPOs (+${added} new; ${perSegment.mainboard || 0} mb / ${perSegment.sme || 0} sme rows fetched)\n`);
   }
-  const targetIds = new Set(targets.map((t) => t.id));
 
-  // ---- 3. deep-scrape details ----
-  const detailed = new Map();
-  for (const row of targets) {
-    const rec = await scrapeDetail(row, { politeMs: POLITE_MS, log });
+  // ---- 2. detail scrape (resumable, prioritised mainboard + largest SME first) ----
+  // refresh only picks up a handful of newly-listed IPOs; seed/backfill do every missing one.
+  const MAX_DETAILS = envInt('MAX_DETAILS', MODE === 'refresh' ? 120 : Number.MAX_SAFE_INTEGER);
+  const need = [...byId.values()].filter(needsDetail).sort((a, b) => {
+    const sa = isSme(a) ? 1 : 0;
+    const sb = isSme(b) ? 1 : 0;
+    if (sa !== sb) return sa - sb; // mainboard first
+    return (b.issue_size_cr || 0) - (a.issue_size_cr || 0); // then largest issue
+  });
+  const targets = MODE === 'rollup' ? [] : need.slice(0, MAX_DETAILS);
+  log(`② Detail scrape: ${need.length} missing, doing ${targets.length} (${byId.size - need.length} already cached)…`);
+  let done = 0;
+  for (const ipo of targets) {
+    const rec = await scrapeDetail(toRow(ipo), { politeMs: POLITE_MS, log });
     if (rec) {
-      detailed.set(rec.id, rec);
+      byId.set(rec.id, rec);
       provenance.detailOk++;
     } else {
       provenance.detailFail++;
-      blocked.push(`detail ${row.slug}`);
+    }
+    if (++done % CHECKPOINT === 0) {
+      writeIpos([...byId.values()]);
+      log(`   … ${done}/${targets.length} (ok=${provenance.detailOk} fail=${provenance.detailFail}) [checkpoint]`);
     }
   }
-  log(`   detailed ok=${provenance.detailOk} fail=${provenance.detailFail}\n`);
+  log(`   detail ok=${provenance.detailOk} fail=${provenance.detailFail}\n`);
 
-  // ---- 4. assemble the IPO set ----
-  const ipos = universe.map((row) => {
-    if (detailed.has(row.id)) return detailed.get(row.id);
-    if (MODE === 'refresh' && existingById.has(row.id)) return existingById.get(row.id);
-    return listRowToIpo(row);
-  });
-  // carry forward any previously-detailed IPOs that fell outside this run's universe window
-  if (MODE === 'refresh') {
-    for (const prev of existing) if (!ipos.some((i) => i.id === prev.id)) ipos.push(prev);
+  // ---- 3. enrich ALL listed tickers (Screener + Munshot) ----
+  const ENRICH_CAP = envInt('ENRICH_CAP', Number.MAX_SAFE_INTEGER);
+  let toEnrich = MODE === 'rollup' ? [] : [...byId.values()].filter((i) => i.ticker && isListed(i));
+  toEnrich.sort((a, b) => (Date.parse(b.listing_date || 0) || 0) - (Date.parse(a.listing_date || 0) || 0));
+  if (toEnrich.length > ENRICH_CAP) toEnrich = toEnrich.slice(0, ENRICH_CAP);
+  log(`③ Enriching ${toEnrich.length} listed tickers (Screener + Munshot live)…`);
+  let en = 0;
+  for (const ipo of toEnrich) {
+    await enrich(ipo, { provenance });
+    if (++en % CHECKPOINT === 0) {
+      writeIpos([...byId.values()]);
+      log(`   … enriched ${en}/${toEnrich.length} (screener=${provenance.screener} munshot=${provenance.munshot} munshotFail=${provenance.munshotFail})`);
+    }
   }
-
-  // ---- 5. enrich listed, detailed IPOs with live data ----
-  // (bounded by ENRICH_CAP so a full backfill stays inside CI time limits; older names
-  //  fall back to the at-offer market cap, and the weekly refresh tops everyone up over time.)
-  const ENRICH_CAP = envInt('ENRICH_CAP', MODE === 'backfill' ? 250 : 100000);
-  let toEnrich = ipos.filter((i) => i.ticker && (targetIds.has(i.id) || MODE === 'refresh'));
-  if (ENRICH_CAP <= 0) toEnrich = [];
-  else if (toEnrich.length > ENRICH_CAP) {
-    toEnrich = [...toEnrich]
-      .sort((a, b) => (Date.parse(b.listing_date || 0) || 0) - (Date.parse(a.listing_date || 0) || 0))
-      .slice(0, ENRICH_CAP);
-  }
-  log(`③ Enriching ${toEnrich.length} listed names (Screener + Munshot live)…`);
-  for (const ipo of toEnrich) await enrich(ipo, { politeMs: POLITE_MS, provenance });
-  if (provenance.munshot === 0 && provenance.munshotFail > 0) blocked.push('Munshot live API (HTTP 502 / unreachable)');
+  if (provenance.munshot === 0 && provenance.munshotFail > 0) blocked.push('Munshot live API (HTTP 502 / intermittently unreachable)');
   log(`   screener hits=${provenance.screener} · munshot hits=${provenance.munshot} (fail=${provenance.munshotFail})\n`);
 
-  // ---- 6. wealth + prospects ----
+  // ---- 4. wealth + prospects (floor ₹25 Cr, no ₹150 pre-filter) ----
+  const ipos = [...byId.values()];
   ipos.forEach(computeCompanyWealth);
-  const prospects = rollUpProspects(ipos);
-  const qualifying = prospects.filter((p) => p.qualifies);
-  log(`④ Wealth engine: ${prospects.length} prospects, ${qualifying.length} qualifying ≥₹150 Cr\n`);
+  const prospects = rollUpProspects(ipos, { floorCr: FLOOR_CR, qualifyCr: QUALIFY_CR });
+  const thresholds = Object.fromEntries(THRESHOLDS.map((t) => [String(t), prospects.filter((p) => p.est_wealth_cr >= t).length]));
+  log(`④ Wealth engine: ${prospects.length} prospects (≥₹${FLOOR_CR} Cr). Qualifying ≥₹150 Cr: ${thresholds['150']}\n`);
 
-  // ---- 7. meta + provenance ----
+  // ---- 5. meta + provenance ----
+  const detailedTotal = ipos.filter((i) => !needsDetail(i)).length;
+  const withMcap = ipos.filter((i) => i.market_cap_cr != null).length;
+  // provenance derived from the data itself (accurate regardless of mode / this run)
+  const screenerCount = ipos.filter((i) => i.data_flags && (i.data_flags.market_cap === 'screener' || i.data_flags.current_promoter_pct === 'screener')).length;
+  const munshotCount = ipos.filter((i) => i.data_flags && i.data_flags.market_cap === 'munshot-live').length;
   const real = [];
-  if (provenance.detailOk > 0) real.push(`Chittorgarh universe + promoter/OFS disclosures (${provenance.detailOk} detail pages)`);
-  if (provenance.screener > 0) real.push(`Screener.in promoter% / pledge / market cap (${provenance.screener} companies)`);
-  if (provenance.munshot > 0) real.push(`Munshot live price / market cap (${provenance.munshot} tickers)`);
+  if (detailedTotal > 0) real.push(`Chittorgarh promoter/OFS disclosures (${detailedTotal} detail pages)`);
+  if (screenerCount > 0) real.push(`Screener.in promoter% / pledge / market cap (${screenerCount} companies)`);
+  if (munshotCount > 0) real.push(`Munshot live price / market cap (${munshotCount} tickers)`);
 
   const meta = {
     generated_at: nowISO(),
     mode: MODE,
     universe: {
-      mainboard: ipos.filter((i) => i.exchange === 'NSE' || i.exchange === 'BSE').length,
-      sme: ipos.filter((i) => String(i.exchange).includes('SME')).length,
+      mainboard: ipos.filter((i) => !isSme(i)).length,
+      sme: ipos.filter((i) => isSme(i)).length,
       years: TARGET_YEARS,
     },
-    counts: { ipos: ipos.length, prospects: prospects.length, qualifying: qualifying.length },
+    counts: {
+      ipos: ipos.length,
+      ipos_detailed: detailedTotal,
+      prospects: prospects.length,
+      qualifying: thresholds['150'],
+      thresholds,
+    },
     data_sources: [
-      { name: 'Chittorgarh', url: 'https://www.chittorgarh.com', status: provenance.detailOk > 0 ? 'real' : 'partial', note: 'IPO universe, promoters, pre/post shareholding %, Offer-for-Sale per-seller table' },
-      { name: 'Screener.in', url: 'https://www.screener.in', status: provenance.screener > 0 ? 'real' : 'blocked', note: "Today's promoter holding %, pledged %, market cap" },
-      { name: 'Munshot API', url: 'https://fastapi.muns.io/stock-data', status: provenance.munshot > 0 ? 'real' : 'blocked', note: 'Live price & market cap' },
+      { name: 'Chittorgarh', url: 'https://www.chittorgarh.com', status: detailedTotal > 0 ? 'real' : 'partial', note: 'IPO universe, promoters, pre/post shareholding %, Offer-for-Sale per-seller table' },
+      { name: 'Screener.in', url: 'https://www.screener.in', status: screenerCount > 0 ? 'real' : 'blocked', note: "Today's promoter holding %, pledged %, market cap" },
+      { name: 'Munshot API', url: 'https://fastapi.muns.io/stock-data', status: munshotCount > 0 ? 'real' : 'blocked', note: 'Live price & market cap (bare NSE symbol)' },
     ],
     seeding: {
       mode: MODE,
       real,
-      blocked: [...new Set(blocked.filter((b) => !b.startsWith('detail ')))],
+      blocked: [...new Set(blocked)],
       notes: [
-        `${provenance.detailOk} IPOs deep-scraped for promoter/OFS; ${ipos.length - provenance.detailOk} list-level only.`,
-        `Market cap source per IPO is flagged in data_flags (munshot-live / screener / offer).`,
+        `${detailedTotal}/${ipos.length} IPOs deep-scraped for promoter/OFS; ${ipos.length - detailedTotal} list-level only (the backfill Action finishes the rest).`,
+        `${withMcap} IPOs have a market cap (munshot-live / screener / at-offer — see each record's data_flags).`,
+        `prospects.json keeps everyone ≥ ₹${FLOOR_CR} Cr; the UI threshold slider filters live.`,
       ],
     },
     took_seconds: Math.round((Date.now() - started) / 1000),
   };
 
-  writeData(ipos, prospects, meta);
+  writeAll(ipos, prospects, meta);
 
   log('✓ wrote public/data/ipos.json, prospects.json, meta.json');
-  log(`  IPOs: ${meta.counts.ipos}  ·  prospects: ${meta.counts.prospects}  ·  qualifying ≥₹150 Cr: ${meta.counts.qualifying}`);
-  log(`  real sources: ${real.join('; ') || '(none)'}`);
+  log(`  IPOs: ${meta.counts.ipos} (detailed ${detailedTotal}) · prospects ≥₹25Cr: ${prospects.length}`);
+  log(`  thresholds: ${THRESHOLDS.map((t) => `≥${t}:${thresholds[t]}`).join('  ')}`);
+  log(`  real: ${real.join('; ') || '(none)'}`);
   log(`  blocked: ${meta.seeding.blocked.join('; ') || '(none)'}`);
   log(`  took ${meta.took_seconds}s`);
 }
