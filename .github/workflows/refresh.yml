@@ -1,0 +1,46 @@
+name: Weekly refresh (live prices + promoter %)
+
+# Re-pulls today's market cap (Munshot) + promoter holding % / pledge (Screener) for
+# listed names, recomputes wealth, and picks up any newly-listed IPOs. Commits changed
+# data JSON; Cloudflare redeploys automatically. FREE: curl + cheerio, Playwright fallback.
+
+on:
+  schedule:
+    - cron: '27 4 * * 1' # Mondays ~04:27 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Refresh live prices + promoter % and recompute wealth
+        run: npm run refresh
+
+      - name: Commit refreshed data if changed
+        run: |
+          git config user.name  "munshot-data-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/data/ipos.json public/data/prospects.json public/data/meta.json
+          if git diff --cached --quiet; then
+            echo "No data changes this week."
+          else
+            git commit -m "chore(data): weekly live-price + promoter% refresh"
+            git push
+          fi

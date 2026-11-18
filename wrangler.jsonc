@@ -1,0 +1,17 @@
+{
+  // Cloudflare Worker that serves the built Vite SPA (dist/) + a live-price API.
+  // Deploy: `npm run build` then `npx wrangler deploy` (or connect this repo in the
+  // Cloudflare dashboard → Workers Builds, build command `npm run build`).
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "munshot-wealth-radar",
+  "main": "worker/index.js",
+  "compatibility_date": "2024-11-06",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application"
+  },
+  "observability": {
+    "enabled": true
+  }
+}

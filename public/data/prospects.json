@@ -1,0 +1,1616 @@
+[
+  {
+    "person": "Coal India Ltd.",
+    "companies": [
+      {
+        "company": "Mahanadi Coalfields Ltd.",
+        "ticker": null,
+        "role": "Promoter",
+        "holding_value_cr": null,
+        "ofs_cash_cr": 9000.97
+      }
+    ],
+    "est_wealth_cr": 9000.97,
+    "ofs_cash_cr": 9000.97,
+    "holding_value_cr": 0,
+    "city": "Burla",
+    "state": "Odisha",
+    "sectors": [
+      "Coal"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "HIGH",
+    "latest_listing_date": "2026-11-23",
+    "qualifies": true
+  },
+  {
+    "person": "Bonfiglioli SPA",
+    "companies": [
+      {
+        "company": "Bonfiglioli Transmissions Ltd.",
+        "ticker": "BONFIG",
+        "role": "Promoter",
+        "holding_value_cr": 8482.75,
+        "ofs_cash_cr": 2533.67
+      }
+    ],
+    "est_wealth_cr": 11016.42,
+    "ofs_cash_cr": 2533.67,
+    "holding_value_cr": 8482.75,
+    "city": "SIDCO Industrial Estate",
+    "state": "Tamil Nadu",
+    "sectors": [
+      "Industrial Products"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "HIGH",
+    "latest_listing_date": "2026-10-23",
+    "qualifies": true
+  },
+  {
+    "person": "Edelweiss Securities & Investments Pvt.ltd.",
+    "companies": [
+      {
+        "company": "EAAA India Alternatives Ltd.",
+        "ticker": "EDELALTS",
+        "role": "Promoter",
+        "holding_value_cr": 10469.06,
+        "ofs_cash_cr": 1200
+      }
+    ],
+    "est_wealth_cr": 11669.06,
+    "ofs_cash_cr": 1200,
+    "holding_value_cr": 10469.06,
+    "city": "Mumbai City",
+    "state": "Maharashtra",
+    "sectors": [
+      "Asset Management Company"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "MEDIUM",
+    "latest_listing_date": "2026-11-02",
+    "qualifies": true
+  },
+  {
+    "person": "Manipal Technologies Ltd.",
+    "companies": [
+      {
+        "company": "Manipal Payment & Identity Solutions Ltd.",
+        "ticker": "MPIMANIPAL",
+        "role": "Promoter",
+        "holding_value_cr": 3949.1,
+        "ofs_cash_cr": 485
+      }
+    ],
+    "est_wealth_cr": 4434.1,
+    "ofs_cash_cr": 485,
+    "holding_value_cr": 3949.1,
+    "city": "Press Corner",
+    "state": "Karnataka",
+    "sectors": [
+      "Financial Technology (Fintech)"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "MEDIUM",
+    "latest_listing_date": "2026-09-17",
+    "qualifies": true
+  },
+  {
+    "person": "Kusum Harish Dharamshi",
+    "companies": [
+      {
+        "company": "HD Fire Protect Ltd.",
+        "ticker": "HDFIRE",
+        "role": "Promoter",
+        "holding_value_cr": 2137.75,
+        "ofs_cash_cr": 468.73
+      }
+    ],
+    "est_wealth_cr": 2606.48,
+    "ofs_cash_cr": 468.73,
+    "holding_value_cr": 2137.75,
+    "city": "Runwal R Square",
+    "state": "Maharashtra",
+    "sectors": [
+      "Industrial Products"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-10-21",
+    "qualifies": true
+  },
+  {
+    "person": "O.p.munjal Holdings",
+    "companies": [
+      {
+        "company": "Hero Motors Ltd.",
+        "ticker": "HEROMOTORS",
+        "role": "Promoter",
+        "holding_value_cr": 1704.38,
+        "ofs_cash_cr": 395
+      }
+    ],
+    "est_wealth_cr": 2099.38,
+    "ofs_cash_cr": 395,
+    "holding_value_cr": 1704.38,
+    "city": null,
+    "state": "Punjab",
+    "sectors": [
+      "Auto Components & Equipments"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-09-23",
+    "qualifies": true
+  },
+  {
+    "person": "Creovate Innovation Pvt.ltd.",
+    "companies": [
+      {
+        "company": "Zetwerk Manufacturing Business Ltd.",
+        "ticker": "ZETWERK",
+        "role": "Promoter",
+        "holding_value_cr": null,
+        "ofs_cash_cr": 346.85
+      }
+    ],
+    "est_wealth_cr": 346.85,
+    "ofs_cash_cr": 346.85,
+    "holding_value_cr": 0,
+    "city": "Green Glen Layout",
+    "state": "Karnataka",
+    "sectors": [
+      "Industrial Products"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "HIGH",
+    "latest_listing_date": "2026-10-23",
+    "qualifies": true
+  },
+  {
+    "person": "Avenue India Resurgence Pte.ltd.",
+    "companies": [
+      {
+        "company": "Asset Reconstruction Co.(India) Ltd.",
+        "ticker": "ARCIL",
+        "role": "Promoter",
+        "holding_value_cr": null,
+        "ofs_cash_cr": 345.05
+      }
+    ],
+    "est_wealth_cr": 345.05,
+    "ofs_cash_cr": 345.05,
+    "holding_value_cr": 0,
+    "city": null,
+    "state": "Maharashtra",
+    "sectors": [
+      "Other Financial Services"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "HIGH",
+    "latest_listing_date": "2026-09-17",
+    "qualifies": true
+  },
+  {
+    "person": "Dharminder Kumar Nagar",
+    "companies": [
+      {
+        "company": "Paras Healthcare Ltd.",
+        "ticker": "PARASHLTH",
+        "role": "Promoter",
+        "holding_value_cr": 5779.16,
+        "ofs_cash_cr": 300
+      }
+    ],
+    "est_wealth_cr": 6079.16,
+    "ofs_cash_cr": 300,
+    "holding_value_cr": 5779.16,
+    "city": "Paras Twin Towers",
+    "state": "Haryana",
+    "sectors": [
+      "Hospital"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "HIGH",
+    "latest_listing_date": "2026-10-28",
+    "qualifies": true
+  },
+  {
+    "person": "Harish Narshi Dharamshi",
+    "companies": [
+      {
+        "company": "HD Fire Protect Ltd.",
+        "ticker": "HDFIRE",
+        "role": "Promoter",
+        "holding_value_cr": 2137.75,
+        "ofs_cash_cr": 243.4
+      }
+    ],
+    "est_wealth_cr": 2381.15,
+    "ofs_cash_cr": 243.4,
+    "holding_value_cr": 2137.75,
+    "city": "Runwal R Square",
+    "state": "Maharashtra",
+    "sectors": [
+      "Industrial Products"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-10-21",
+    "qualifies": true
+  },
+  {
+    "person": "Amrit Pratik Acharya",
+    "companies": [
+      {
+        "company": "Zetwerk Manufacturing Business Ltd.",
+        "ticker": "ZETWERK",
+        "role": "Promoter",
+        "holding_value_cr": 2235.14,
+        "ofs_cash_cr": 214.84
+      }
+    ],
+    "est_wealth_cr": 2449.98,
+    "ofs_cash_cr": 214.84,
+    "holding_value_cr": 2235.14,
+    "city": "Green Glen Layout",
+    "state": "Karnataka",
+    "sectors": [
+      "Industrial Products"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-10-23",
+    "qualifies": true
+  },
+  {
+    "person": "Srinath Ramakkrushnan",
+    "companies": [
+      {
+        "company": "Zetwerk Manufacturing Business Ltd.",
+        "ticker": "ZETWERK",
+        "role": "Promoter",
+        "holding_value_cr": 2235.14,
+        "ofs_cash_cr": 214.84
+      }
+    ],
+    "est_wealth_cr": 2449.98,
+    "ofs_cash_cr": 214.84,
+    "holding_value_cr": 2235.14,
+    "city": "Green Glen Layout",
+    "state": "Karnataka",
+    "sectors": [
+      "Industrial Products"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-10-23",
+    "qualifies": true
+  },
+  {
+    "person": "State Bank Of India",
+    "companies": [
+      {
+        "company": "Asset Reconstruction Co.(India) Ltd.",
+        "ticker": "ARCIL",
+        "role": "Promoter",
+        "holding_value_cr": 3315.29,
+        "ofs_cash_cr": 152.39
+      }
+    ],
+    "est_wealth_cr": 3467.68,
+    "ofs_cash_cr": 152.39,
+    "holding_value_cr": 3315.29,
+    "city": null,
+    "state": "Maharashtra",
+    "sectors": [
+      "Other Financial Services"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "HIGH",
+    "latest_listing_date": "2026-09-17",
+    "qualifies": true
+  },
+  {
+    "person": "Saketchandrasingh Pratapsingh Dhandoriya",
+    "companies": [
+      {
+        "company": "SFC Environmental Technologies Ltd.",
+        "ticker": "SFCTECH",
+        "role": "Promoter",
+        "holding_value_cr": 802.51,
+        "ofs_cash_cr": 123.29
+      }
+    ],
+    "est_wealth_cr": 925.8,
+    "ofs_cash_cr": 123.29,
+    "holding_value_cr": 802.51,
+    "city": null,
+    "state": "Maharashtra",
+    "sectors": [],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-11-03",
+    "qualifies": true
+  },
+  {
+    "person": "Usha Rajnikant Shah (held Jointly With Nishith Rajnikant Shah & Shah Sandhya Nishith)",
+    "companies": [
+      {
+        "company": "Prasol Chemicals Ltd.",
+        "ticker": "PRASOLCHEM",
+        "role": "Promoter",
+        "holding_value_cr": 248,
+        "ofs_cash_cr": 120
+      }
+    ],
+    "est_wealth_cr": 368,
+    "ofs_cash_cr": 120,
+    "holding_value_cr": 248,
+    "city": "T. T. C",
+    "state": "Maharashtra",
+    "sectors": [
+      "Specialty Chemicals"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-09-16",
+    "qualifies": true
+  },
+  {
+    "person": "P.n.s.business Pvt.ltd.",
+    "companies": [
+      {
+        "company": "Fusion CX Ltd.",
+        "ticker": "FUSIONCX",
+        "role": "Promoter",
+        "holding_value_cr": 1596.96,
+        "ofs_cash_cr": 101
+      }
+    ],
+    "est_wealth_cr": 1697.96,
+    "ofs_cash_cr": 101,
+    "holding_value_cr": 1596.96,
+    "city": "Bidhan Nagar",
+    "state": "West Bengal",
+    "sectors": [],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-10-22",
+    "qualifies": true
+  },
+  {
+    "person": "Rasish Consultants Pvt.ltd.",
+    "companies": [
+      {
+        "company": "Fusion CX Ltd.",
+        "ticker": "FUSIONCX",
+        "role": "Promoter",
+        "holding_value_cr": 1596.96,
+        "ofs_cash_cr": 101
+      }
+    ],
+    "est_wealth_cr": 1697.96,
+    "ofs_cash_cr": 101,
+    "holding_value_cr": 1596.96,
+    "city": "Bidhan Nagar",
+    "state": "West Bengal",
+    "sectors": [],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-10-22",
+    "qualifies": true
+  },
+  {
+    "person": "Tanveer Singh",
+    "companies": [
+      {
+        "company": "Karamtara Engineering Ltd.",
+        "ticker": "KARAMTARA",
+        "role": "Promoter",
+        "holding_value_cr": 4804.97,
+        "ofs_cash_cr": 100
+      }
+    ],
+    "est_wealth_cr": 4904.97,
+    "ofs_cash_cr": 100,
+    "holding_value_cr": 4804.97,
+    "city": null,
+    "state": "Maharashtra",
+    "sectors": [
+      "Heavy Electrical Equipment"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-09-17",
+    "qualifies": true
+  },
+  {
+    "person": "Rajiv Singh",
+    "companies": [
+      {
+        "company": "Karamtara Engineering Ltd.",
+        "ticker": "KARAMTARA",
+        "role": "Promoter",
+        "holding_value_cr": 4804.97,
+        "ofs_cash_cr": 100
+      }
+    ],
+    "est_wealth_cr": 4904.97,
+    "ofs_cash_cr": 100,
+    "holding_value_cr": 4804.97,
+    "city": null,
+    "state": "Maharashtra",
+    "sectors": [
+      "Heavy Electrical Equipment"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-09-17",
+    "qualifies": true
+  },
+  {
+    "person": "Starfish I Pte.ltd.",
+    "companies": [
+      {
+        "company": "Acevector Ltd. (Snapdeal IPO)",
+        "ticker": "ACEVECTOR",
+        "role": "Promoter",
+        "holding_value_cr": 552.67,
+        "ofs_cash_cr": 88.34
+      }
+    ],
+    "est_wealth_cr": 641.01,
+    "ofs_cash_cr": 88.34,
+    "holding_value_cr": 552.67,
+    "city": "Okhla Industrial Area",
+    "state": "New Delhi",
+    "sectors": [
+      "E-Retail/ E-Commerce"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "MEDIUM",
+    "latest_listing_date": "2026-10-05",
+    "qualifies": true
+  },
+  {
+    "person": "Arjan Suja Rabari",
+    "companies": [
+      {
+        "company": "LCC Projects Ltd.",
+        "ticker": "LCCPROJECT",
+        "role": "Promoter",
+        "holding_value_cr": 1620,
+        "ofs_cash_cr": 84.57
+      }
+    ],
+    "est_wealth_cr": 1704.57,
+    "ofs_cash_cr": 84.57,
+    "holding_value_cr": 1620,
+    "city": null,
+    "state": "Gujarat",
+    "sectors": [
+      "Civil Construction"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-09-17",
+    "qualifies": true
+  },
+  {
+    "person": "Laljibhai Arjanbhai Ahir",
+    "companies": [
+      {
+        "company": "LCC Projects Ltd.",
+        "ticker": "LCCPROJECT",
+        "role": "Promoter",
+        "holding_value_cr": 1620,
+        "ofs_cash_cr": 84.57
+      }
+    ],
+    "est_wealth_cr": 1704.57,
+    "ofs_cash_cr": 84.57,
+    "holding_value_cr": 1620,
+    "city": null,
+    "state": "Gujarat",
+    "sectors": [
+      "Civil Construction"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-09-17",
+    "qualifies": true
+  },
+  {
+    "person": "Arvind Kondangi Lakshmikumar",
+    "companies": [
+      {
+        "company": "Tonbo Imaging India Ltd.",
+        "ticker": "TONBO",
+        "role": "Promoter",
+        "holding_value_cr": 416.75,
+        "ofs_cash_cr": 80.49
+      }
+    ],
+    "est_wealth_cr": 497.24,
+    "ofs_cash_cr": 80.49,
+    "holding_value_cr": 416.75,
+    "city": "Jakkasandra Extension",
+    "state": "Karnataka",
+    "sectors": [
+      "Aerospace & Defense"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-10-23",
+    "qualifies": true
+  },
+  {
+    "person": "Dhirajkumar Savjibhai Vasoya",
+    "companies": [
+      {
+        "company": "Sahajanand Medical Technologies Ltd.",
+        "ticker": "SMT",
+        "role": "Promoter",
+        "holding_value_cr": 2004.56,
+        "ofs_cash_cr": 68.8
+      }
+    ],
+    "est_wealth_cr": 2073.36,
+    "ofs_cash_cr": 68.8,
+    "holding_value_cr": 2004.56,
+    "city": null,
+    "state": "Gujarat",
+    "sectors": [
+      "Medical Equipment & Supplies"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "HIGH",
+    "latest_listing_date": "2026-10-23",
+    "qualifies": true
+  },
+  {
+    "person": "Vipul Nagpal",
+    "companies": [
+      {
+        "company": "Orient Cables (India) Ltd.",
+        "ticker": "ORIENTCABL",
+        "role": "Promoter",
+        "holding_value_cr": 1796.2,
+        "ofs_cash_cr": 67.2
+      }
+    ],
+    "est_wealth_cr": 1863.4,
+    "ofs_cash_cr": 67.2,
+    "holding_value_cr": 1796.2,
+    "city": null,
+    "state": "New Delhi",
+    "sectors": [],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-10-05",
+    "qualifies": true
+  },
+  {
+    "person": "Vishal Sanwarprasad Budhia",
+    "companies": [
+      {
+        "company": "Steamhouse India Ltd.",
+        "ticker": "STEAMHOUSE",
+        "role": "Promoter",
+        "holding_value_cr": 3320.32,
+        "ofs_cash_cr": 61
+      }
+    ],
+    "est_wealth_cr": 3381.32,
+    "ofs_cash_cr": 61,
+    "holding_value_cr": 3320.32,
+    "city": "Four Point",
+    "state": "Gujarat",
+    "sectors": [],
+    "max_pledge_pct": null,
+    "confidence": "HIGH",
+    "latest_listing_date": "2026-09-17",
+    "qualifies": true
+  },
+  {
+    "person": "Ramchand Murlidhar Raimalani",
+    "companies": [
+      {
+        "company": "M.K.Sons Fine Jewels Ltd.",
+        "ticker": "MKSONS",
+        "role": "Promoter",
+        "holding_value_cr": 674.96,
+        "ofs_cash_cr": 55.08
+      }
+    ],
+    "est_wealth_cr": 730.04,
+    "ofs_cash_cr": 55.08,
+    "holding_value_cr": 674.96,
+    "city": null,
+    "state": "Maharashtra",
+    "sectors": [
+      "Gems, Jewellery And Watches"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "HIGH",
+    "latest_listing_date": "2026-11-04",
+    "qualifies": true
+  },
+  {
+    "person": "Puneet Agarwal",
+    "companies": [
+      {
+        "company": "Moneyview Ltd.",
+        "ticker": "MONEYVIEW",
+        "role": "Promoter",
+        "holding_value_cr": 652.03,
+        "ofs_cash_cr": 46.06
+      }
+    ],
+    "est_wealth_cr": 698.09,
+    "ofs_cash_cr": 46.06,
+    "holding_value_cr": 652.03,
+    "city": "The Address Building",
+    "state": "Karnataka",
+    "sectors": [
+      "Financial Technology (Fintech)"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-10-01",
+    "qualifies": true
+  },
+  {
+    "person": "Sanjay Aggarwal",
+    "companies": [
+      {
+        "company": "Moneyview Ltd.",
+        "ticker": "MONEYVIEW",
+        "role": "Promoter",
+        "holding_value_cr": 652.03,
+        "ofs_cash_cr": 46.06
+      }
+    ],
+    "est_wealth_cr": 698.09,
+    "ofs_cash_cr": 46.06,
+    "holding_value_cr": 652.03,
+    "city": "The Address Building",
+    "state": "Karnataka",
+    "sectors": [
+      "Financial Technology (Fintech)"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-10-01",
+    "qualifies": true
+  },
+  {
+    "person": "Siddharth Gunvant Shah",
+    "companies": [
+      {
+        "company": "SS Retail Ltd.",
+        "ticker": "SSRETAIL",
+        "role": "Promoter",
+        "holding_value_cr": 817.24,
+        "ofs_cash_cr": 44.95
+      }
+    ],
+    "est_wealth_cr": 862.19,
+    "ofs_cash_cr": 44.95,
+    "holding_value_cr": 817.24,
+    "city": "Ratikmal Complex",
+    "state": "Maharashtra",
+    "sectors": [
+      "Speciality Retail"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-09-23",
+    "qualifies": true
+  },
+  {
+    "person": "Ankit Kumar",
+    "companies": [
+      {
+        "company": "Tonbo Imaging India Ltd.",
+        "ticker": "TONBO",
+        "role": "Promoter",
+        "holding_value_cr": 416.75,
+        "ofs_cash_cr": 40.6
+      }
+    ],
+    "est_wealth_cr": 457.35,
+    "ofs_cash_cr": 40.6,
+    "holding_value_cr": 416.75,
+    "city": "Jakkasandra Extension",
+    "state": "Karnataka",
+    "sectors": [
+      "Aerospace & Defense"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-10-23",
+    "qualifies": true
+  },
+  {
+    "person": "Bhisham Kumar Gupta (held Jointly With Raksha Bhisham Gupta)",
+    "companies": [
+      {
+        "company": "Prasol Chemicals Ltd.",
+        "ticker": "PRASOLCHEM",
+        "role": "Promoter",
+        "holding_value_cr": 248,
+        "ofs_cash_cr": 39.03
+      }
+    ],
+    "est_wealth_cr": 287.03,
+    "ofs_cash_cr": 39.03,
+    "holding_value_cr": 248,
+    "city": "T. T. C",
+    "state": "Maharashtra",
+    "sectors": [
+      "Specialty Chemicals"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-09-16",
+    "qualifies": true
+  },
+  {
+    "person": "Gaurang Natwarlal Parikh (held Jointly With Tanvi Gaurang Parikh)",
+    "companies": [
+      {
+        "company": "Prasol Chemicals Ltd.",
+        "ticker": "PRASOLCHEM",
+        "role": "Promoter",
+        "holding_value_cr": 248,
+        "ofs_cash_cr": 35.35
+      }
+    ],
+    "est_wealth_cr": 283.35,
+    "ofs_cash_cr": 35.35,
+    "holding_value_cr": 248,
+    "city": "T. T. C",
+    "state": "Maharashtra",
+    "sectors": [
+      "Specialty Chemicals"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-09-16",
+    "qualifies": true
+  },
+  {
+    "person": "Sonal Nishith Dharia (held Jointly With Nishith Rasiklal Dharia)",
+    "companies": [
+      {
+        "company": "Prasol Chemicals Ltd.",
+        "ticker": "PRASOLCHEM",
+        "role": "Promoter",
+        "holding_value_cr": 248,
+        "ofs_cash_cr": 35.2
+      }
+    ],
+    "est_wealth_cr": 283.2,
+    "ofs_cash_cr": 35.2,
+    "holding_value_cr": 248,
+    "city": "T. T. C",
+    "state": "Maharashtra",
+    "sectors": [
+      "Specialty Chemicals"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-09-16",
+    "qualifies": true
+  },
+  {
+    "person": "Geetansh Bamania",
+    "companies": [
+      {
+        "company": "Rentomojo Ltd.",
+        "ticker": "RENTOMOJO",
+        "role": "Promoter",
+        "holding_value_cr": 596.45,
+        "ofs_cash_cr": 34.3
+      }
+    ],
+    "est_wealth_cr": 630.75,
+    "ofs_cash_cr": 34.3,
+    "holding_value_cr": 596.45,
+    "city": null,
+    "state": "Karnataka",
+    "sectors": [
+      "E-Retail/ E-Commerce"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-09-17",
+    "qualifies": true
+  },
+  {
+    "person": "Vridaa Holding Trust",
+    "companies": [
+      {
+        "company": "Manika Plastech Ltd.",
+        "ticker": "MANIKA",
+        "role": "Promoter",
+        "holding_value_cr": 397.98,
+        "ofs_cash_cr": 33
+      }
+    ],
+    "est_wealth_cr": 430.98,
+    "ofs_cash_cr": 33,
+    "holding_value_cr": 397.98,
+    "city": null,
+    "state": "Dadra and Nagar Haveli and Daman and Diu",
+    "sectors": [
+      "Plastic Products - Industrial"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "MEDIUM",
+    "latest_listing_date": "2026-09-21",
+    "qualifies": true
+  },
+  {
+    "person": "Vaman Prestressing Co.pvt.ltd.",
+    "companies": [
+      {
+        "company": "Vishal Nirmiti Ltd.",
+        "ticker": "VNL",
+        "role": "Promoter",
+        "holding_value_cr": 286.82,
+        "ofs_cash_cr": 33
+      }
+    ],
+    "est_wealth_cr": 319.82,
+    "ofs_cash_cr": 33,
+    "holding_value_cr": 286.82,
+    "city": "New Empire Cinema",
+    "state": "Maharashtra",
+    "sectors": [
+      "Civil Construction"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "MEDIUM",
+    "latest_listing_date": "2026-10-08",
+    "qualifies": true
+  },
+  {
+    "person": "Nishith Rasiklal Dharia (held Jointly With Sonal Nishith Dharia)",
+    "companies": [
+      {
+        "company": "Prasol Chemicals Ltd.",
+        "ticker": "PRASOLCHEM",
+        "role": "Promoter",
+        "holding_value_cr": 248,
+        "ofs_cash_cr": 32
+      }
+    ],
+    "est_wealth_cr": 280,
+    "ofs_cash_cr": 32,
+    "holding_value_cr": 248,
+    "city": "T. T. C",
+    "state": "Maharashtra",
+    "sectors": [
+      "Specialty Chemicals"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-09-16",
+    "qualifies": true
+  },
+  {
+    "person": "Sachin Jatin Parikh (held Jointly With Shruti Sachin Parikh)",
+    "companies": [
+      {
+        "company": "Prasol Chemicals Ltd.",
+        "ticker": "PRASOLCHEM",
+        "role": "Promoter",
+        "holding_value_cr": 248,
+        "ofs_cash_cr": 32
+      }
+    ],
+    "est_wealth_cr": 280,
+    "ofs_cash_cr": 32,
+    "holding_value_cr": 248,
+    "city": "T. T. C",
+    "state": "Maharashtra",
+    "sectors": [
+      "Specialty Chemicals"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-09-16",
+    "qualifies": true
+  },
+  {
+    "person": "Sandeep Sudhakar Asolkar Jointly With Priya Sandeep Asolkar",
+    "companies": [
+      {
+        "company": "SFC Environmental Technologies Ltd.",
+        "ticker": "SFCTECH",
+        "role": "Promoter",
+        "holding_value_cr": 802.51,
+        "ofs_cash_cr": 30.82
+      }
+    ],
+    "est_wealth_cr": 833.33,
+    "ofs_cash_cr": 30.82,
+    "holding_value_cr": 802.51,
+    "city": null,
+    "state": "Maharashtra",
+    "sectors": [],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-11-03",
+    "qualifies": true
+  },
+  {
+    "person": "VVJ Enterprise Pvt.ltd.",
+    "companies": [
+      {
+        "company": "Jindal Supreme (India) Ltd.",
+        "ticker": "JSIPL",
+        "role": "Promoter",
+        "holding_value_cr": 349.63,
+        "ofs_cash_cr": 24.99
+      }
+    ],
+    "est_wealth_cr": 374.62,
+    "ofs_cash_cr": 24.99,
+    "holding_value_cr": 349.63,
+    "city": null,
+    "state": "Haryana",
+    "sectors": [
+      "Iron & Steel Products"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "MEDIUM",
+    "latest_listing_date": "2026-09-23",
+    "qualifies": true
+  },
+  {
+    "person": "Sidhant Dalmia",
+    "companies": [
+      {
+        "company": "Wiscon Industries Ltd.",
+        "ticker": "WISCON",
+        "role": "Promoter",
+        "holding_value_cr": 279.15,
+        "ofs_cash_cr": 22
+      }
+    ],
+    "est_wealth_cr": 301.15,
+    "ofs_cash_cr": 22,
+    "holding_value_cr": 279.15,
+    "city": "Okhla Ind Area",
+    "state": "New Delhi",
+    "sectors": [
+      "Consumer Electronics"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "HIGH",
+    "latest_listing_date": "2026-11-03",
+    "qualifies": true
+  },
+  {
+    "person": "Sandeep Kumar",
+    "companies": [
+      {
+        "company": "A-One Steels India Ltd.",
+        "ticker": "AONESTEELS",
+        "role": "Promoter",
+        "holding_value_cr": 896.11,
+        "ofs_cash_cr": 19.99
+      }
+    ],
+    "est_wealth_cr": 916.1,
+    "ofs_cash_cr": 19.99,
+    "holding_value_cr": 896.11,
+    "city": null,
+    "state": "Karnataka",
+    "sectors": [
+      "Iron & Steel Products"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-10-01",
+    "qualifies": true
+  },
+  {
+    "person": "Sunil Jallan",
+    "companies": [
+      {
+        "company": "A-One Steels India Ltd.",
+        "ticker": "AONESTEELS",
+        "role": "Promoter",
+        "holding_value_cr": 896.11,
+        "ofs_cash_cr": 19.99
+      }
+    ],
+    "est_wealth_cr": 916.1,
+    "ofs_cash_cr": 19.99,
+    "holding_value_cr": 896.11,
+    "city": null,
+    "state": "Karnataka",
+    "sectors": [
+      "Iron & Steel Products"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-10-01",
+    "qualifies": true
+  },
+  {
+    "person": "Mukesh Sangla (huf)",
+    "companies": [
+      {
+        "company": "Adroit Industries (India) Ltd.",
+        "ticker": "ADROITIND",
+        "role": "Promoter",
+        "holding_value_cr": 637.4,
+        "ofs_cash_cr": 18.09
+      }
+    ],
+    "est_wealth_cr": 655.49,
+    "ofs_cash_cr": 18.09,
+    "holding_value_cr": 637.4,
+    "city": null,
+    "state": "Maharashtra",
+    "sectors": [
+      "Auto Components & Equipments"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "MEDIUM",
+    "latest_listing_date": "2026-09-30",
+    "qualifies": true
+  },
+  {
+    "person": "Gaurav Bamania",
+    "companies": [
+      {
+        "company": "Rentomojo Ltd.",
+        "ticker": "RENTOMOJO",
+        "role": "Promoter",
+        "holding_value_cr": 596.45,
+        "ofs_cash_cr": 16.16
+      }
+    ],
+    "est_wealth_cr": 612.61,
+    "ofs_cash_cr": 16.16,
+    "holding_value_cr": 596.45,
+    "city": null,
+    "state": "Karnataka",
+    "sectors": [
+      "E-Retail/ E-Commerce"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-09-17",
+    "qualifies": true
+  },
+  {
+    "person": "Cecilia D’souza",
+    "companies": [
+      {
+        "company": "Tonbo Imaging India Ltd.",
+        "ticker": "TONBO",
+        "role": "Promoter",
+        "holding_value_cr": 416.75,
+        "ofs_cash_cr": 16.1
+      }
+    ],
+    "est_wealth_cr": 432.85,
+    "ofs_cash_cr": 16.1,
+    "holding_value_cr": 416.75,
+    "city": "Jakkasandra Extension",
+    "state": "Karnataka",
+    "sectors": [
+      "Aerospace & Defense"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-10-23",
+    "qualifies": true
+  },
+  {
+    "person": "Suraj Pandey",
+    "companies": [
+      {
+        "company": "Acme India Industries Ltd.",
+        "ticker": "ACMERAIL",
+        "role": "Promoter",
+        "holding_value_cr": 296.55,
+        "ofs_cash_cr": 15.71
+      }
+    ],
+    "est_wealth_cr": 312.26,
+    "ofs_cash_cr": 15.71,
+    "holding_value_cr": 296.55,
+    "city": null,
+    "state": "New Delhi",
+    "sectors": [],
+    "max_pledge_pct": null,
+    "confidence": "HIGH",
+    "latest_listing_date": "2026-10-09",
+    "qualifies": true
+  },
+  {
+    "person": "Garima Nagpal",
+    "companies": [
+      {
+        "company": "Orient Cables (India) Ltd.",
+        "ticker": "ORIENTCABL",
+        "role": "Promoter",
+        "holding_value_cr": 1796.2,
+        "ofs_cash_cr": 15.7
+      }
+    ],
+    "est_wealth_cr": 1811.9,
+    "ofs_cash_cr": 15.7,
+    "holding_value_cr": 1796.2,
+    "city": null,
+    "state": "New Delhi",
+    "sectors": [],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-10-05",
+    "qualifies": true
+  },
+  {
+    "person": "Deepa Siddharth Shah",
+    "companies": [
+      {
+        "company": "SS Retail Ltd.",
+        "ticker": "SSRETAIL",
+        "role": "Promoter",
+        "holding_value_cr": 817.24,
+        "ofs_cash_cr": 13.98
+      }
+    ],
+    "est_wealth_cr": 831.22,
+    "ofs_cash_cr": 13.98,
+    "holding_value_cr": 817.24,
+    "city": "Ratikmal Complex",
+    "state": "Maharashtra",
+    "sectors": [
+      "Speciality Retail"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-09-23",
+    "qualifies": true
+  },
+  {
+    "person": "Prasoon Chauhan",
+    "companies": [
+      {
+        "company": "Black Opal Consultants Ltd.",
+        "ticker": "BLACKOPAL",
+        "role": "Promoter",
+        "holding_value_cr": 150.98,
+        "ofs_cash_cr": 10.99
+      }
+    ],
+    "est_wealth_cr": 161.97,
+    "ofs_cash_cr": 10.99,
+    "holding_value_cr": 150.98,
+    "city": "C.S.C. AGCR Enclave",
+    "state": "New Delhi",
+    "sectors": [],
+    "max_pledge_pct": null,
+    "confidence": "HIGH",
+    "latest_listing_date": "2026-10-07",
+    "qualifies": true
+  },
+  {
+    "person": "Krishan Kumar Jalan",
+    "companies": [
+      {
+        "company": "A-One Steels India Ltd.",
+        "ticker": "AONESTEELS",
+        "role": "Promoter",
+        "holding_value_cr": 896.11,
+        "ofs_cash_cr": 10
+      }
+    ],
+    "est_wealth_cr": 906.11,
+    "ofs_cash_cr": 10,
+    "holding_value_cr": 896.11,
+    "city": null,
+    "state": "Karnataka",
+    "sectors": [
+      "Iron & Steel Products"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-10-01",
+    "qualifies": true
+  },
+  {
+    "person": "Harshal Kishor Parekh",
+    "companies": [
+      {
+        "company": "SS Retail Ltd.",
+        "ticker": "SSRETAIL",
+        "role": "Promoter",
+        "holding_value_cr": 817.24,
+        "ofs_cash_cr": 7.99
+      }
+    ],
+    "est_wealth_cr": 825.23,
+    "ofs_cash_cr": 7.99,
+    "holding_value_cr": 817.24,
+    "city": "Ratikmal Complex",
+    "state": "Maharashtra",
+    "sectors": [
+      "Speciality Retail"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-09-23",
+    "qualifies": true
+  },
+  {
+    "person": "Shruti Sachin Parikh (held Jointly With Sachin Jatin Parikh)",
+    "companies": [
+      {
+        "company": "Prasol Chemicals Ltd.",
+        "ticker": "PRASOLCHEM",
+        "role": "Promoter",
+        "holding_value_cr": 248,
+        "ofs_cash_cr": 7.9
+      }
+    ],
+    "est_wealth_cr": 255.9,
+    "ofs_cash_cr": 7.9,
+    "holding_value_cr": 248,
+    "city": "T. T. C",
+    "state": "Maharashtra",
+    "sectors": [
+      "Specialty Chemicals"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-09-16",
+    "qualifies": true
+  },
+  {
+    "person": "Karthayayini M",
+    "companies": [
+      {
+        "company": "Himalayan Solar Ltd.",
+        "ticker": "HIMALAYAN",
+        "role": "Promoter",
+        "holding_value_cr": 159.71,
+        "ofs_cash_cr": 7.35
+      }
+    ],
+    "est_wealth_cr": 167.06,
+    "ofs_cash_cr": 7.35,
+    "holding_value_cr": 159.71,
+    "city": null,
+    "state": "Haryana",
+    "sectors": [
+      "Other Electrical Equipment"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "HIGH",
+    "latest_listing_date": "2026-10-05",
+    "qualifies": true
+  },
+  {
+    "person": "Rahul Bhanushali",
+    "companies": [
+      {
+        "company": "Dove Soft Ltd.",
+        "ticker": "DSL",
+        "role": "Promoter",
+        "holding_value_cr": 143.09,
+        "ofs_cash_cr": 7
+      }
+    ],
+    "est_wealth_cr": 150.09,
+    "ofs_cash_cr": 7,
+    "holding_value_cr": 143.09,
+    "city": "DLH Park",
+    "state": "Maharashtra",
+    "sectors": [
+      "IT Enabled Services"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "HIGH",
+    "latest_listing_date": "2026-10-08",
+    "qualifies": true
+  },
+  {
+    "person": "Inamulhaq Shamsulhaq Iraki",
+    "companies": [
+      {
+        "company": "German Green Steel & Power Ltd.",
+        "ticker": "GERMAN",
+        "role": "Promoter",
+        "holding_value_cr": 277.58,
+        "ofs_cash_cr": 6.95
+      }
+    ],
+    "est_wealth_cr": 284.53,
+    "ofs_cash_cr": 6.95,
+    "holding_value_cr": 277.58,
+    "city": null,
+    "state": "Gujarat",
+    "sectors": [
+      "Iron & Steel Products"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-10-05",
+    "qualifies": true
+  },
+  {
+    "person": "Abdulhaq Shamsulhaq Iraki",
+    "companies": [
+      {
+        "company": "German Green Steel & Power Ltd.",
+        "ticker": "GERMAN",
+        "role": "Promoter",
+        "holding_value_cr": 277.58,
+        "ofs_cash_cr": 6.95
+      }
+    ],
+    "est_wealth_cr": 284.53,
+    "ofs_cash_cr": 6.95,
+    "holding_value_cr": 277.58,
+    "city": null,
+    "state": "Gujarat",
+    "sectors": [
+      "Iron & Steel Products"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-10-05",
+    "qualifies": true
+  },
+  {
+    "person": "Chitra Agarwal",
+    "companies": [
+      {
+        "company": "Moneyview Ltd.",
+        "ticker": "MONEYVIEW",
+        "role": "Promoter",
+        "holding_value_cr": 652.03,
+        "ofs_cash_cr": 6.58
+      }
+    ],
+    "est_wealth_cr": 658.61,
+    "ofs_cash_cr": 6.58,
+    "holding_value_cr": 652.03,
+    "city": "The Address Building",
+    "state": "Karnataka",
+    "sectors": [
+      "Financial Technology (Fintech)"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-10-01",
+    "qualifies": true
+  },
+  {
+    "person": "Suketu Navinchandra Parikh (held Jointly With Lina Suketu Parikh)",
+    "companies": [
+      {
+        "company": "Prasol Chemicals Ltd.",
+        "ticker": "PRASOLCHEM",
+        "role": "Promoter",
+        "holding_value_cr": 248,
+        "ofs_cash_cr": 6
+      }
+    ],
+    "est_wealth_cr": 254,
+    "ofs_cash_cr": 6,
+    "holding_value_cr": 248,
+    "city": "T. T. C",
+    "state": "Maharashtra",
+    "sectors": [
+      "Specialty Chemicals"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-09-16",
+    "qualifies": true
+  },
+  {
+    "person": "Pushpa Navinchandra Parikh (held Jointly With Suketu Navinchandra Parikh)",
+    "companies": [
+      {
+        "company": "Prasol Chemicals Ltd.",
+        "ticker": "PRASOLCHEM",
+        "role": "Promoter",
+        "holding_value_cr": 248,
+        "ofs_cash_cr": 5.5
+      }
+    ],
+    "est_wealth_cr": 253.5,
+    "ofs_cash_cr": 5.5,
+    "holding_value_cr": 248,
+    "city": "T. T. C",
+    "state": "Maharashtra",
+    "sectors": [
+      "Specialty Chemicals"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-09-16",
+    "qualifies": true
+  },
+  {
+    "person": "Hero Cycles Ltd.",
+    "companies": [
+      {
+        "company": "Hero Motors Ltd.",
+        "ticker": "HEROMOTORS",
+        "role": "Promoter",
+        "holding_value_cr": 1704.38,
+        "ofs_cash_cr": 5
+      }
+    ],
+    "est_wealth_cr": 1709.38,
+    "ofs_cash_cr": 5,
+    "holding_value_cr": 1704.38,
+    "city": null,
+    "state": "Punjab",
+    "sectors": [
+      "Auto Components & Equipments"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-09-23",
+    "qualifies": true
+  },
+  {
+    "person": "Kinjal Pankil Dharia (held Jointly With Pankil Nishith Dharia)",
+    "companies": [
+      {
+        "company": "Prasol Chemicals Ltd.",
+        "ticker": "PRASOLCHEM",
+        "role": "Promoter",
+        "holding_value_cr": 248,
+        "ofs_cash_cr": 4.8
+      }
+    ],
+    "est_wealth_cr": 252.8,
+    "ofs_cash_cr": 4.8,
+    "holding_value_cr": 248,
+    "city": "T. T. C",
+    "state": "Maharashtra",
+    "sectors": [
+      "Specialty Chemicals"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-09-16",
+    "qualifies": true
+  },
+  {
+    "person": "Jignasha Jay Kantawala (held Jointly With Jay Shailesh Kantawala",
+    "companies": [
+      {
+        "company": "Prasol Chemicals Ltd.",
+        "ticker": "PRASOLCHEM",
+        "role": "Promoter",
+        "holding_value_cr": 248,
+        "ofs_cash_cr": 4
+      }
+    ],
+    "est_wealth_cr": 252,
+    "ofs_cash_cr": 4,
+    "holding_value_cr": 248,
+    "city": "T. T. C",
+    "state": "Maharashtra",
+    "sectors": [
+      "Specialty Chemicals"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-09-16",
+    "qualifies": true
+  },
+  {
+    "person": "Sundeep Navinchandra Parikh (held Jointly With Sheetal Sandeep Parikh)",
+    "companies": [
+      {
+        "company": "Prasol Chemicals Ltd.",
+        "ticker": "PRASOLCHEM",
+        "role": "Promoter",
+        "holding_value_cr": 248,
+        "ofs_cash_cr": 3.5
+      }
+    ],
+    "est_wealth_cr": 251.5,
+    "ofs_cash_cr": 3.5,
+    "holding_value_cr": 248,
+    "city": "T. T. C",
+    "state": "Maharashtra",
+    "sectors": [
+      "Specialty Chemicals"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-09-16",
+    "qualifies": true
+  },
+  {
+    "person": "Bhavini Harshal Parekh",
+    "companies": [
+      {
+        "company": "SS Retail Ltd.",
+        "ticker": "SSRETAIL",
+        "role": "Promoter",
+        "holding_value_cr": 817.24,
+        "ofs_cash_cr": 3
+      }
+    ],
+    "est_wealth_cr": 820.24,
+    "ofs_cash_cr": 3,
+    "holding_value_cr": 817.24,
+    "city": "Ratikmal Complex",
+    "state": "Maharashtra",
+    "sectors": [
+      "Speciality Retail"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-09-23",
+    "qualifies": true
+  },
+  {
+    "person": "Tushar Natverlal Dharia (held Jointly With Ami Tushar Dharia)",
+    "companies": [
+      {
+        "company": "Prasol Chemicals Ltd.",
+        "ticker": "PRASOLCHEM",
+        "role": "Promoter",
+        "holding_value_cr": 248,
+        "ofs_cash_cr": 0.52
+      }
+    ],
+    "est_wealth_cr": 248.52,
+    "ofs_cash_cr": 0.52,
+    "holding_value_cr": 248,
+    "city": "T. T. C",
+    "state": "Maharashtra",
+    "sectors": [
+      "Specialty Chemicals"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-09-16",
+    "qualifies": true
+  },
+  {
+    "person": "Lina Suketu Parikh (held Jointly With Suketu Navinchandra Parikh)",
+    "companies": [
+      {
+        "company": "Prasol Chemicals Ltd.",
+        "ticker": "PRASOLCHEM",
+        "role": "Promoter",
+        "holding_value_cr": 248,
+        "ofs_cash_cr": 0.51
+      }
+    ],
+    "est_wealth_cr": 248.51,
+    "ofs_cash_cr": 0.51,
+    "holding_value_cr": 248,
+    "city": "T. T. C",
+    "state": "Maharashtra",
+    "sectors": [
+      "Specialty Chemicals"
+    ],
+    "max_pledge_pct": null,
+    "confidence": "LOW",
+    "latest_listing_date": "2026-09-16",
+    "qualifies": true
+  }
+]
