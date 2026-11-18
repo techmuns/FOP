@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type MouseEvent, type CSSProperties } from 'react';
 import { useElementWidth, useTip, ChartFrame } from './ChartBase';
 import { arcPath } from '../../lib/chartMath';
 
@@ -62,22 +62,24 @@ export function Donut({ data, format, height = 240, centerTitle, centerValue, th
           {slices.map((s) => {
             const isActive = active === s.key;
             const grow = isActive ? 4 : 0;
-            return (
-              <path
-                key={s.key}
-                d={arcPath(cx, cy, rOuter + grow, rInner, s.start, s.end)}
-                fill={s.color}
-                stroke="#fff"
-                strokeWidth={2}
-                style={{ transition: 'all 0.15s ease', cursor: 'default' }}
-                onMouseMove={(e) => moveTip(e, s)}
-                onMouseEnter={() => setActive(s.key)}
-                onMouseLeave={() => {
-                  setActive(null);
-                  hide();
-                }}
-              />
-            );
+            const handlers = {
+              onMouseMove: (e: MouseEvent) => moveTip(e, s),
+              onMouseEnter: () => setActive(s.key),
+              onMouseLeave: () => {
+                setActive(null);
+                hide();
+              },
+              style: { transition: 'all 0.15s ease', cursor: 'default' } as CSSProperties,
+            };
+            // a single full slice can't be drawn as an SVG arc (start==end) — draw a ring/disc
+            if (s.frac >= 0.9999) {
+              return pie ? (
+                <circle key={s.key} cx={cx} cy={cy} r={rOuter + grow} fill={s.color} stroke="#fff" strokeWidth={2} {...handlers} />
+              ) : (
+                <circle key={s.key} cx={cx} cy={cy} r={(rOuter + grow + rInner) / 2} fill="none" stroke={s.color} strokeWidth={rOuter + grow - rInner} {...handlers} />
+              );
+            }
+            return <path key={s.key} d={arcPath(cx, cy, rOuter + grow, rInner, s.start, s.end)} fill={s.color} stroke="#fff" strokeWidth={2} {...handlers} />;
           })}
           {!pie && (centerTitle || centerValue) && (
             <>

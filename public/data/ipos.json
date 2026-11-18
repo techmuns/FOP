@@ -164,7 +164,7 @@
     "pledge_pct": null,
     "market_cap_cr": 4183,
     "offer_market_cap_cr": 3232.57,
-    "sector": null,
+    "sector": "Waste Management",
     "city": null,
     "state": "Maharashtra",
     "promoters": [
@@ -240,7 +240,8 @@
     "data_flags": {
       "current_promoter_pct": "screener",
       "market_cap": "screener"
-    }
+    },
+    "industry_id": "206"
   },
   {
     "id": "2559",
@@ -375,7 +376,7 @@
     "pledge_pct": null,
     "market_cap_cr": 1030490.55,
     "offer_market_cap_cr": 1030490.55,
-    "sector": null,
+    "sector": "Telecom - Cellular & Fixed line services",
     "city": "Nr. Centre Point",
     "state": "Gujarat",
     "promoters": [],
@@ -387,7 +388,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "196"
   },
   {
     "id": "2550",
@@ -835,7 +837,7 @@
     "pledge_pct": null,
     "market_cap_cr": 4046,
     "offer_market_cap_cr": 4172.01,
-    "sector": null,
+    "sector": "Business Process Outsourcing (BPO)/Knowledge Process Outsourcing (KPO)",
     "city": "Bidhan Nagar",
     "state": "West Bengal",
     "promoters": [
@@ -862,7 +864,8 @@
     "data_flags": {
       "current_promoter_pct": "screener",
       "market_cap": "screener"
-    }
+    },
+    "industry_id": "193"
   },
   {
     "id": "2628",
@@ -1136,7 +1139,7 @@
     "pledge_pct": null,
     "market_cap_cr": 4451,
     "offer_market_cap_cr": 3095.35,
-    "sector": null,
+    "sector": "Telecom - Equipment & Accessories",
     "city": null,
     "state": "New Delhi",
     "promoters": [
@@ -1177,7 +1180,8 @@
     "data_flags": {
       "current_promoter_pct": "screener",
       "market_cap": "screener"
-    }
+    },
+    "industry_id": "199"
   },
   {
     "id": "2543",
@@ -1656,7 +1660,7 @@
     "pledge_pct": null,
     "market_cap_cr": 3017,
     "offer_market_cap_cr": 3344.97,
-    "sector": null,
+    "sector": "Ceramics",
     "city": "Dhuva",
     "state": "Gujarat",
     "promoters": [
@@ -1676,7 +1680,8 @@
     "data_flags": {
       "current_promoter_pct": "screener",
       "market_cap": "screener"
-    }
+    },
+    "industry_id": "51"
   },
   {
     "id": "2805",
@@ -1726,7 +1731,7 @@
     "pledge_pct": null,
     "market_cap_cr": 441787.5,
     "offer_market_cap_cr": 441787.5,
-    "sector": null,
+    "sector": "Exchange and Data Platform",
     "city": "Bandra Kurla Complex",
     "state": "Maharashtra",
     "promoters": [
@@ -1899,7 +1904,8 @@
     "scraped_at": "2026-11-18T08:34:01.511Z",
     "data_flags": {
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "138"
   },
   {
     "id": "2225",
@@ -2232,7 +2238,7 @@
     "pledge_pct": null,
     "market_cap_cr": 4259,
     "offer_market_cap_cr": 2238.89,
-    "sector": null,
+    "sector": "Industrial Gases",
     "city": "Four Point",
     "state": "Gujarat",
     "promoters": [
@@ -2252,7 +2258,8 @@
     "data_flags": {
       "current_promoter_pct": "screener",
       "market_cap": "screener"
-    }
+    },
+    "industry_id": "22"
   },
   {
     "id": "2524",
@@ -3215,7 +3222,7 @@
     "pledge_pct": null,
     "market_cap_cr": 7200.23,
     "offer_market_cap_cr": 7200.23,
-    "sector": null,
+    "sector": "Precious Metals",
     "city": "Trade World",
     "state": "Maharashtra",
     "promoters": [
@@ -3249,7 +3256,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "34"
   },
   {
     "id": "2668",
@@ -3423,7 +3431,7 @@
     "pledge_pct": null,
     "market_cap_cr": 1121.36,
     "offer_market_cap_cr": 1121.36,
-    "sector": null,
+    "sector": "Film Production, Distribution & Exhibition",
     "city": null,
     "state": "Maharashtra",
     "promoters": [
@@ -3450,7 +3458,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "72"
   },
   {
     "id": "2663",
@@ -3554,7 +3563,7 @@
     "pledge_pct": null,
     "market_cap_cr": 17297.61,
     "offer_market_cap_cr": 17297.61,
-    "sector": null,
+    "sector": "Residential, Commercial Projects",
     "city": "Jupiter Textile Mills",
     "state": "Maharashtra",
     "promoters": [],
@@ -3566,7 +3575,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "77"
   },
   {
     "id": "2450",
@@ -3753,7 +3763,7 @@
     "pledge_pct": null,
     "market_cap_cr": 10777.81,
     "offer_market_cap_cr": 10777.81,
-    "sector": null,
+    "sector": "Dairy Products",
     "city": "Pattakaranpalayam",
     "state": "Tamil Nadu",
     "promoters": [
@@ -3780,7 +3790,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "114"
   },
   {
     "id": "2579",
@@ -5126,7 +5137,7 @@
     "pledge_pct": null,
     "market_cap_cr": 2881.06,
     "offer_market_cap_cr": 2881.06,
-    "sector": null,
+    "sector": "Other Financial Services",
     "city": null,
     "state": "Maharashtra",
     "promoters": [
@@ -5209,7 +5220,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "127"
   },
   {
     "id": "2676",
@@ -6057,7 +6069,7 @@
     "pledge_pct": null,
     "market_cap_cr": 12325.29,
     "offer_market_cap_cr": 12325.29,
-    "sector": null,
+    "sector": "Power Generation",
     "city": null,
     "state": "Maharashtra",
     "promoters": [
@@ -6105,7 +6117,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "200"
   },
   {
     "id": "2019",
@@ -6479,7 +6492,7 @@
     "pledge_pct": null,
     "market_cap_cr": 10711.1,
     "offer_market_cap_cr": 10711.1,
-    "sector": null,
+    "sector": "Coal",
     "city": "Koyla",
     "state": "Jharkhand",
     "promoters": [
@@ -6499,7 +6512,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "104"
   },
   {
     "id": "2289",
@@ -8796,7 +8810,7 @@
     "pledge_pct": null,
     "market_cap_cr": 3851.02,
     "offer_market_cap_cr": 3851.02,
-    "sector": null,
+    "sector": "Granites & Marbles",
     "city": null,
     "state": "Telangana",
     "promoters": [
@@ -8823,7 +8837,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "52"
   },
   {
     "id": "2429",
@@ -8842,7 +8857,7 @@
     "pledge_pct": null,
     "market_cap_cr": 10070,
     "offer_market_cap_cr": 10070,
-    "sector": null,
+    "sector": "Life Insurance",
     "city": "Ambadeep Building",
     "state": "New Delhi",
     "promoters": [
@@ -8876,7 +8891,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "142"
   },
   {
     "id": "2254",
@@ -8934,7 +8950,7 @@
     "pledge_pct": null,
     "market_cap_cr": 5304.5,
     "offer_market_cap_cr": 5304.5,
-    "sector": null,
+    "sector": "Asset Management Company",
     "city": null,
     "state": "Maharashtra",
     "promoters": [
@@ -8961,7 +8977,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "134"
   },
   {
     "id": "2064",
@@ -8980,7 +8997,7 @@
     "pledge_pct": null,
     "market_cap_cr": 77380.05,
     "offer_market_cap_cr": 77380.05,
-    "sector": null,
+    "sector": "Household Appliances",
     "city": null,
     "state": "New Delhi",
     "promoters": [
@@ -9000,7 +9017,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "55"
   },
   {
     "id": "2317",
@@ -9349,7 +9367,7 @@
     "pledge_pct": null,
     "market_cap_cr": 464.42,
     "offer_market_cap_cr": 464.42,
-    "sector": null,
+    "sector": "Dealers-Commercial Vehicles, Tractors, Construction Vehicles",
     "city": null,
     "state": "Chhattisgarh",
     "promoters": [
@@ -9383,7 +9401,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "157"
   },
   {
     "id": "2023",
@@ -9546,7 +9565,7 @@
     "pledge_pct": null,
     "market_cap_cr": 858.48,
     "offer_market_cap_cr": 858.48,
-    "sector": null,
+    "sector": "Trading - Metals",
     "city": "East Gandhi Maidan",
     "state": "Bihar",
     "promoters": [],
@@ -9558,7 +9577,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "37"
   },
   {
     "id": "2345",
@@ -9577,7 +9597,7 @@
     "pledge_pct": null,
     "market_cap_cr": 8005.99,
     "offer_market_cap_cr": 8005.99,
-    "sector": null,
+    "sector": "Diversified Metals",
     "city": null,
     "state": "Tamil Nadu",
     "promoters": [
@@ -9604,7 +9624,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "35"
   },
   {
     "id": "2028",
@@ -9700,7 +9721,7 @@
     "pledge_pct": null,
     "market_cap_cr": 1971.91,
     "offer_market_cap_cr": 1971.91,
-    "sector": null,
+    "sector": "E-Learning",
     "city": null,
     "state": "Maharashtra",
     "promoters": [
@@ -9720,7 +9741,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "86"
   },
   {
     "id": "2174",
@@ -9852,7 +9874,7 @@
     "pledge_pct": null,
     "market_cap_cr": 1301.22,
     "offer_market_cap_cr": 1301.22,
-    "sector": null,
+    "sector": "Packaged Foods",
     "city": null,
     "state": "West Bengal",
     "promoters": [
@@ -9893,7 +9915,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "116"
   },
   {
     "id": "2042",
@@ -10493,7 +10516,7 @@
     "pledge_pct": null,
     "market_cap_cr": 4105.54,
     "offer_market_cap_cr": 4105.54,
-    "sector": null,
+    "sector": "Shipping",
     "city": "Town Hall Circle",
     "state": "Gujarat",
     "promoters": [],
@@ -10505,7 +10528,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "184"
   },
   {
     "id": "2032",
@@ -10824,7 +10848,7 @@
     "pledge_pct": null,
     "market_cap_cr": 1801.37,
     "offer_market_cap_cr": 1801.37,
-    "sector": null,
+    "sector": "Houseware",
     "city": "Wadala",
     "state": "Maharashtra",
     "promoters": [
@@ -10858,7 +10882,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "56"
   },
   {
     "id": "2230",
@@ -10877,7 +10902,7 @@
     "pledge_pct": null,
     "market_cap_cr": 20041.46,
     "offer_market_cap_cr": 20041.46,
-    "sector": null,
+    "sector": "Cement & Cement Products",
     "city": "Bandra Kurla Complex",
     "state": "Maharashtra",
     "promoters": [
@@ -10911,7 +10936,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "25"
   },
   {
     "id": "2180",
@@ -10930,7 +10956,7 @@
     "pledge_pct": null,
     "market_cap_cr": 502.04,
     "offer_market_cap_cr": 502.04,
-    "sector": null,
+    "sector": "Road Assets–Toll, Annuity, Hybrid-Annuity",
     "city": "Pipliyahana Junction",
     "state": "Madhya Pradesh",
     "promoters": [
@@ -10957,7 +10983,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "188"
   },
   {
     "id": "2027",
@@ -11081,7 +11108,7 @@
     "pledge_pct": null,
     "market_cap_cr": 16000,
     "offer_market_cap_cr": 16000,
-    "sector": null,
+    "sector": "Depositories, Clearing Houses and Other Intermediaries",
     "city": null,
     "state": "Maharashtra",
     "promoters": [
@@ -11108,7 +11135,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "135"
   },
   {
     "id": "2030",
@@ -11390,7 +11418,7 @@
     "pledge_pct": null,
     "market_cap_cr": 2702.07,
     "offer_market_cap_cr": 2702.07,
-    "sector": null,
+    "sector": "Computers Hardware & Equipments",
     "city": null,
     "state": "Maharashtra",
     "promoters": [
@@ -11424,7 +11452,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "178"
   },
   {
     "id": "2029",
@@ -11443,7 +11472,7 @@
     "pledge_pct": null,
     "market_cap_cr": 31867.39,
     "offer_market_cap_cr": 31867.39,
-    "sector": null,
+    "sector": "Biotechnology",
     "city": "Bommasandra Industrial Area",
     "state": "Karnataka",
     "promoters": [
@@ -11519,7 +11548,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "147"
   },
   {
     "id": "2034",
@@ -11569,7 +11599,7 @@
     "pledge_pct": null,
     "market_cap_cr": 14484.74,
     "offer_market_cap_cr": 14484.74,
-    "sector": null,
+    "sector": "Restaurants",
     "city": "Shiv Sagar Estate",
     "state": "Maharashtra",
     "promoters": [
@@ -11589,7 +11619,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "81"
   },
   {
     "id": "2096",
@@ -11608,7 +11639,7 @@
     "pledge_pct": null,
     "market_cap_cr": 4287.07,
     "offer_market_cap_cr": 4287.07,
-    "sector": null,
+    "sector": "Internet & Catalogue Retail",
     "city": null,
     "state": "West Bengal",
     "promoters": [
@@ -11635,7 +11666,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "93"
   },
   {
     "id": "2074",
@@ -11914,7 +11946,7 @@
     "pledge_pct": null,
     "market_cap_cr": 1799.28,
     "offer_market_cap_cr": 1799.28,
-    "sector": null,
+    "sector": "Other Construction Materials",
     "city": "A Wing",
     "state": "Maharashtra",
     "promoters": [],
@@ -11926,7 +11958,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "26"
   },
   {
     "id": "2202",
@@ -11945,7 +11978,7 @@
     "pledge_pct": null,
     "market_cap_cr": 6998.21,
     "offer_market_cap_cr": 6998.21,
-    "sector": null,
+    "sector": "Compressors, Pumps & Diesel Engines",
     "city": "P.O.Kutail",
     "state": "Haryana",
     "promoters": [
@@ -11965,7 +11998,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "173"
   },
   {
     "id": "2172",
@@ -12046,7 +12080,7 @@
     "pledge_pct": null,
     "market_cap_cr": 26037.8,
     "offer_market_cap_cr": 26037.8,
-    "sector": null,
+    "sector": "Oil Storage & Transportation",
     "city": null,
     "state": "Gujarat",
     "promoters": [],
@@ -12058,7 +12092,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "100"
   },
   {
     "id": "2182",
@@ -12302,7 +12337,7 @@
     "pledge_pct": null,
     "market_cap_cr": 7196.19,
     "offer_market_cap_cr": 7196.19,
-    "sector": null,
+    "sector": "Construction Vehicles",
     "city": "Peenya Industrial Area",
     "state": "Karnataka",
     "promoters": [
@@ -12357,7 +12392,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "156"
   },
   {
     "id": "1975",
@@ -12516,7 +12552,7 @@
     "pledge_pct": null,
     "market_cap_cr": 713.93,
     "offer_market_cap_cr": 713.93,
-    "sector": null,
+    "sector": "Industrial Gases",
     "city": "Mindspace",
     "state": "Maharashtra",
     "promoters": [
@@ -12536,7 +12572,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "22"
   },
   {
     "id": "1961",
@@ -12811,7 +12848,7 @@
     "pledge_pct": null,
     "market_cap_cr": 1033.11,
     "offer_market_cap_cr": 1033.11,
-    "sector": null,
+    "sector": "Tractors",
     "city": null,
     "state": "Chandigarh",
     "promoters": [
@@ -12831,7 +12868,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "154"
   },
   {
     "id": "1942",
@@ -13775,7 +13813,7 @@
     "pledge_pct": null,
     "market_cap_cr": 2295.45,
     "offer_market_cap_cr": 2295.45,
-    "sector": null,
+    "sector": "Financial Technology (Fintech)",
     "city": "Pegasus One",
     "state": "Haryana",
     "promoters": [],
@@ -13787,7 +13825,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "145"
   },
   {
     "id": "1925",
@@ -13915,7 +13954,7 @@
     "pledge_pct": null,
     "market_cap_cr": 35168.01,
     "offer_market_cap_cr": 35168.01,
-    "sector": null,
+    "sector": "Diversified Retail",
     "city": null,
     "state": "Haryana",
     "promoters": [
@@ -13935,7 +13974,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "91"
   },
   {
     "id": "1918",
@@ -14028,7 +14068,7 @@
     "pledge_pct": null,
     "market_cap_cr": 2597.84,
     "offer_market_cap_cr": 2597.84,
-    "sector": null,
+    "sector": "Water Supply & Management",
     "city": "RG Metro Arcade",
     "state": "New Delhi",
     "promoters": [
@@ -14069,7 +14109,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "205"
   },
   {
     "id": "1902",
@@ -14119,7 +14160,7 @@
     "pledge_pct": null,
     "market_cap_cr": 4817.81,
     "offer_market_cap_cr": 4817.81,
-    "sector": null,
+    "sector": "Transport Related Services",
     "city": "Kadubeesanahalli",
     "state": "Karnataka",
     "promoters": [
@@ -14223,7 +14264,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "185"
   },
   {
     "id": "1899",
@@ -14288,7 +14330,7 @@
     "pledge_pct": null,
     "market_cap_cr": 17486.81,
     "offer_market_cap_cr": 17486.81,
-    "sector": null,
+    "sector": "Power Generation",
     "city": null,
     "state": "Haryana",
     "promoters": [
@@ -14308,7 +14350,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "200"
   },
   {
     "id": "1896",
@@ -14598,7 +14641,7 @@
     "pledge_pct": null,
     "market_cap_cr": 1801.39,
     "offer_market_cap_cr": 1801.39,
-    "sector": null,
+    "sector": "Diversified FMCG",
     "city": null,
     "state": "Maharashtra",
     "promoters": [
@@ -14653,7 +14696,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "122"
   },
   {
     "id": "1890",
@@ -14764,7 +14808,7 @@
     "pledge_pct": null,
     "market_cap_cr": 159258.06,
     "offer_market_cap_cr": 159258.06,
-    "sector": null,
+    "sector": "Passenger Cars & Utility Vehicles",
     "city": "Irrungattukottai",
     "state": "Tamil Nadu",
     "promoters": [
@@ -14784,7 +14828,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "42"
   },
   {
     "id": "1883",
@@ -15163,7 +15208,7 @@
     "pledge_pct": null,
     "market_cap_cr": 892.9,
     "offer_market_cap_cr": 892.9,
-    "sector": null,
+    "sector": "Tyres & Rubber Products",
     "city": "Kalady",
     "state": "Kerala",
     "promoters": [
@@ -15190,7 +15235,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "46"
   },
   {
     "id": "1822",
@@ -16597,7 +16643,7 @@
     "pledge_pct": null,
     "market_cap_cr": 682.74,
     "offer_market_cap_cr": 682.74,
-    "sector": null,
+    "sector": "Sponge Iron",
     "city": null,
     "state": "Chhattisgarh",
     "promoters": [],
@@ -16609,7 +16655,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "29"
   },
   {
     "id": "1580",
@@ -16628,7 +16675,7 @@
     "pledge_pct": null,
     "market_cap_cr": 7859.59,
     "offer_market_cap_cr": 7859.59,
-    "sector": null,
+    "sector": "Breweries & Distilleries",
     "city": null,
     "state": "Maharashtra",
     "promoters": [
@@ -16655,7 +16702,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "110"
   },
   {
     "id": "1749",
@@ -17004,7 +17052,7 @@
     "pledge_pct": null,
     "market_cap_cr": 24947.9,
     "offer_market_cap_cr": 24947.9,
-    "sector": null,
+    "sector": "General Insurance",
     "city": "Narveer Tanaji Wadi",
     "state": "Maharashtra",
     "promoters": [
@@ -17045,7 +17093,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "141"
   },
   {
     "id": "1717",
@@ -17170,7 +17219,7 @@
     "pledge_pct": null,
     "market_cap_cr": 10814.07,
     "offer_market_cap_cr": 10814.07,
-    "sector": null,
+    "sector": "Healthcare Research, Analytics & Technology",
     "city": "Manyata Embassy",
     "state": "Karnataka",
     "promoters": [
@@ -17232,7 +17281,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "151"
   },
   {
     "id": "1704",
@@ -17311,7 +17361,7 @@
     "pledge_pct": null,
     "market_cap_cr": 28500,
     "offer_market_cap_cr": 28500,
-    "sector": null,
+    "sector": "Telecom - Cellular & Fixed line services",
     "city": null,
     "state": "New Delhi",
     "promoters": [
@@ -17331,7 +17381,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "196"
   },
   {
     "id": "1682",
@@ -17420,7 +17471,7 @@
     "pledge_pct": null,
     "market_cap_cr": 2100.28,
     "offer_market_cap_cr": 2100.28,
-    "sector": null,
+    "sector": "Auto-Dealer",
     "city": "Mamangalam",
     "state": "Kerala",
     "promoters": [
@@ -17440,7 +17491,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "44"
   },
   {
     "id": "1667",
@@ -17512,7 +17564,7 @@
     "pledge_pct": null,
     "market_cap_cr": 866.01,
     "offer_market_cap_cr": 866.01,
-    "sector": null,
+    "sector": "Commodity Chemicals",
     "city": null,
     "state": "West Bengal",
     "promoters": [
@@ -17553,7 +17605,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "14"
   },
   {
     "id": "1620",
@@ -17805,7 +17858,7 @@
     "pledge_pct": null,
     "market_cap_cr": 3021.21,
     "offer_market_cap_cr": 3021.21,
-    "sector": null,
+    "sector": "Pharmacy Retail",
     "city": null,
     "state": "Haryana",
     "promoters": [
@@ -17951,7 +18004,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "90"
   },
   {
     "id": "1641",
@@ -18261,7 +18315,7 @@
     "pledge_pct": null,
     "market_cap_cr": 379.33,
     "offer_market_cap_cr": 379.33,
-    "sector": null,
+    "sector": "Fertilizers",
     "city": "Mulugu Mandal",
     "state": "Telangana",
     "promoters": [
@@ -18302,7 +18356,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "23"
   },
   {
     "id": "1619",
@@ -18430,7 +18485,7 @@
     "pledge_pct": null,
     "market_cap_cr": 2878.32,
     "offer_market_cap_cr": 2878.32,
-    "sector": null,
+    "sector": "Insurance Distributors",
     "city": null,
     "state": "Karnataka",
     "promoters": [
@@ -18534,7 +18589,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "144"
   },
   {
     "id": "1611",
@@ -18637,7 +18693,7 @@
     "pledge_pct": null,
     "market_cap_cr": 3097.52,
     "offer_market_cap_cr": 3097.52,
-    "sector": null,
+    "sector": "Heavy Electrical Equipment",
     "city": "I.D.A.Jeedimetla",
     "state": "Telangana",
     "promoters": [
@@ -18671,7 +18727,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "158"
   },
   {
     "id": "1595",
@@ -18917,7 +18974,7 @@
     "pledge_pct": null,
     "market_cap_cr": 4960.82,
     "offer_market_cap_cr": 4960.82,
-    "sector": null,
+    "sector": "Microfinance Institutions",
     "city": "Bandra Kurla Complex",
     "state": "Maharashtra",
     "promoters": [
@@ -18979,7 +19036,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "129"
   },
   {
     "id": "1593",
@@ -19153,7 +19211,7 @@
     "pledge_pct": null,
     "market_cap_cr": 5277.62,
     "offer_market_cap_cr": 5277.62,
-    "sector": null,
+    "sector": "Housing Finance Company",
     "city": null,
     "state": "Haryana",
     "promoters": [
@@ -19201,7 +19259,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "124"
   },
   {
     "id": "1567",
@@ -19421,7 +19480,7 @@
     "pledge_pct": null,
     "market_cap_cr": 3204,
     "offer_market_cap_cr": 3204,
-    "sector": null,
+    "sector": "Stationary",
     "city": null,
     "state": "Maharashtra",
     "promoters": [
@@ -19504,7 +19563,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "121"
   },
   {
     "id": "1569",
@@ -19523,7 +19583,7 @@
     "pledge_pct": null,
     "market_cap_cr": 8600.85,
     "offer_market_cap_cr": 8600.85,
-    "sector": null,
+    "sector": "Financial Institution",
     "city": "East Court",
     "state": "New Delhi",
     "promoters": [
@@ -19543,7 +19603,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "123"
   },
   {
     "id": "1563",
@@ -19769,7 +19830,7 @@
     "pledge_pct": null,
     "market_cap_cr": 10424.59,
     "offer_market_cap_cr": 10424.59,
-    "sector": null,
+    "sector": "Personal Care",
     "city": null,
     "state": "New Delhi",
     "promoters": [
@@ -19845,7 +19906,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "119"
   },
   {
     "id": "1552",
@@ -19864,7 +19926,7 @@
     "pledge_pct": null,
     "market_cap_cr": 13752.57,
     "offer_market_cap_cr": 13752.57,
-    "sector": null,
+    "sector": "Houseware",
     "city": "Dabhel",
     "state": "Dadra and Nagar Haveli and Daman and Diu",
     "promoters": [
@@ -19919,7 +19981,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "56"
   },
   {
     "id": "1547",
@@ -19984,7 +20047,7 @@
     "pledge_pct": null,
     "market_cap_cr": 2073.51,
     "offer_market_cap_cr": 2073.51,
-    "sector": null,
+    "sector": "LPG/CNG/PNG/LNG Supplier",
     "city": "Corporate Park",
     "state": "Gujarat",
     "promoters": [],
@@ -19996,7 +20059,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "96"
   },
   {
     "id": "1539",
@@ -20130,7 +20194,7 @@
     "pledge_pct": null,
     "market_cap_cr": 24990.02,
     "offer_market_cap_cr": 24990.02,
-    "sector": null,
+    "sector": "Port & Port services",
     "city": null,
     "state": "Maharashtra",
     "promoters": [],
@@ -20142,7 +20206,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "187"
   },
   {
     "id": "1513",
@@ -20320,7 +20385,7 @@
     "pledge_pct": null,
     "market_cap_cr": 2228.21,
     "offer_market_cap_cr": 2228.21,
-    "sector": null,
+    "sector": "Tour, Travel Related Services",
     "city": "Complex B Wing",
     "state": "Maharashtra",
     "promoters": [
@@ -20347,7 +20412,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "84"
   },
   {
     "id": "1505",
@@ -20454,7 +20520,7 @@
     "pledge_pct": null,
     "market_cap_cr": 2747.25,
     "offer_market_cap_cr": 2747.25,
-    "sector": null,
+    "sector": "Hotels & Resorts",
     "city": null,
     "state": "New Delhi",
     "promoters": [
@@ -20487,7 +20553,8 @@
     "scraped_at": "2026-11-18T09:12:05.477Z",
     "data_flags": {
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "80"
   },
   {
     "id": "1503",
@@ -20506,7 +20573,7 @@
     "pledge_pct": null,
     "market_cap_cr": 11676.74,
     "offer_market_cap_cr": 11676.74,
-    "sector": null,
+    "sector": "Cables - Electricals",
     "city": "Worli",
     "state": "Maharashtra",
     "promoters": [
@@ -20561,7 +20628,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "163"
   },
   {
     "id": "1496",
@@ -21327,7 +21395,7 @@
     "pledge_pct": null,
     "market_cap_cr": 2739.76,
     "offer_market_cap_cr": 2739.76,
-    "sector": null,
+    "sector": "Other Bank",
     "city": "Sehmalpur",
     "state": "Uttar Pradesh",
     "promoters": [],
@@ -21339,7 +21407,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "133"
   },
   {
     "id": "1452",
@@ -21558,7 +21627,7 @@
     "pledge_pct": null,
     "market_cap_cr": 2929.5,
     "offer_market_cap_cr": 2929.5,
-    "sector": null,
+    "sector": "Meat Products including Poultry",
     "city": null,
     "state": "Uttar Pradesh",
     "promoters": [
@@ -21613,7 +21682,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "118"
   },
   {
     "id": "1430",
@@ -21709,7 +21779,7 @@
     "pledge_pct": null,
     "market_cap_cr": 2846.76,
     "offer_market_cap_cr": 2846.76,
-    "sector": null,
+    "sector": "Other Electrical Equipment",
     "city": "MEPZ",
     "state": "Tamil Nadu",
     "promoters": [],
@@ -21721,7 +21791,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "159"
   },
   {
     "id": "1398",
@@ -21771,7 +21842,7 @@
     "pledge_pct": null,
     "market_cap_cr": 593.35,
     "offer_market_cap_cr": 593.35,
-    "sector": null,
+    "sector": "Granites & Marbles",
     "city": null,
     "state": "Rajasthan",
     "promoters": [
@@ -21798,7 +21869,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "52"
   },
   {
     "id": "1383",
@@ -22525,7 +22597,7 @@
     "pledge_pct": null,
     "market_cap_cr": 460.06,
     "offer_market_cap_cr": 460.06,
-    "sector": null,
+    "sector": "Transport Related Services",
     "city": null,
     "state": "New Delhi",
     "promoters": [
@@ -22545,7 +22617,8 @@
     "data_flags": {
       "market_cap": "offer",
       "current_promoter_pct": "post_issue"
-    }
+    },
+    "industry_id": "185"
   },
   {
     "id": "3216",
@@ -22888,7 +22961,7 @@
     "pledge_pct": null,
     "market_cap_cr": 208.37,
     "offer_market_cap_cr": 208.37,
-    "sector": null,
+    "sector": "Real Estate related services",
     "city": "C.S.C. AGCR Enclave",
     "state": "New Delhi",
     "promoters": [
@@ -22908,7 +22981,8 @@
     "data_flags": {
       "market_cap": "offer",
       "current_promoter_pct": "post_issue"
-    }
+    },
+    "industry_id": "78"
   },
   {
     "id": "2823",
@@ -23276,7 +23350,7 @@
     "pledge_pct": null,
     "market_cap_cr": 167,
     "offer_market_cap_cr": 192.23,
-    "sector": null,
+    "sector": "Seafood",
     "city": "Eluru District",
     "state": "Andhra Pradesh",
     "promoters": [
@@ -23303,7 +23377,8 @@
     "data_flags": {
       "current_promoter_pct": "screener",
       "market_cap": "screener"
-    }
+    },
+    "industry_id": "117"
   },
   {
     "id": "2651",
@@ -23731,7 +23806,7 @@
     "pledge_pct": null,
     "market_cap_cr": 190.86,
     "offer_market_cap_cr": 190.86,
-    "sector": null,
+    "sector": "LPG/CNG/PNG/LNG Supplier",
     "city": null,
     "state": "Gujarat",
     "promoters": [],
@@ -23743,7 +23818,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "96"
   },
   {
     "id": "2760",
@@ -23839,7 +23915,7 @@
     "pledge_pct": null,
     "market_cap_cr": 117.16,
     "offer_market_cap_cr": 117.16,
-    "sector": null,
+    "sector": "Wellness",
     "city": "Western Express Highway",
     "state": "Maharashtra",
     "promoters": [],
@@ -23851,7 +23927,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "83"
   },
   {
     "id": "2427",
@@ -24141,7 +24218,7 @@
     "pledge_pct": null,
     "market_cap_cr": 66.22,
     "offer_market_cap_cr": 66.22,
-    "sector": null,
+    "sector": "Petrochemicals",
     "city": "Commercial Complex",
     "state": "New Delhi",
     "promoters": [],
@@ -24153,7 +24230,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "19"
   },
   {
     "id": "2718",
@@ -24342,7 +24420,7 @@
     "pledge_pct": null,
     "market_cap_cr": 144.64,
     "offer_market_cap_cr": 144.64,
-    "sector": null,
+    "sector": "Shipping",
     "city": null,
     "state": "New Delhi",
     "promoters": [
@@ -24362,7 +24440,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "184"
   },
   {
     "id": "2730",
@@ -24412,7 +24491,7 @@
     "pledge_pct": null,
     "market_cap_cr": 143.15,
     "offer_market_cap_cr": 143.15,
-    "sector": null,
+    "sector": "Commodity Chemicals",
     "city": "Vatva",
     "state": "Gujarat",
     "promoters": [],
@@ -24424,7 +24503,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "14"
   },
   {
     "id": "2751",
@@ -24505,7 +24585,7 @@
     "pledge_pct": null,
     "market_cap_cr": 277.56,
     "offer_market_cap_cr": 277.56,
-    "sector": null,
+    "sector": "Amusement Parks/ Other Recreation",
     "city": "Mohan Studio Compound",
     "state": "Maharashtra",
     "promoters": [],
@@ -24517,7 +24597,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "82"
   },
   {
     "id": "2757",
@@ -25941,7 +26022,7 @@
     "pledge_pct": null,
     "market_cap_cr": 141.18,
     "offer_market_cap_cr": 141.18,
-    "sector": null,
+    "sector": "Oil Equipment & Services",
     "city": "N/r Shravan Chokdi",
     "state": "Gujarat",
     "promoters": [],
@@ -25953,7 +26034,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "101"
   },
   {
     "id": "2653",
@@ -27384,7 +27466,7 @@
     "pledge_pct": null,
     "market_cap_cr": 247.37,
     "offer_market_cap_cr": 247.37,
-    "sector": null,
+    "sector": "Auto-Dealer",
     "city": "Hongasandra",
     "state": "Karnataka",
     "promoters": [],
@@ -27396,7 +27478,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "44"
   },
   {
     "id": "2788",
@@ -28056,7 +28139,7 @@
     "pledge_pct": null,
     "market_cap_cr": 150.75,
     "offer_market_cap_cr": 150.75,
-    "sector": null,
+    "sector": "Plywood Boards/ Laminates",
     "city": null,
     "state": "West Bengal",
     "promoters": [
@@ -28097,7 +28180,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "60"
   },
   {
     "id": "2700",
@@ -28341,7 +28425,7 @@
     "pledge_pct": null,
     "market_cap_cr": 315.7,
     "offer_market_cap_cr": 315.7,
-    "sector": null,
+    "sector": "Sugar",
     "city": null,
     "state": "Maharashtra",
     "promoters": [
@@ -28361,7 +28445,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "107"
   },
   {
     "id": "2555",
@@ -28651,7 +28736,7 @@
     "pledge_pct": null,
     "market_cap_cr": 92.54,
     "offer_market_cap_cr": 92.54,
-    "sector": null,
+    "sector": "Leather And Leather Products",
     "city": null,
     "state": "Gujarat",
     "promoters": [
@@ -28797,7 +28882,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "57"
   },
   {
     "id": "2138",
@@ -29232,7 +29318,7 @@
     "pledge_pct": null,
     "market_cap_cr": 398.12,
     "offer_market_cap_cr": 398.12,
-    "sector": null,
+    "sector": "Plastic Products - Consumer",
     "city": null,
     "state": "Maharashtra",
     "promoters": [],
@@ -29244,7 +29330,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "59"
   },
   {
     "id": "2578",
@@ -29356,7 +29443,7 @@
     "pledge_pct": null,
     "market_cap_cr": 115.18,
     "offer_market_cap_cr": 115.18,
-    "sector": null,
+    "sector": "Lubricants",
     "city": null,
     "state": "West Bengal",
     "promoters": [],
@@ -29368,7 +29455,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "103"
   },
   {
     "id": "2261",
@@ -29418,7 +29506,7 @@
     "pledge_pct": null,
     "market_cap_cr": 152.76,
     "offer_market_cap_cr": 152.76,
-    "sector": null,
+    "sector": "Printing & Publication",
     "city": "(C.F.AREA) I.D.A",
     "state": "Telangana",
     "promoters": [],
@@ -29430,7 +29518,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "76"
   },
   {
     "id": "2607",
@@ -29889,7 +29978,7 @@
     "pledge_pct": null,
     "market_cap_cr": 150.09,
     "offer_market_cap_cr": 150.09,
-    "sector": null,
+    "sector": "Leisure Products",
     "city": "Solus Business Park",
     "state": "Maharashtra",
     "promoters": [],
@@ -29901,7 +29990,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "58"
   },
   {
     "id": "2396",
@@ -29920,7 +30010,7 @@
     "pledge_pct": null,
     "market_cap_cr": 194.38,
     "offer_market_cap_cr": 194.38,
-    "sector": null,
+    "sector": "Education",
     "city": "Begampur",
     "state": "Haryana",
     "promoters": [
@@ -29940,7 +30030,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "85"
   },
   {
     "id": "2547",
@@ -31156,7 +31247,7 @@
     "pledge_pct": null,
     "market_cap_cr": 184.6,
     "offer_market_cap_cr": 184.6,
-    "sector": null,
+    "sector": "Digital Entertainment",
     "city": null,
     "state": "New Delhi",
     "promoters": [],
@@ -31168,7 +31259,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "73"
   },
   {
     "id": "2265",
@@ -31403,7 +31495,7 @@
     "pledge_pct": null,
     "market_cap_cr": 40.52,
     "offer_market_cap_cr": 40.52,
-    "sector": null,
+    "sector": "Financial Products Distributor",
     "city": null,
     "state": "Rajasthan",
     "promoters": [
@@ -31430,7 +31522,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "136"
   },
   {
     "id": "2313",
@@ -31449,7 +31542,7 @@
     "pledge_pct": null,
     "market_cap_cr": 68.35,
     "offer_market_cap_cr": 68.35,
-    "sector": null,
+    "sector": "Pharmacy Retail",
     "city": "Devraj Premises",
     "state": "Maharashtra",
     "promoters": [],
@@ -31461,7 +31554,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "90"
   },
   {
     "id": "2326",
@@ -31573,7 +31667,7 @@
     "pledge_pct": null,
     "market_cap_cr": 225.1,
     "offer_market_cap_cr": 225.1,
-    "sector": null,
+    "sector": "Meat Products including Poultry",
     "city": "Vishal Tower",
     "state": "New Delhi",
     "promoters": [],
@@ -31585,7 +31679,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "118"
   },
   {
     "id": "2196",
@@ -31697,7 +31792,7 @@
     "pledge_pct": null,
     "market_cap_cr": 112.8,
     "offer_market_cap_cr": 112.8,
-    "sector": null,
+    "sector": "Rubber",
     "city": null,
     "state": "Telangana",
     "promoters": [],
@@ -31709,7 +31804,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "167"
   },
   {
     "id": "2341",
@@ -32006,7 +32102,7 @@
     "pledge_pct": null,
     "market_cap_cr": 238.74,
     "offer_market_cap_cr": 238.74,
-    "sector": null,
+    "sector": "Real Estate related services",
     "city": "Hiranandani Gardens",
     "state": "Maharashtra",
     "promoters": [],
@@ -32018,7 +32114,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "78"
   },
   {
     "id": "2439",
@@ -32076,7 +32173,7 @@
     "pledge_pct": null,
     "market_cap_cr": 279.62,
     "offer_market_cap_cr": 279.62,
-    "sector": null,
+    "sector": "Business Process Outsourcing (BPO)/Knowledge Process Outsourcing (KPO)",
     "city": "Railway Colony",
     "state": "Madhya Pradesh",
     "promoters": [],
@@ -32088,7 +32185,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "193"
   },
   {
     "id": "2143",
@@ -32753,7 +32851,7 @@
     "pledge_pct": null,
     "market_cap_cr": 211.88,
     "offer_market_cap_cr": 211.88,
-    "sector": null,
+    "sector": "Ferro & Silica Manganese",
     "city": null,
     "state": "Odisha",
     "promoters": [
@@ -32773,7 +32871,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "27"
   },
   {
     "id": "2431",
@@ -33850,7 +33949,7 @@
     "pledge_pct": null,
     "market_cap_cr": 338.07,
     "offer_market_cap_cr": 338.07,
-    "sector": null,
+    "sector": "Film Production, Distribution & Exhibition",
     "city": null,
     "state": "Gujarat",
     "promoters": [],
@@ -33862,7 +33961,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "72"
   },
   {
     "id": "2344",
@@ -34104,7 +34204,7 @@
     "pledge_pct": null,
     "market_cap_cr": 82.41,
     "offer_market_cap_cr": 82.41,
-    "sector": null,
+    "sector": "Seafood",
     "city": null,
     "state": "West Bengal",
     "promoters": [],
@@ -34116,7 +34216,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "117"
   },
   {
     "id": "2418",
@@ -34135,7 +34236,7 @@
     "pledge_pct": null,
     "market_cap_cr": 389.33,
     "offer_market_cap_cr": 389.33,
-    "sector": null,
+    "sector": "Airline",
     "city": "SIDCO Industrial Estate",
     "state": "Tamil Nadu",
     "promoters": [],
@@ -34147,7 +34248,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "180"
   },
   {
     "id": "2136",
@@ -34662,7 +34764,7 @@
     "pledge_pct": null,
     "market_cap_cr": 613.47,
     "offer_market_cap_cr": 613.47,
-    "sector": null,
+    "sector": "Breweries & Distilleries",
     "city": "Signature",
     "state": "Maharashtra",
     "promoters": [
@@ -34689,7 +34791,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "110"
   },
   {
     "id": "2111",
@@ -35008,7 +35111,7 @@
     "pledge_pct": null,
     "market_cap_cr": 96.43,
     "offer_market_cap_cr": 96.43,
-    "sector": null,
+    "sector": "Edible Oil",
     "city": "Orient Club",
     "state": "Gujarat",
     "promoters": [],
@@ -35020,7 +35123,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "106"
   },
   {
     "id": "2191",
@@ -35039,7 +35143,7 @@
     "pledge_pct": null,
     "market_cap_cr": 71,
     "offer_market_cap_cr": 71,
-    "sector": null,
+    "sector": "Footwear",
     "city": null,
     "state": "New Delhi",
     "promoters": [],
@@ -35051,7 +35155,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "64"
   },
   {
     "id": "2211",
@@ -35398,7 +35503,7 @@
     "pledge_pct": null,
     "market_cap_cr": 152.28,
     "offer_market_cap_cr": 152.28,
-    "sector": null,
+    "sector": "Consumer Electronics",
     "city": "Barton Centre",
     "state": "Karnataka",
     "promoters": [],
@@ -35410,7 +35515,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "49"
   },
   {
     "id": "2144",
@@ -35941,7 +36047,7 @@
     "pledge_pct": null,
     "market_cap_cr": 157.82,
     "offer_market_cap_cr": 157.82,
-    "sector": null,
+    "sector": "Aluminium",
     "city": "Community Centre",
     "state": "New Delhi",
     "promoters": [],
@@ -35953,7 +36059,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "31"
   },
   {
     "id": "2239",
@@ -36003,7 +36110,7 @@
     "pledge_pct": null,
     "market_cap_cr": 108.82,
     "offer_market_cap_cr": 108.82,
-    "sector": null,
+    "sector": "Sanitary Ware",
     "city": "B/H Shantidham Residency",
     "state": "Gujarat",
     "promoters": [],
@@ -36015,7 +36122,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "61"
   },
   {
     "id": "2216",
@@ -37195,7 +37303,7 @@
     "pledge_pct": null,
     "market_cap_cr": 226.12,
     "offer_market_cap_cr": 226.12,
-    "sector": null,
+    "sector": "Explosives",
     "city": "Pramukh Tangent Complex",
     "state": "Gujarat",
     "promoters": [],
@@ -37207,7 +37315,8 @@
     "data_flags": {
       "current_promoter_pct": "post_issue",
       "market_cap": "offer"
-    }
+    },
+    "industry_id": "18"
   },
   {
     "id": "1994",

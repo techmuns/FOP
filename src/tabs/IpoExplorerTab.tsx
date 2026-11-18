@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Rocket, Factory, PieChart, Scale, Search, X } from 'lucide-react';
 import type { AppData, IPO } from '../types';
 import { PageHeader, Card, CardHeader, MiniStat, Badge } from '../components/ui/Card';
@@ -39,10 +39,30 @@ function SplitBar({ fresh, ofs }: { fresh: number | null; ofs: number | null }) 
   );
 }
 
-export function IpoExplorerTab({ data, onOpenPromoter }: { data: AppData; onOpenPromoter: (person: string) => void }) {
+export function IpoExplorerTab({
+  data,
+  onOpenPromoter,
+  focusCompany,
+  onClearFocus,
+}: {
+  data: AppData;
+  onOpenPromoter: (person: string) => void;
+  focusCompany?: string | null;
+  onClearFocus?: () => void;
+}) {
   const [seg, setSeg] = useState<Seg>('all');
   const [year, setYear] = useState('all');
   const [q, setQ] = useState('');
+
+  // when opened from a Promoter 360 company card, filter to & highlight that IPO
+  useEffect(() => {
+    if (focusCompany) {
+      setSeg('all');
+      setYear('all');
+      setQ(focusCompany);
+    }
+  }, [focusCompany]);
+  const focusId = focusCompany ? data.ipos.find((i) => i.company === focusCompany)?.id ?? null : null;
 
   const yearOpts = useMemo(() => {
     const ys = new Set<string>();
@@ -113,10 +133,11 @@ export function IpoExplorerTab({ data, onOpenPromoter }: { data: AppData; onOpen
       m.set(s, (m.get(s) || 0) + w);
     }
     const sorted = [...m.entries()].sort((a, b) => b[1] - a[1]);
-    const top = sorted.slice(0, 8);
-    const restCr = sorted.slice(8).reduce((s, [, v]) => s + v, 0);
+    const TOP = 11;
+    const top = sorted.slice(0, TOP);
+    const restCr = sorted.slice(TOP).reduce((s, [, v]) => s + v, 0);
     const out = top.map(([sector, cr]) => ({ key: sector, label: sector, value: Math.round(cr), color: sectorColor(sector) }));
-    if (restCr > 0) out.push({ key: 'other', label: 'Other sectors', value: Math.round(restCr), color: '#CBD5E1' });
+    if (restCr > 0) out.push({ key: 'other', label: `Other sectors (${sorted.length - TOP})`, value: Math.round(restCr), color: '#CBD5E1' });
     return out;
   }, [ipos]);
   const sectorTotal = sectorDonut.reduce((s, d) => s + d.value, 0);
@@ -272,11 +293,23 @@ export function IpoExplorerTab({ data, onOpenPromoter }: { data: AppData; onOpen
 
       {/* table */}
       <Card pad={false}>
-        <div className="flex items-center justify-between px-4 py-2.5">
+        <div className="flex items-center justify-between gap-2 px-4 py-2.5">
           <h3 className="flex items-center gap-1.5 text-[13.5px] font-bold text-mun-ink">
             <Rocket size={15} className="text-mun-primary" /> {num(ipos.length)} IPOs
           </h3>
-          <span className="text-[11px] text-mun-grey">Click a row → the lead promoter's 360</span>
+          {focusCompany ? (
+            <button
+              onClick={() => {
+                setQ('');
+                onClearFocus?.();
+              }}
+              className="inline-flex items-center gap-1.5 rounded-full bg-mun-primary/10 px-2.5 py-1 text-[11px] font-semibold text-mun-primary transition hover:bg-mun-primary/20"
+            >
+              Focused: {companyShort(focusCompany)} <X size={12} />
+            </button>
+          ) : (
+            <span className="text-[11px] text-mun-grey">Click a row → the lead promoter's 360</span>
+          )}
         </div>
         <Table
           columns={columns}
@@ -287,6 +320,7 @@ export function IpoExplorerTab({ data, onOpenPromoter }: { data: AppData; onOpen
             const lead = leadPromoter(i);
             if (lead) onOpenPromoter(lead);
           }}
+          activeKey={focusId}
           maxHeight={600}
           dense
         />

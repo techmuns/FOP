@@ -65,32 +65,38 @@ async function fetchQuoteForTicker(ticker, token) {
   return null;
 }
 
-async function fetchQuote(symbol, token, retries = 2) {
+// Munshot's gateway 502s intermittently, so retry with exponential backoff + jitter: the
+// "Refresh prices" button self-recovers within a few hundred ms instead of returning nothing.
+async function fetchQuote(symbol, token, retries = 3) {
   const headers = { 'content-type': 'application/json' };
   if (token) headers.authorization = `Bearer ${token}`;
+  const backoff = (attempt) => 250 * 2 ** attempt + Math.floor(Math.random() * 150);
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
       const ctrl = new AbortController();
       const timer = setTimeout(() => ctrl.abort(), 12000);
-      const res = await fetch(MUNSHOT_API, {
-        method: 'POST',
-        headers,
-        body: JSON.stringify({ ticker_symbol: symbol, type: 'stockquote', country: 'India' }),
-        signal: ctrl.signal,
-      });
-      clearTimeout(timer);
+      let res;
+      try {
+        res = await fetch(MUNSHOT_API, {
+          method: 'POST',
+          headers,
+          body: JSON.stringify({ ticker_symbol: symbol, type: 'stockquote', country: 'India' }),
+          signal: ctrl.signal,
+        });
+      } finally {
+        clearTimeout(timer);
+      }
+      // retry 5xx / 429 (transient); give up on other 4xx (e.g. 404 = ticker not covered)
       if (!res.ok) {
-        if (attempt < retries) {
-          await sleep(400 * (attempt + 1));
+        if ((res.status >= 500 || res.status === 429) && attempt < retries) {
+          await sleep(backoff(attempt));
           continue;
         }
         return null;
       }
-      const parsed = parseQuote(await res.text());
-      if (parsed) return parsed;
-      return null;
+      return parseQuote(await res.text());
     } catch {
-      if (attempt < retries) await sleep(400 * (attempt + 1));
+      if (attempt < retries) await sleep(backoff(attempt));
     }
   }
   return null;

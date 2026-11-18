@@ -17,10 +17,15 @@ export default function App() {
   const [busy, setBusy] = useState(false);
   const [flash, setFlash] = useState<{ ok: boolean; msg: string } | null>(null);
   const [focusPerson, setFocusPerson] = useState<string | null>(null);
+  const [focusIpo, setFocusIpo] = useState<string | null>(null);
 
   const openPromoter = (person: string) => {
     setFocusPerson(person);
     setTab('promoters');
+  };
+  const openIpo = (company: string) => {
+    setFocusIpo(company);
+    setTab('ipos');
   };
 
   const tabs: TabDef<TabKey>[] = [
@@ -71,8 +76,10 @@ export default function App() {
         {status === 'ready' && data && (
           <>
             {tab === 'hitlist' && <HitListTab data={data} onOpenPromoter={openPromoter} />}
-            {tab === 'ipos' && <IpoExplorerTab data={data} onOpenPromoter={openPromoter} />}
-            {tab === 'promoters' && <Promoter360Tab data={data} focusPerson={focusPerson} onClearFocus={() => setFocusPerson(null)} />}
+            {tab === 'ipos' && <IpoExplorerTab data={data} onOpenPromoter={openPromoter} focusCompany={focusIpo} onClearFocus={() => setFocusIpo(null)} />}
+            {tab === 'promoters' && (
+              <Promoter360Tab data={data} focusPerson={focusPerson} onClearFocus={() => setFocusPerson(null)} onOpenPromoter={openPromoter} onOpenIpo={openIpo} />
+            )}
           </>
         )}
       </main>

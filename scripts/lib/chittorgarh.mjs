@@ -13,10 +13,62 @@
  * IPO disclosures are immutable once listed, so detail pages are scraped once & cached.
  */
 import { load } from 'cheerio';
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { fetchJson, fetchText, sleep, nowISO, stripTags, toNum, toCr } from './http.mjs';
 
 const API = 'https://webnodejs.chittorgarh.com/cloud/report/data-read/82';
 const PAGE_SIZE = 5;
+const CACHE_PATH = path.join(path.dirname(fileURLToPath(import.meta.url)), '../.cache/industries.json');
+
+// Chittorgarh industry id → name (resolved once from the per-industry report page's <h1>, then cached).
+let _industryCache = null;
+function industryCache() {
+  if (_industryCache) return _industryCache;
+  try {
+    _industryCache = existsSync(CACHE_PATH) ? JSON.parse(readFileSync(CACHE_PATH, 'utf8')) : {};
+  } catch {
+    _industryCache = {};
+  }
+  return _industryCache;
+}
+export async function resolveIndustryName(id, { log = () => {} } = {}) {
+  if (!id) return null;
+  const cache = industryCache();
+  if (Object.prototype.hasOwnProperty.call(cache, id)) return cache[id];
+  let name = null;
+  try {
+    const html = await fetchText(`https://www.chittorgarh.com/report/sector-wise-ipo-list-in-india/96/all/${id}/`, { label: `industry ${id}`, timeout: 30, retries: 2 });
+    const m =
+      html.match(/<h1[^>]*>\s*IPOs?\s*-\s*([^<]+?)\s*:\s*\d{4}/i) ||
+      html.match(/<title>[^<]*\|\s*([^<|]+?)\s+(?:Sector\s+)?IPO/i);
+    if (m) name = stripTags(m[1]).replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim() || null;
+  } catch {
+    /* leave null */
+  }
+  cache[id] = name;
+  try {
+    mkdirSync(path.dirname(CACHE_PATH), { recursive: true });
+    writeFileSync(CACHE_PATH, JSON.stringify(cache, null, 2));
+  } catch {
+    /* ignore */
+  }
+  if (name) log(`   · industry ${id} → ${name}`);
+  return name;
+}
+
+// Last-resort sector for well-known mega names whose detail page carries no industry link.
+const MEGA_SECTOR = [
+  [/hyundai motor/i, 'Passenger Cars & Utility Vehicles'],
+  [/\blg electronics/i, 'Consumer Electronics'],
+  [/vishal mega mart/i, 'Retail'],
+  [/jio (financial|platforms)/i, 'Financial Services'],
+];
+export function megaSector(name) {
+  for (const [re, s] of MEGA_SECTOR) if (re.test(name)) return s;
+  return null;
+}
 
 const MON = { Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5, Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11 };
 
@@ -202,10 +254,17 @@ export function parseDetailHtml(html) {
 
   const ticker = (escField(html, 'nse_symbol') || '').trim() || (escField(html, 'bse_scripcode') || '').trim() || null;
 
-  // sector from the "Recently … IPOs in <industry>" heading (read raw, stop at tag)
+  // sector: (1) the sector-wise link's title/anchor, (2) the "Recently … IPOs in X" heading
   let sector = null;
-  const sm = html.match(/Recently[^<]{0,30}IPOs?\s+in\s+(?:<[^>]+>\s*)?([^<>]{2,60})/i);
-  if (sm) sector = sm[1].replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim() || null;
+  const linkM =
+    html.match(/sector-wise-ipo-list-in-india[\\/]+96[\\/]+all[\\/]+\d+[\\/]*["'\\]*[^>]*?title=\\?["']\s*Industry:\s*([^"'\\]{2,55})/i) ||
+    html.match(/title=\\?["']\s*Industry:\s*([^"'\\]{2,55})/i);
+  if (linkM) sector = stripTags(linkM[1]).replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim() || null;
+  if (!sector) {
+    const sm = html.match(/Recently[^<]{0,30}IPOs?\s+in\s+(?:<[^>]+>\s*)?([^<>]{2,60})/i);
+    if (sm) sector = sm[1].replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim() || null;
+  }
+  const industry_id = (escField(html, 'ipo_industry') || '').replace(/[^0-9]/g, '') || null;
 
   // registered office city/state from JSON-LD PostalAddress
   let state = null;
@@ -235,6 +294,7 @@ export function parseDetailHtml(html) {
     post_promoter_pct: post,
     offer_market_cap_cr: offerMcapCr,
     sector,
+    industry_id,
     city,
     state,
     promoters,
@@ -251,6 +311,10 @@ export async function scrapeDetail(row, { politeMs = 1200, log = () => {} } = {}
     return null;
   }
   const d = parseDetailHtml(html);
+  // resolve the sector when the page has no "same industry" heading: industry id → name, then mega-map
+  let sector = d.sector;
+  if (!sector && d.industry_id) sector = await resolveIndustryName(d.industry_id, { log });
+  if (!sector) sector = megaSector(row.company);
   if (politeMs) await sleep(politeMs);
   return {
     id: row.id,
@@ -269,7 +333,8 @@ export async function scrapeDetail(row, { politeMs = 1200, log = () => {} } = {}
     pledge_pct: null,
     market_cap_cr: null,
     offer_market_cap_cr: d.offer_market_cap_cr,
-    sector: d.sector,
+    sector,
+    industry_id: d.industry_id,
     city: d.city,
     state: d.state,
     promoters: d.promoters,
