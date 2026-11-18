@@ -44,7 +44,7 @@ function parseScreener(html, url, basis) {
 export async function fetchScreener(symbols, { politeMs = 1100, log = () => {} } = {}) {
   const tried = [];
   for (const sym of symbols.filter(Boolean)) {
-    for (const variant of ['consolidated/', '']) {
+    for (const variant of ['', 'consolidated/']) {
       const url = `https://www.screener.in/company/${encodeURIComponent(sym)}/${variant}`;
       tried.push(url);
       let html;

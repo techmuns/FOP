@@ -29,6 +29,9 @@ export interface IPO {
   current_promoter_pct: number | null;
   pledge_pct: number | null;
   market_cap_cr: number | null;
+  /** at-offer market cap from the prospectus — a flagged fallback when there's no live cap */
+  offer_market_cap_cr: number | null;
+  current_price: number | null;
   sector: string | null;
   city: string | null;
   state: string | null;
@@ -47,6 +50,9 @@ export interface ProspectCompany {
   company: string;
   ticker: string | null;
   role: string;
+  exchange: Exchange;
+  listing_date: string | null;
+  sector: string | null;
   holding_value_cr: number | null;
   ofs_cash_cr: number | null;
 }
@@ -78,7 +84,13 @@ export interface DataSource {
 export interface Meta {
   generated_at: string;
   universe: { mainboard: number; sme: number; years: number[] };
-  counts: { ipos: number; prospects: number; qualifying: number };
+  counts: {
+    ipos: number;
+    ipos_detailed?: number;
+    prospects: number;
+    qualifying: number;
+    thresholds?: Record<string, number>;
+  };
   data_sources: DataSource[];
   /** in-session provenance: what is real vs seeded, and anything that blocked */
   seeding?: { mode: string; real: string[]; blocked: string[]; notes?: string[] };

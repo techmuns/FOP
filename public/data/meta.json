@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-18T08:39:48.407Z",
-  "mode": "seed",
+  "generated_at": "2026-11-18T10:05:59.556Z",
+  "mode": "rollup",
   "universe": {
     "mainboard": 362,
     "sme": 444,
@@ -13,8 +13,17 @@
   },
   "counts": {
     "ipos": 806,
-    "prospects": 68,
-    "qualifying": 68
+    "ipos_detailed": 803,
+    "prospects": 789,
+    "qualifying": 555,
+    "thresholds": {
+      "25": 789,
+      "50": 696,
+      "100": 598,
+      "150": 555,
+      "250": 459,
+      "500": 308
+    }
   },
   "data_sources": [
     {
@@ -33,22 +42,21 @@
       "name": "Munshot API",
       "url": "https://fastapi.muns.io/stock-data",
       "status": "blocked",
-      "note": "Live price & market cap"
+      "note": "Live price & market cap (bare NSE symbol)"
     }
   ],
   "seeding": {
-    "mode": "seed",
+    "mode": "rollup",
     "real": [
-      "Chittorgarh universe + promoter/OFS disclosures (50 detail pages)",
+      "Chittorgarh promoter/OFS disclosures (803 detail pages)",
       "Screener.in promoter% / pledge / market cap (36 companies)"
     ],
-    "blocked": [
-      "Munshot live API (HTTP 502 / unreachable)"
-    ],
+    "blocked": [],
     "notes": [
-      "50 IPOs deep-scraped for promoter/OFS; 756 list-level only.",
-      "Market cap source per IPO is flagged in data_flags (munshot-live / screener / offer)."
+      "803/806 IPOs deep-scraped for promoter/OFS; 3 list-level only (the backfill Action finishes the rest).",
+      "803 IPOs have a market cap (munshot-live / screener / at-offer — see each record's data_flags).",
+      "prospects.json keeps everyone ≥ ₹25 Cr; the UI threshold slider filters live."
     ]
   },
-  "took_seconds": 523
+  "took_seconds": 0
 }

@@ -1,15 +1,26 @@
-import { UserSearch, PieChart, Layers, MapPin, ShieldCheck } from 'lucide-react';
+import { UserSearch, PieChart, Layers, MapPin, ShieldCheck, X, Building2 } from 'lucide-react';
 import type { AppData } from '../types';
 import { PageHeader, Card, CardHeader, MiniStat, Badge } from '../components/ui/Card';
 import { Donut, type DonutDatum } from '../components/charts/Donut';
 import { HBars, type HBarDatum } from '../components/charts/Bars';
 import { fmtCr, num } from '../lib/format';
-import { prospectsByBand, sectorTotals, summary } from '../lib/wealth';
+import { prospectsByBand, sectorTotals, summary, normalizeName } from '../lib/wealth';
 import { sectorColor, CONFIDENCE_COLOR, MUN } from '../lib/brand';
 
-export function Promoter360Tab({ data }: { data: AppData }) {
+export function Promoter360Tab({
+  data,
+  focusPerson,
+  onClearFocus,
+}: {
+  data: AppData;
+  focusPerson?: string | null;
+  onClearFocus?: () => void;
+}) {
   const prospects = data.prospects.filter((p) => p.qualifies);
   const s = summary(prospects);
+  const focusKey = focusPerson ? normalizeName(focusPerson).key : null;
+  const focused = focusKey ? data.prospects.find((p) => normalizeName(p.person).key === focusKey) : null;
+  const focusName = focused?.person ?? focusPerson;
 
   const bands = prospectsByBand(prospects).filter((b) => b.count > 0);
   const donut: DonutDatum[] = bands.map((b) => ({
@@ -40,6 +51,53 @@ export function Promoter360Tab({ data }: { data: AppData }) {
 
   return (
     <div className="animate-fade-up">
+      {focusPerson && (
+        <Card className="mb-4 border-mun-primary/30 bg-gradient-to-br from-mun-primary/[0.05] to-transparent">
+          <div className="flex items-start justify-between gap-3">
+            <div className="flex items-start gap-3">
+              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl text-[13px] font-bold text-white" style={{ background: focused ? CONFIDENCE_COLOR[focused.confidence] : MUN.grey }}>
+                {(focusName || '?').split(/\s+/).map((w) => w[0]).slice(0, 2).join('').toUpperCase()}
+              </span>
+              <div className="min-w-0">
+                <h3 className="font-display text-[17px] font-extrabold leading-tight text-mun-ink">{focusName}</h3>
+                {focused ? (
+                  <>
+                    <div className="mt-1 flex flex-wrap items-center gap-x-4 gap-y-1 text-[12.5px]">
+                      <span className="text-mun-grey">Est. wealth <b className="tnum text-mun-primary">{fmtCr(focused.est_wealth_cr)}</b></span>
+                      <span className="text-mun-grey">Cash out <b className="tnum" style={{ color: MUN.amber }}>{fmtCr(focused.ofs_cash_cr)}</b></span>
+                      <span className="text-mun-grey">Still held <b className="tnum" style={{ color: MUN.emerald }}>{fmtCr(focused.holding_value_cr)}</b></span>
+                      <Badge color={CONFIDENCE_COLOR[focused.confidence]}>{focused.confidence}</Badge>
+                    </div>
+                    <div className="mt-1.5 flex flex-wrap items-center gap-1.5">
+                      <Building2 size={13} className="text-mun-grey" />
+                      {focused.companies.map((c, i) => (
+                        <span key={i} className="rounded-md bg-white px-1.5 py-0.5 text-[10.5px] font-medium text-mun-slate shadow-sm">
+                          {c.company.replace(/\s+(Ltd\.?|Limited)\.?$/i, '')}
+                        </span>
+                      ))}
+                      {(focused.city || focused.state) && (
+                        <span className="inline-flex items-center gap-1 text-[11px] text-mun-grey">
+                          <MapPin size={12} /> {[focused.city, focused.state].filter(Boolean).join(', ')}
+                        </span>
+                      )}
+                    </div>
+                  </>
+                ) : (
+                  <p className="mt-1 text-[12.5px] text-mun-grey">Selected from the list — this person sits below the ₹25 Cr floor, so there's no full record yet.</p>
+                )}
+                <p className="mt-2 text-[11.5px] italic text-mun-grey">
+                  Full 360 profile — company trail, cash-out timeline, residual stake, pledge risk & contactable geography — ships in the next release.
+                </p>
+              </div>
+            </div>
+            {onClearFocus && (
+              <button onClick={onClearFocus} className="shrink-0 rounded-lg p-1.5 text-mun-grey transition hover:bg-white hover:text-mun-slate" title="Clear selection">
+                <X size={16} />
+              </button>
+            )}
+          </div>
+        </Card>
+      )}
       <PageHeader
         icon={UserSearch}
         title="Promoter 360"

@@ -14,9 +14,6 @@ on:
       sme_pages:
         description: 'Max list pages per SME financial year'
         default: '400'
-      enrich_cap:
-        description: 'Max listed names to enrich live (Screener/Munshot)'
-        default: '250'
 
 permissions:
   contents: write
@@ -43,11 +40,11 @@ jobs:
         continue-on-error: true
         run: npx --yes playwright@1.48.2 install --with-deps chromium
 
-      - name: Backfill IPO universe + promoter/OFS + prospects
+      - name: Backfill IPO universe + promoter/OFS + prospects (no cap; resumes from committed ipos.json)
         env:
           MB_PAGES: ${{ github.event.inputs.mb_pages }}
           SME_PAGES: ${{ github.event.inputs.sme_pages }}
-          ENRICH_CAP: ${{ github.event.inputs.enrich_cap }}
+          MUNSHOT_TOKEN: ${{ secrets.MUNSHOT_TOKEN }}
         run: npm run backfill
 
       - name: Commit refreshed data if changed

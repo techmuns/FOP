@@ -3,7 +3,8 @@
 import type { IPO, Prospect, Confidence, ProspectCompany } from '../types';
 import { wealthBand, WEALTH_BANDS } from './brand';
 
-export const GATE_CR = 150;
+export const GATE_CR = 150; // "qualifies" convenience flag
+export const FLOOR_CR = 25; // keep everyone ≥ ₹25 Cr; the UI threshold slider filters live
 
 const HONORIFICS = /^(?:m\/s|mr|mrs|ms|dr|prof|shri|sri|smt|late|col|capt|maj|justice|sardar|thiru)\.?\s+/i;
 const ENTITY_RE =
@@ -42,9 +43,21 @@ function weakest(a: Confidence | null, b: Confidence): Confidence {
 export function computeCompanyWealth(ipo: IPO): IPO {
   let pct = ipo.current_promoter_pct;
   if (pct == null) pct = ipo.post_promoter_pct;
+  // fall back to the at-offer valuation when there's no live market cap
+  if (ipo.market_cap_cr == null && ipo.offer_market_cap_cr != null) {
+    ipo.market_cap_cr = ipo.offer_market_cap_cr;
+    ipo.data_flags = { ...(ipo.data_flags || {}), market_cap: 'offer' };
+  }
   const mcap = ipo.market_cap_cr;
   ipo.holding_value_cr = pct != null && mcap != null ? round((pct / 100) * mcap) : null;
   const sellers = ipo.promoters || [];
+  // normalise OFS cash to shares × issue_price_upper (self-heals records whose source
+  // table lacked the disclosed "Amount" column)
+  for (const s of sellers) {
+    if (s.ofs_shares != null && ipo.issue_price_high != null) {
+      s.ofs_cr = round((s.ofs_shares * ipo.issue_price_high) / 1e7);
+    }
+  }
   const hasOfs = sellers.some((p) => p.is_promoter && p.ofs_cr != null);
   ipo.promoter_ofs_cash_cr = hasOfs
     ? round(sellers.filter((p) => p.is_promoter && p.ofs_cr != null).reduce((s, p) => s + (p.ofs_cr || 0), 0))
@@ -66,7 +79,9 @@ export function recomputeHoldings(ipos: IPO[], prices: Record<string, { current?
   });
 }
 
-export function rollUpProspects(ipos: IPO[]): Prospect[] {
+export function rollUpProspects(ipos: IPO[], opts: { floorCr?: number; qualifyCr?: number } = {}): Prospect[] {
+  const floorCr = opts.floorCr ?? FLOOR_CR;
+  const qualifyCr = opts.qualifyCr ?? GATE_CR;
   type Acc = {
     person: string;
     displays: Set<string>;
@@ -130,6 +145,9 @@ export function rollUpProspects(ipos: IPO[]): Prospect[] {
           : n.isEntity
             ? 'Promoter Group'
             : 'Promoter',
+        exchange: ipo.exchange,
+        listing_date: ipo.listing_date || null,
+        sector: ipo.sector || null,
         holding_value_cr: holdCr,
         ofs_cash_cr: ofsCr,
       });
@@ -165,11 +183,11 @@ export function rollUpProspects(ipos: IPO[]): Prospect[] {
       max_pledge_pct: p.pledge != null ? round(p.pledge, 1) : null,
       confidence: p.confidence || 'HIGH',
       latest_listing_date: p.latest,
-      qualifies: est >= GATE_CR,
+      qualifies: est >= qualifyCr,
     });
   }
   return out
-    .filter((p) => p.est_wealth_cr >= GATE_CR)
+    .filter((p) => p.est_wealth_cr >= floorCr)
     .sort((a, b) => b.ofs_cash_cr - a.ofs_cash_cr || b.est_wealth_cr - a.est_wealth_cr);
 }
 

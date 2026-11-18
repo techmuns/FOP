@@ -8,9 +8,9 @@ prospect hit-list**, gated to a **≥ ₹150 crore** ideal-customer profile.
 
 > IPO disclosures → de-anonymise beneficiaries → estimate wealth → rank the hottest targets.
 
-This is **Prompt 1 of 3**: the foundation, data pipeline, and app shell. The three tabs are
-working **placeholders** that prove the data + chart kit are live; their full internals land in
-prompts 2–3.
+**Status:** Prompt 1 (foundation + pipeline + shell) and Prompt 2 (full **Hit-List** and
+**IPO Explorer** tabs + the full-universe deep-scrape) are done. **Promoter 360** is still a
+placeholder — its per-person drill-down is Prompt 3.
 
 ---
 
@@ -48,10 +48,15 @@ scripts/
 ```
 
 ```bash
-npm run seed       # capped universe + ~50 recent detail deep-scrapes (local / in-session)
-npm run backfill   # full 3-year universe + every detail page (GitHub Actions, manual)
+npm run seed       # reuse the committed universe + FULL resumable detail scrape + enrich-all
+npm run backfill   # crawl the universe fresh + every detail page + enrich-all (GitHub Actions)
 npm run refresh    # re-pull live prices + promoter%, pick up new IPOs, recompute (weekly)
+node scripts/pipeline.mjs rollup   # fast: recompute prospects/meta from ipos.json (no network)
 ```
+
+The scrape is **resumable & idempotent**: `ipos.json` is the detail cache, already-scraped IPOs
+are skipped, and `ipos.json` is checkpointed mid-run. `prospects.json` keeps **everyone ≥ ₹25 Cr**
+(the UI threshold slider filters live); `meta.json` reports counts at ≥50/100/150/250/500 Cr.
 
 ### Sources
 
@@ -59,7 +64,7 @@ npm run refresh    # re-pull live prices + promoter%, pick up new IPOs, recomput
 | --- | --- | --- |
 | **Chittorgarh** | IPO universe, promoters, pre/post shareholding %, per-seller Offer-for-Sale table, sector, registered state | JSON report API + server-rendered detail pages (immutable once listed → scraped once) |
 | **Screener.in** | Today's promoter holding %, pledged %, market cap | Public company page (no login) |
-| **Munshot API** | Live price + market cap | `POST https://fastapi.muns.io/stock-data` (free, keyless) |
+| **Munshot API** | Live price + market cap | `POST https://fastapi.muns.io/stock-data` with the **bare NSE symbol** (no `.NS`); market cap is in rupees → ÷1e7 = ₹ crore. Optional `MUNSHOT_TOKEN` bearer only raises rate limits. |
 
 ### Wealth engine (per company, all `*_cr` in ₹ crore)
 
@@ -107,11 +112,15 @@ Local: `npx wrangler dev` (serves the Worker + built assets) or `npx wrangler de
 Both mirror a checkout → setup-node 22 → `npm ci` → scrape → commit-if-changed pattern (no `[skip ci]`,
 so Cloudflare redeploys).
 
-## Tabs (placeholders in Prompt 1)
+## Tabs
 
-1. **Hit-List** (`Target`) — ranked prospects; top cash-outs/wealth bar + money split.
-2. **IPO Explorer** (`Rocket`) — the universe; IPOs-by-quarter columns with board filter.
-3. **Promoter 360** (`UserSearch`) — de-anonymised people; wealth-band donut + richest sectors.
-
-Each proves data is loaded and renders a live chart from the ported kit. Full internals ship in
-prompts 2–3.
+1. **Hit-List** (`Target`) — the money screen. A **wealth-threshold slider + preset chips**
+   (₹50/100/150/250/500 Cr) that everything reacts to live; 4 stat tiles; a Top-20 hero bar chart;
+   filters (exchange / sector / state / year / took-OFS / confidence / search); the sortable core
+   table (person · companies · est. wealth · OFS · holding · city/state · sector · pledge ·
+   confidence); and **Export to Excel** (client-side `.xlsx`, lazy-loaded SheetJS). Row click → Promoter 360.
+2. **IPO Explorer** (`Rocket`) — the evidence layer. Sub-tabs All/Mainboard/SME + year + search;
+   three charts (IPOs/month stacked mainboard-vs-SME, fresh-vs-OFS by year, wealth-by-sector donut);
+   and the full IPO table with an in-cell fresh/OFS split bar. Row click → the lead promoter's 360.
+3. **Promoter 360** (`UserSearch`) — **placeholder** (Prompt 3). It already receives the focused
+   person from a row click and shows a bridge card; the full per-person drill-down is next.

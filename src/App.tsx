@@ -16,6 +16,12 @@ export default function App() {
   const [tab, setTab] = useState<TabKey>('hitlist');
   const [busy, setBusy] = useState(false);
   const [flash, setFlash] = useState<{ ok: boolean; msg: string } | null>(null);
+  const [focusPerson, setFocusPerson] = useState<string | null>(null);
+
+  const openPromoter = (person: string) => {
+    setFocusPerson(person);
+    setTab('promoters');
+  };
 
   const tabs: TabDef<TabKey>[] = [
     { key: 'hitlist', label: 'Hit-List', icon: Target, badge: data ? String(data.meta.counts.qualifying) : undefined },
@@ -64,9 +70,9 @@ export default function App() {
         {status === 'error' && <ErrorState msg={error} />}
         {status === 'ready' && data && (
           <>
-            {tab === 'hitlist' && <HitListTab data={data} />}
-            {tab === 'ipos' && <IpoExplorerTab data={data} />}
-            {tab === 'promoters' && <Promoter360Tab data={data} />}
+            {tab === 'hitlist' && <HitListTab data={data} onOpenPromoter={openPromoter} />}
+            {tab === 'ipos' && <IpoExplorerTab data={data} onOpenPromoter={openPromoter} />}
+            {tab === 'promoters' && <Promoter360Tab data={data} focusPerson={focusPerson} onClearFocus={() => setFocusPerson(null)} />}
           </>
         )}
       </main>

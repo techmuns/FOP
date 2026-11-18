@@ -15,7 +15,8 @@
  * LOW (split across several named promoters). We never present an assumption as precise.
  */
 
-export const GATE_CR = 150; // ideal-customer floor: ₹150 crore
+export const GATE_CR = 150; // ideal-customer "qualifies" flag: ₹150 crore
+export const FLOOR_CR = 25; // keep everyone worth ≥ ₹25 crore in the file; the UI filters live
 
 const HONORIFICS = /^(?:m\/s|mr|mrs|ms|dr|prof|shri|sri|smt|late|col|capt|maj|justice|sardar|thiru)\.?\s+/i;
 const ENTITY_RE =
@@ -71,10 +72,23 @@ export function computeCompanyWealth(ipo) {
     if (pct != null) flags.current_promoter_pct = 'post_issue';
   }
 
+  // fall back to the at-offer valuation when there's no live (Screener/Munshot) market cap
+  if (ipo.market_cap_cr == null && ipo.offer_market_cap_cr != null) {
+    ipo.market_cap_cr = ipo.offer_market_cap_cr;
+    flags.market_cap = 'offer';
+  }
+
   const mcap = ipo.market_cap_cr;
   ipo.holding_value_cr = pct != null && mcap != null ? round((pct / 100) * mcap) : null;
 
   const sellers = Array.isArray(ipo.promoters) ? ipo.promoters : [];
+  // normalise OFS cash to the task's formula: shares × issue_price_upper (self-heals any
+  // record whose source table lacked the disclosed "Amount" column)
+  for (const s of sellers) {
+    if (s.ofs_shares != null && ipo.issue_price_high != null) {
+      s.ofs_cr = round((s.ofs_shares * ipo.issue_price_high) / 1e7);
+    }
+  }
   const ofs = sellers
     .filter((p) => p.is_promoter && p.ofs_cr != null)
     .reduce((s, p) => s + p.ofs_cr, 0);
@@ -87,9 +101,10 @@ export function computeCompanyWealth(ipo) {
 /**
  * Roll IPOs up into person-level prospects.
  * @param {Array} ipos  IPO records (company wealth already computed, or will be computed here)
- * @returns {Array} prospects, gated to >= GATE_CR, sorted by OFS cash desc.
+ * @param {{floorCr?: number, qualifyCr?: number}} opts  keep everyone >= floorCr; flag qualifies >= qualifyCr
+ * @returns {Array} prospects, gated to >= floorCr, sorted by OFS cash desc.
  */
-export function rollUpProspects(ipos) {
+export function rollUpProspects(ipos, { floorCr = FLOOR_CR, qualifyCr = GATE_CR } = {}) {
   /** @type {Map<string, any>} */
   const people = new Map();
 
@@ -151,6 +166,9 @@ export function rollUpProspects(ipos) {
         company: ipo.company,
         ticker: ipo.ticker || null,
         role: sellerRole(n.seller, n.isEntity),
+        exchange: ipo.exchange,
+        listing_date: ipo.listing_date || null,
+        sector: ipo.sector || null,
         holding_value_cr: holdCr,
         ofs_cash_cr: ofsCr,
       });
@@ -192,12 +210,12 @@ export function rollUpProspects(ipos) {
       max_pledge_pct: p.max_pledge_pct != null ? round(p.max_pledge_pct, 1) : null,
       confidence,
       latest_listing_date: p.latest_listing_date,
-      qualifies: p.est_wealth_cr >= GATE_CR,
+      qualifies: p.est_wealth_cr >= qualifyCr,
     });
   }
 
   return out
-    .filter((p) => p.est_wealth_cr >= GATE_CR)
+    .filter((p) => p.est_wealth_cr >= floorCr)
     .sort((a, b) => b.ofs_cash_cr - a.ofs_cash_cr || b.est_wealth_cr - a.est_wealth_cr);
 }
 
