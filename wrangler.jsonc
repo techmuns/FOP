@@ -3,9 +3,14 @@
   // Deploy: `npm run build` then `npx wrangler deploy` (or connect this repo in the
   // Cloudflare dashboard → Workers Builds, build command `npm run build`).
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "munshot-wealth-radar",
+  "name": "fop",
   "main": "worker/index.js",
   "compatibility_date": "2024-11-06",
+  // Build the Vite SPA into dist/ before deploy, so `wrangler deploy` (and Cloudflare
+  // Workers Builds) is self-contained — the assets directory always exists at upload time.
+  "build": {
+    "command": "npm run build"
+  },
   "assets": {
     "directory": "./dist",
     "binding": "ASSETS",
