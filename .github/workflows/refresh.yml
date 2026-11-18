@@ -3,6 +3,10 @@ name: Weekly refresh (live prices + promoter %)
 # Re-pulls today's market cap (Munshot) + promoter holding % / pledge (Screener) for
 # listed names, recomputes wealth, and picks up any newly-listed IPOs. Commits changed
 # data JSON; Cloudflare redeploys automatically. FREE: curl + cheerio, Playwright fallback.
+#
+# Enrichment is BATCHED + RESUMABLE: each run enriches a slice of tickers from a cursor stored
+# in meta.json (committed), so holdings converge to live caps over successive weekly runs as the
+# Screener rate-limit resets — no manual work. Munshot is retried with backoff.
 
 on:
   schedule:
@@ -30,9 +34,11 @@ jobs:
 
       - run: npm ci
 
-      - name: Refresh live prices + promoter % and recompute wealth
+      - name: Refresh live prices + promoter % and recompute wealth (batched/resumable)
         env:
           MUNSHOT_TOKEN: ${{ secrets.MUNSHOT_TOKEN }}
+          ENRICH_BATCH: '300' # tickers enriched per run; cursor in meta.json advances each week
+          POLITE_MS: '1100' # gentle rate so Screener doesn't throttle a long batch
         run: npm run refresh
 
       - name: Commit refreshed data if changed

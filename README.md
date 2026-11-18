@@ -8,9 +8,9 @@ prospect hit-list**, gated to a **≥ ₹150 crore** ideal-customer profile.
 
 > IPO disclosures → de-anonymise beneficiaries → estimate wealth → rank the hottest targets.
 
-**Status:** Prompt 1 (foundation + pipeline + shell) and Prompt 2 (full **Hit-List** and
-**IPO Explorer** tabs + the full-universe deep-scrape) are done. **Promoter 360** is still a
-placeholder — its per-person drill-down is Prompt 3.
+**Status: complete.** All three tabs are built — **Hit-List** (the money screen), **IPO Explorer**
+(the evidence layer), and **Promoter 360** (the per-person drill-down) — on 803 real deep-scraped
+IPOs with every sector resolved.
 
 ---
 
@@ -122,5 +122,13 @@ so Cloudflare redeploys).
 2. **IPO Explorer** (`Rocket`) — the evidence layer. Sub-tabs All/Mainboard/SME + year + search;
    three charts (IPOs/month stacked mainboard-vs-SME, fresh-vs-OFS by year, wealth-by-sector donut);
    and the full IPO table with an in-cell fresh/OFS split bar. Row click → the lead promoter's 360.
-3. **Promoter 360** (`UserSearch`) — **placeholder** (Prompt 3). It already receives the focused
-   person from a row click and shows a bridge card; the full per-person drill-down is next.
+3. **Promoter 360** (`UserSearch`) — the per-person drill-down, opened by any Hit-List or IPO
+   row click: identity header + plain-English summary, wealth breakdown (held vs OFS), per-company
+   cards (pre→post→current %, holding, OFS, pledge; click → IPO Explorer), a wealth-by-sector donut,
+   a liquidity timeline, the **circle of influence** (co-promoters from shared IPOs, each clickable),
+   and an Export-profile button. With no one selected it shows an overview index.
+
+**Sectors** are resolved from Chittorgarh's per-industry report pages (industry id → name, cached),
+so the donuts carry zero "Unclassified". **Live enrichment** (`refresh.yml`) is batched &
+resumable via a cursor in `meta.json`, so holdings converge to live caps over weekly runs as the
+Screener rate-limit resets; the Worker retries Munshot with backoff so "Refresh prices" self-recovers.

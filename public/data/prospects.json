@@ -8,7 +8,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-10-22",
-        "sector": null,
+        "sector": "Passenger Cars & Utility Vehicles",
         "holding_value_cr": 131387.9,
         "ofs_cash_cr": 27870.16
       }
@@ -18,7 +18,9 @@
     "holding_value_cr": 131387.9,
     "city": "Irrungattukottai",
     "state": "Tamil Nadu",
-    "sectors": [],
+    "sectors": [
+      "Passenger Cars & Utility Vehicles"
+    ],
     "max_pledge_pct": null,
     "confidence": "HIGH",
     "latest_listing_date": "2024-10-22",
@@ -53,7 +55,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2026-01-19",
-        "sector": null,
+        "sector": "Coal",
         "holding_value_cr": 9639.99,
         "ofs_cash_cr": 1071.11
       }
@@ -81,7 +83,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-10-14",
-        "sector": null,
+        "sector": "Household Appliances",
         "holding_value_cr": 65773.04,
         "ofs_cash_cr": 11607.01
       }
@@ -91,7 +93,9 @@
     "holding_value_cr": 65773.04,
     "city": null,
     "state": "New Delhi",
-    "sectors": [],
+    "sectors": [
+      "Household Appliances"
+    ],
     "max_pledge_pct": null,
     "confidence": "MEDIUM",
     "latest_listing_date": "2025-10-14",
@@ -187,7 +191,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-12-18",
-        "sector": null,
+        "sector": "Diversified Retail",
         "holding_value_cr": 26734.72,
         "ofs_cash_cr": 8000
       }
@@ -197,7 +201,9 @@
     "holding_value_cr": 26734.72,
     "city": null,
     "state": "Haryana",
-    "sectors": [],
+    "sectors": [
+      "Diversified Retail"
+    ],
     "max_pledge_pct": null,
     "confidence": "MEDIUM",
     "latest_listing_date": "2024-12-18",
@@ -520,7 +526,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-10-17",
-        "sector": null,
+        "sector": "Life Insurance",
         "holding_value_cr": 6243.4,
         "ofs_cash_cr": 1460.15
       },
@@ -530,7 +536,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-10-16",
-        "sector": null,
+        "sector": "Asset Management Company",
         "holding_value_cr": 1989.19,
         "ofs_cash_cr": 689.59
       }
@@ -540,7 +546,10 @@
     "holding_value_cr": 8232.59,
     "city": "Ambadeep Building",
     "state": "New Delhi",
-    "sectors": [],
+    "sectors": [
+      "Life Insurance",
+      "Asset Management Company"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2025-10-17",
@@ -582,7 +591,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-07-14",
-        "sector": null,
+        "sector": "Restaurants",
         "holding_value_cr": 12484.4,
         "ofs_cash_cr": 2000.42
       }
@@ -592,7 +601,9 @@
     "holding_value_cr": 12484.4,
     "city": "Shiv Sagar Estate",
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Restaurants"
+    ],
     "max_pledge_pct": null,
     "confidence": "MEDIUM",
     "latest_listing_date": "2025-07-14",
@@ -688,7 +699,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-05-23",
-        "sector": null,
+        "sector": "General Insurance",
         "holding_value_cr": 18356.66,
         "ofs_cash_cr": 1489.35
       }
@@ -698,7 +709,9 @@
     "holding_value_cr": 18356.66,
     "city": "Narveer Tanaji Wadi",
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "General Insurance"
+    ],
     "max_pledge_pct": null,
     "confidence": "MEDIUM",
     "latest_listing_date": "2024-05-23",
@@ -848,7 +861,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2026-03-02",
-        "sector": null,
+        "sector": "Power Generation",
         "holding_value_cr": null,
         "ofs_cash_cr": 896.2
       }
@@ -858,7 +871,9 @@
     "holding_value_cr": 0,
     "city": null,
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Power Generation"
+    ],
     "max_pledge_pct": null,
     "confidence": "HIGH",
     "latest_listing_date": "2026-03-02",
@@ -900,7 +915,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-11-29",
-        "sector": null,
+        "sector": "Financial Institution",
         "holding_value_cr": 6450.64,
         "ofs_cash_cr": 860.08
       }
@@ -910,7 +925,9 @@
     "holding_value_cr": 6450.64,
     "city": "East Court",
     "state": "New Delhi",
-    "sectors": [],
+    "sectors": [
+      "Financial Institution"
+    ],
     "max_pledge_pct": null,
     "confidence": "HIGH",
     "latest_listing_date": "2023-11-29",
@@ -1006,7 +1023,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-11-06",
-        "sector": null,
+        "sector": "Houseware",
         "holding_value_cr": 3578.42,
         "ofs_cash_cr": 736.4
       }
@@ -1016,7 +1033,9 @@
     "holding_value_cr": 3578.42,
     "city": "Dabhel",
     "state": "Dadra and Nagar Haveli and Daman and Diu",
-    "sectors": [],
+    "sectors": [
+      "Houseware"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-11-06",
@@ -1031,7 +1050,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-07-09",
-        "sector": null,
+        "sector": "Internet & Catalogue Retail",
         "holding_value_cr": 1713.54,
         "ofs_cash_cr": 723
       }
@@ -1041,7 +1060,9 @@
     "holding_value_cr": 1713.54,
     "city": null,
     "state": "West Bengal",
-    "sectors": [],
+    "sectors": [
+      "Internet & Catalogue Retail"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2025-07-09",
@@ -1056,7 +1077,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-10-01",
-        "sector": null,
+        "sector": "Diversified Metals",
         "holding_value_cr": 6002.09,
         "ofs_cash_cr": 715
       }
@@ -1066,7 +1087,9 @@
     "holding_value_cr": 6002.09,
     "city": null,
     "state": "Tamil Nadu",
-    "sectors": [],
+    "sectors": [
+      "Diversified Metals"
+    ],
     "max_pledge_pct": null,
     "confidence": "HIGH",
     "latest_listing_date": "2025-10-01",
@@ -1189,7 +1212,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-10-16",
-        "sector": null,
+        "sector": "Asset Management Company",
         "holding_value_cr": 1989.19,
         "ofs_cash_cr": 636.54
       }
@@ -1199,7 +1222,9 @@
     "holding_value_cr": 1989.19,
     "city": null,
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Asset Management Company"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2025-10-16",
@@ -1322,7 +1347,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-01-23",
-        "sector": null,
+        "sector": "Insurance Distributors",
         "holding_value_cr": null,
         "ofs_cash_cr": 521.19
       }
@@ -1332,7 +1357,9 @@
     "holding_value_cr": 0,
     "city": null,
     "state": "Karnataka",
-    "sectors": [],
+    "sectors": [
+      "Insurance Distributors"
+    ],
     "max_pledge_pct": null,
     "confidence": "HIGH",
     "latest_listing_date": "2024-01-23",
@@ -1374,7 +1401,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-11-13",
-        "sector": null,
+        "sector": "Power Generation",
         "holding_value_cr": 14585.75,
         "ofs_cash_cr": 505
       }
@@ -1384,7 +1411,9 @@
     "holding_value_cr": 14585.75,
     "city": null,
     "state": "Haryana",
-    "sectors": [],
+    "sectors": [
+      "Power Generation"
+    ],
     "max_pledge_pct": null,
     "confidence": "MEDIUM",
     "latest_listing_date": "2024-11-13",
@@ -1453,7 +1482,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-06-20",
-        "sector": null,
+        "sector": "Compressors, Pumps & Diesel Engines",
         "holding_value_cr": 5296.25,
         "ofs_cash_cr": 497.34
       }
@@ -1463,7 +1492,9 @@
     "holding_value_cr": 5296.25,
     "city": "P.O.Kutail",
     "state": "Haryana",
-    "sectors": [],
+    "sectors": [
+      "Compressors, Pumps & Diesel Engines"
+    ],
     "max_pledge_pct": null,
     "confidence": "HIGH",
     "latest_listing_date": "2025-06-20",
@@ -1559,7 +1590,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-02-16",
-        "sector": null,
+        "sector": "Pharmacy Retail",
         "holding_value_cr": null,
         "ofs_cash_cr": 480
       }
@@ -1569,7 +1600,9 @@
     "holding_value_cr": 0,
     "city": null,
     "state": "Haryana",
-    "sectors": [],
+    "sectors": [
+      "Pharmacy Retail"
+    ],
     "max_pledge_pct": null,
     "confidence": "HIGH",
     "latest_listing_date": "2024-02-16",
@@ -1611,7 +1644,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-11-06",
-        "sector": null,
+        "sector": "Houseware",
         "holding_value_cr": 3578.42,
         "ofs_cash_cr": 464.25
       }
@@ -1621,7 +1654,9 @@
     "holding_value_cr": 3578.42,
     "city": "Dabhel",
     "state": "Dadra and Nagar Haveli and Daman and Diu",
-    "sectors": [],
+    "sectors": [
+      "Houseware"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-11-06",
@@ -1890,7 +1925,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-07-02",
-        "sector": null,
+        "sector": "Breweries & Distilleries",
         "holding_value_cr": 3179.6,
         "ofs_cash_cr": 375
       }
@@ -1900,7 +1935,9 @@
     "holding_value_cr": 3179.6,
     "city": null,
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Breweries & Distilleries"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2024-07-02",
@@ -1942,7 +1979,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-02-17",
-        "sector": null,
+        "sector": "Construction Vehicles",
         "holding_value_cr": null,
         "ofs_cash_cr": 351.81
       }
@@ -1952,7 +1989,9 @@
     "holding_value_cr": 0,
     "city": "Peenya Industrial Area",
     "state": "Karnataka",
-    "sectors": [],
+    "sectors": [
+      "Construction Vehicles"
+    ],
     "max_pledge_pct": null,
     "confidence": "HIGH",
     "latest_listing_date": "2025-02-17",
@@ -1967,7 +2006,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-07-21",
-        "sector": null,
+        "sector": "Biotechnology",
         "holding_value_cr": 11899.29,
         "ofs_cash_cr": 350.08
       }
@@ -1977,7 +2016,9 @@
     "holding_value_cr": 11899.29,
     "city": "Bommasandra Industrial Area",
     "state": "Karnataka",
-    "sectors": [],
+    "sectors": [
+      "Biotechnology"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2025-07-21",
@@ -1992,7 +2033,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-07-21",
-        "sector": null,
+        "sector": "Biotechnology",
         "holding_value_cr": 11899.29,
         "ofs_cash_cr": 350.08
       }
@@ -2002,7 +2043,9 @@
     "holding_value_cr": 11899.29,
     "city": "Bommasandra Industrial Area",
     "state": "Karnataka",
-    "sectors": [],
+    "sectors": [
+      "Biotechnology"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2025-07-21",
@@ -2314,7 +2357,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-11-06",
-        "sector": null,
+        "sector": "Houseware",
         "holding_value_cr": 3578.42,
         "ofs_cash_cr": 300.16
       }
@@ -2324,7 +2367,9 @@
     "holding_value_cr": 3578.42,
     "city": "Dabhel",
     "state": "Dadra and Nagar Haveli and Daman and Diu",
-    "sectors": [],
+    "sectors": [
+      "Houseware"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-11-06",
@@ -2420,7 +2465,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-09-30",
-        "sector": null,
+        "sector": "E-Learning",
         "holding_value_cr": 1130.3,
         "ofs_cash_cr": 280
       }
@@ -2430,7 +2475,9 @@
     "holding_value_cr": 1130.3,
     "city": null,
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "E-Learning"
+    ],
     "max_pledge_pct": null,
     "confidence": "HIGH",
     "latest_listing_date": "2025-09-30",
@@ -2483,7 +2530,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-01-23",
-        "sector": null,
+        "sector": "Insurance Distributors",
         "holding_value_cr": null,
         "ofs_cash_cr": 276.13
       }
@@ -2493,7 +2540,9 @@
     "holding_value_cr": 0,
     "city": null,
     "state": "Karnataka",
-    "sectors": [],
+    "sectors": [
+      "Insurance Distributors"
+    ],
     "max_pledge_pct": null,
     "confidence": "HIGH",
     "latest_listing_date": "2024-01-23",
@@ -2778,7 +2827,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2026-03-02",
-        "sector": null,
+        "sector": "Power Generation",
         "holding_value_cr": 6049.25,
         "ofs_cash_cr": 214.95
       }
@@ -2788,7 +2837,9 @@
     "holding_value_cr": 6049.25,
     "city": null,
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Power Generation"
+    ],
     "max_pledge_pct": null,
     "confidence": "HIGH",
     "latest_listing_date": "2026-03-02",
@@ -2884,7 +2935,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-12-28",
-        "sector": null,
+        "sector": "Heavy Electrical Equipment",
         "holding_value_cr": 2041.27,
         "ofs_cash_cr": 204.96
       }
@@ -2894,7 +2945,9 @@
     "holding_value_cr": 2041.27,
     "city": "I.D.A.Jeedimetla",
     "state": "Telangana",
-    "sectors": [],
+    "sectors": [
+      "Heavy Electrical Equipment"
+    ],
     "max_pledge_pct": null,
     "confidence": "HIGH",
     "latest_listing_date": "2023-12-28",
@@ -3152,7 +3205,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-10-24",
-        "sector": null,
+        "sector": "Granites & Marbles",
         "holding_value_cr": 1485.15,
         "ofs_cash_cr": 181
       }
@@ -3162,7 +3215,9 @@
     "holding_value_cr": 1485.15,
     "city": null,
     "state": "Telangana",
-    "sectors": [],
+    "sectors": [
+      "Granites & Marbles"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2025-10-24",
@@ -3366,7 +3421,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-09-28",
-        "sector": null,
+        "sector": "Tour, Travel Related Services",
         "holding_value_cr": 1436.3,
         "ofs_cash_cr": 166.87
       }
@@ -3376,7 +3431,9 @@
     "holding_value_cr": 1436.3,
     "city": "Complex B Wing",
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Tour, Travel Related Services"
+    ],
     "max_pledge_pct": null,
     "confidence": "MEDIUM",
     "latest_listing_date": "2023-09-28",
@@ -3850,7 +3907,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-02-17",
-        "sector": null,
+        "sector": "Construction Vehicles",
         "holding_value_cr": 1439.24,
         "ofs_cash_cr": 143.92
       }
@@ -3860,7 +3917,9 @@
     "holding_value_cr": 1439.24,
     "city": "Peenya Industrial Area",
     "state": "Karnataka",
-    "sectors": [],
+    "sectors": [
+      "Construction Vehicles"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2025-02-17",
@@ -3956,7 +4015,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-07-09",
-        "sector": null,
+        "sector": "Internet & Catalogue Retail",
         "holding_value_cr": 1713.54,
         "ofs_cash_cr": 137
       }
@@ -3966,7 +4025,9 @@
     "holding_value_cr": 1713.54,
     "city": null,
     "state": "West Bengal",
-    "sectors": [],
+    "sectors": [
+      "Internet & Catalogue Retail"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2025-07-09",
@@ -4116,7 +4177,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-07-02",
-        "sector": null,
+        "sector": "Breweries & Distilleries",
         "holding_value_cr": 3179.6,
         "ofs_cash_cr": 125
       }
@@ -4126,7 +4187,9 @@
     "holding_value_cr": 3179.6,
     "city": null,
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Breweries & Distilleries"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2024-07-02",
@@ -4168,7 +4231,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2026-11-03",
-        "sector": null,
+        "sector": "Waste Management",
         "holding_value_cr": 802.51,
         "ofs_cash_cr": 123.29
       }
@@ -4178,7 +4241,9 @@
     "holding_value_cr": 802.51,
     "city": null,
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Waste Management"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2026-11-03",
@@ -4274,7 +4339,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-07-04",
-        "sector": null,
+        "sector": "Meat Products including Poultry",
         "holding_value_cr": 408.23,
         "ofs_cash_cr": 120
       }
@@ -4284,7 +4349,9 @@
     "holding_value_cr": 408.23,
     "city": null,
     "state": "Uttar Pradesh",
-    "sectors": [],
+    "sectors": [
+      "Meat Products including Poultry"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-07-04",
@@ -4650,7 +4717,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-02-17",
-        "sector": null,
+        "sector": "Construction Vehicles",
         "holding_value_cr": 1439.24,
         "ofs_cash_cr": 107.94
       }
@@ -4660,7 +4727,9 @@
     "holding_value_cr": 1439.24,
     "city": "Peenya Industrial Area",
     "state": "Karnataka",
-    "sectors": [],
+    "sectors": [
+      "Construction Vehicles"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2025-02-17",
@@ -4675,7 +4744,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-02-17",
-        "sector": null,
+        "sector": "Construction Vehicles",
         "holding_value_cr": 1439.24,
         "ofs_cash_cr": 107.94
       }
@@ -4685,7 +4754,9 @@
     "holding_value_cr": 1439.24,
     "city": "Peenya Industrial Area",
     "state": "Karnataka",
-    "sectors": [],
+    "sectors": [
+      "Construction Vehicles"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2025-02-17",
@@ -4700,7 +4771,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-01-23",
-        "sector": null,
+        "sector": "Insurance Distributors",
         "holding_value_cr": 1141.83,
         "ofs_cash_cr": 106.13
       }
@@ -4710,7 +4781,9 @@
     "holding_value_cr": 1141.83,
     "city": null,
     "state": "Karnataka",
-    "sectors": [],
+    "sectors": [
+      "Insurance Distributors"
+    ],
     "max_pledge_pct": null,
     "confidence": "HIGH",
     "latest_listing_date": "2024-01-23",
@@ -4833,7 +4906,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-11-07",
-        "sector": null,
+        "sector": "Personal Care",
         "holding_value_cr": 1828.48,
         "ofs_cash_cr": 103.24
       }
@@ -4843,7 +4916,9 @@
     "holding_value_cr": 1828.48,
     "city": null,
     "state": "New Delhi",
-    "sectors": [],
+    "sectors": [
+      "Personal Care"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-11-07",
@@ -4939,7 +5014,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2026-10-22",
-        "sector": null,
+        "sector": "Business Process Outsourcing (BPO)/Knowledge Process Outsourcing (KPO)",
         "holding_value_cr": 1596.96,
         "ofs_cash_cr": 101
       }
@@ -4949,7 +5024,9 @@
     "holding_value_cr": 1596.96,
     "city": "Bidhan Nagar",
     "state": "West Bengal",
-    "sectors": [],
+    "sectors": [
+      "Business Process Outsourcing (BPO)/Knowledge Process Outsourcing (KPO)"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2026-10-22",
@@ -4964,7 +5041,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2026-10-22",
-        "sector": null,
+        "sector": "Business Process Outsourcing (BPO)/Knowledge Process Outsourcing (KPO)",
         "holding_value_cr": 1596.96,
         "ofs_cash_cr": 101
       }
@@ -4974,7 +5051,9 @@
     "holding_value_cr": 1596.96,
     "city": "Bidhan Nagar",
     "state": "West Bengal",
-    "sectors": [],
+    "sectors": [
+      "Business Process Outsourcing (BPO)/Knowledge Process Outsourcing (KPO)"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2026-10-22",
@@ -5178,7 +5257,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2026-10-05",
-        "sector": null,
+        "sector": "Telecom - Equipment & Accessories",
         "holding_value_cr": null,
         "ofs_cash_cr": 97.1
       }
@@ -5188,7 +5267,9 @@
     "holding_value_cr": 0,
     "city": null,
     "state": "New Delhi",
-    "sectors": [],
+    "sectors": [
+      "Telecom - Equipment & Accessories"
+    ],
     "max_pledge_pct": null,
     "confidence": "HIGH",
     "latest_listing_date": "2026-10-05",
@@ -5473,7 +5554,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-02-17",
-        "sector": null,
+        "sector": "Construction Vehicles",
         "holding_value_cr": 1439.24,
         "ofs_cash_cr": 89.95
       }
@@ -5483,7 +5564,9 @@
     "holding_value_cr": 1439.24,
     "city": "Peenya Industrial Area",
     "state": "Karnataka",
-    "sectors": [],
+    "sectors": [
+      "Construction Vehicles"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2025-02-17",
@@ -5903,7 +5986,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-09-20",
-        "sector": null,
+        "sector": "Cables - Electricals",
         "holding_value_cr": 2440.83,
         "ofs_cash_cr": 78.08
       }
@@ -5913,7 +5996,9 @@
     "holding_value_cr": 2440.83,
     "city": "Worli",
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Cables - Electricals"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-09-20",
@@ -5928,7 +6013,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-09-20",
-        "sector": null,
+        "sector": "Cables - Electricals",
         "holding_value_cr": 2440.83,
         "ofs_cash_cr": 78.08
       }
@@ -5938,7 +6023,9 @@
     "holding_value_cr": 2440.83,
     "city": "Worli",
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Cables - Electricals"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-09-20",
@@ -5953,7 +6040,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-09-20",
-        "sector": null,
+        "sector": "Cables - Electricals",
         "holding_value_cr": 2440.83,
         "ofs_cash_cr": 78.08
       }
@@ -5963,7 +6050,9 @@
     "holding_value_cr": 2440.83,
     "city": "Worli",
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Cables - Electricals"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-09-20",
@@ -6059,7 +6148,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-01-07",
-        "sector": null,
+        "sector": "Tractors",
         "holding_value_cr": 717.39,
         "ofs_cash_cr": 75.25
       }
@@ -6069,7 +6158,9 @@
     "holding_value_cr": 717.39,
     "city": null,
     "state": "Chandigarh",
-    "sectors": [],
+    "sectors": [
+      "Tractors"
+    ],
     "max_pledge_pct": null,
     "confidence": "HIGH",
     "latest_listing_date": "2025-01-07",
@@ -6111,7 +6202,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2026-08-18",
-        "sector": null,
+        "sector": "Dairy Products",
         "holding_value_cr": 4284.72,
         "ofs_cash_cr": 75
       }
@@ -6121,7 +6212,9 @@
     "holding_value_cr": 4284.72,
     "city": "Pattakaranpalayam",
     "state": "Tamil Nadu",
-    "sectors": [],
+    "sectors": [
+      "Dairy Products"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2026-08-18",
@@ -6244,7 +6337,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-09-20",
-        "sector": null,
+        "sector": "Cables - Electricals",
         "holding_value_cr": null,
         "ofs_cash_cr": 73.2
       }
@@ -6254,7 +6347,9 @@
     "holding_value_cr": 0,
     "city": "Worli",
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Cables - Electricals"
+    ],
     "max_pledge_pct": null,
     "confidence": "HIGH",
     "latest_listing_date": "2023-09-20",
@@ -6269,7 +6364,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2026-08-25",
-        "sector": null,
+        "sector": "Film Production, Distribution & Exhibition",
         "holding_value_cr": 419.62,
         "ofs_cash_cr": 73.13
       }
@@ -6279,7 +6374,9 @@
     "holding_value_cr": 419.62,
     "city": null,
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Film Production, Distribution & Exhibition"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2026-08-25",
@@ -6321,7 +6418,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2026-03-02",
-        "sector": null,
+        "sector": "Power Generation",
         "holding_value_cr": null,
         "ofs_cash_cr": 72.38
       }
@@ -6331,7 +6428,9 @@
     "holding_value_cr": 0,
     "city": null,
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Power Generation"
+    ],
     "max_pledge_pct": null,
     "confidence": "HIGH",
     "latest_listing_date": "2026-03-02",
@@ -6508,7 +6607,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2026-08-31",
-        "sector": null,
+        "sector": "Precious Metals",
         "holding_value_cr": 1965.9,
         "ofs_cash_cr": 69.4
       }
@@ -6518,7 +6617,9 @@
     "holding_value_cr": 1965.9,
     "city": "Trade World",
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Precious Metals"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2026-08-31",
@@ -6533,7 +6634,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2026-08-31",
-        "sector": null,
+        "sector": "Precious Metals",
         "holding_value_cr": 1965.9,
         "ofs_cash_cr": 69.4
       }
@@ -6543,7 +6644,9 @@
     "holding_value_cr": 1965.9,
     "city": "Trade World",
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Precious Metals"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2026-08-31",
@@ -6612,7 +6715,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2026-10-05",
-        "sector": null,
+        "sector": "Telecom - Equipment & Accessories",
         "holding_value_cr": 1796.2,
         "ofs_cash_cr": 67.2
       }
@@ -6622,7 +6725,9 @@
     "holding_value_cr": 1796.2,
     "city": null,
     "state": "New Delhi",
-    "sectors": [],
+    "sectors": [
+      "Telecom - Equipment & Accessories"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2026-10-05",
@@ -6637,7 +6742,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2026-08-31",
-        "sector": null,
+        "sector": "Precious Metals",
         "holding_value_cr": 1965.9,
         "ofs_cash_cr": 66.2
       }
@@ -6647,7 +6752,9 @@
     "holding_value_cr": 1965.9,
     "city": "Trade World",
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Precious Metals"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2026-08-31",
@@ -6851,7 +6958,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2026-09-17",
-        "sector": null,
+        "sector": "Industrial Gases",
         "holding_value_cr": 3320.32,
         "ofs_cash_cr": 61
       }
@@ -6861,7 +6968,9 @@
     "holding_value_cr": 3320.32,
     "city": "Four Point",
     "state": "Gujarat",
-    "sectors": [],
+    "sectors": [
+      "Industrial Gases"
+    ],
     "max_pledge_pct": null,
     "confidence": "HIGH",
     "latest_listing_date": "2026-09-17",
@@ -6903,7 +7012,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-11-22",
-        "sector": null,
+        "sector": "Transport Related Services",
         "holding_value_cr": 430.87,
         "ofs_cash_cr": 60.57
       }
@@ -6913,7 +7022,9 @@
     "holding_value_cr": 430.87,
     "city": "Kadubeesanahalli",
     "state": "Karnataka",
-    "sectors": [],
+    "sectors": [
+      "Transport Related Services"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2024-11-22",
@@ -6982,7 +7093,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-02-16",
-        "sector": null,
+        "sector": "Pharmacy Retail",
         "holding_value_cr": 792.01,
         "ofs_cash_cr": 59.15
       }
@@ -6992,7 +7103,9 @@
     "holding_value_cr": 792.01,
     "city": null,
     "state": "Haryana",
-    "sectors": [],
+    "sectors": [
+      "Pharmacy Retail"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2024-02-16",
@@ -7007,7 +7120,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-07-30",
-        "sector": null,
+        "sector": "Computers Hardware & Equipments",
         "holding_value_cr": null,
         "ofs_cash_cr": 58.78
       }
@@ -7017,7 +7130,9 @@
     "holding_value_cr": 0,
     "city": null,
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Computers Hardware & Equipments"
+    ],
     "max_pledge_pct": null,
     "confidence": "HIGH",
     "latest_listing_date": "2025-07-30",
@@ -7221,7 +7336,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2026-10-05",
-        "sector": null,
+        "sector": "Telecom - Equipment & Accessories",
         "holding_value_cr": null,
         "ofs_cash_cr": 52
       }
@@ -7231,7 +7346,9 @@
     "holding_value_cr": 0,
     "city": null,
     "state": "New Delhi",
-    "sectors": [],
+    "sectors": [
+      "Telecom - Equipment & Accessories"
+    ],
     "max_pledge_pct": null,
     "confidence": "HIGH",
     "latest_listing_date": "2026-10-05",
@@ -7327,7 +7444,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-12-01",
-        "sector": null,
+        "sector": "Stationary",
         "holding_value_cr": 251.8,
         "ofs_cash_cr": 51.4
       }
@@ -7337,7 +7454,9 @@
     "holding_value_cr": 251.8,
     "city": null,
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Stationary"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-12-01",
@@ -7406,7 +7525,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-10-17",
-        "sector": null,
+        "sector": "Life Insurance",
         "holding_value_cr": null,
         "ofs_cash_cr": 50.35
       }
@@ -7416,7 +7535,9 @@
     "holding_value_cr": 0,
     "city": "Ambadeep Building",
     "state": "New Delhi",
-    "sectors": [],
+    "sectors": [
+      "Life Insurance"
+    ],
     "max_pledge_pct": null,
     "confidence": "HIGH",
     "latest_listing_date": "2025-10-17",
@@ -7458,7 +7579,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2026-08-18",
-        "sector": null,
+        "sector": "Dairy Products",
         "holding_value_cr": 4284.72,
         "ofs_cash_cr": 50
       }
@@ -7468,7 +7589,9 @@
     "holding_value_cr": 4284.72,
     "city": "Pattakaranpalayam",
     "state": "Tamil Nadu",
-    "sectors": [],
+    "sectors": [
+      "Dairy Products"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2026-08-18",
@@ -7591,7 +7714,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-07-04",
-        "sector": null,
+        "sector": "Meat Products including Poultry",
         "holding_value_cr": 408.23,
         "ofs_cash_cr": 49
       }
@@ -7601,7 +7724,9 @@
     "holding_value_cr": 408.23,
     "city": null,
     "state": "Uttar Pradesh",
-    "sectors": [],
+    "sectors": [
+      "Meat Products including Poultry"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-07-04",
@@ -7616,7 +7741,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-07-04",
-        "sector": null,
+        "sector": "Meat Products including Poultry",
         "holding_value_cr": 408.23,
         "ofs_cash_cr": 49
       }
@@ -7626,7 +7751,9 @@
     "holding_value_cr": 408.23,
     "city": null,
     "state": "Uttar Pradesh",
-    "sectors": [],
+    "sectors": [
+      "Meat Products including Poultry"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-07-04",
@@ -7641,7 +7768,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-07-04",
-        "sector": null,
+        "sector": "Meat Products including Poultry",
         "holding_value_cr": 408.23,
         "ofs_cash_cr": 49
       }
@@ -7651,7 +7778,9 @@
     "holding_value_cr": 408.23,
     "city": null,
     "state": "Uttar Pradesh",
-    "sectors": [],
+    "sectors": [
+      "Meat Products including Poultry"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-07-04",
@@ -7666,7 +7795,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-07-04",
-        "sector": null,
+        "sector": "Meat Products including Poultry",
         "holding_value_cr": 408.23,
         "ofs_cash_cr": 49
       }
@@ -7676,7 +7805,9 @@
     "holding_value_cr": 408.23,
     "city": null,
     "state": "Uttar Pradesh",
-    "sectors": [],
+    "sectors": [
+      "Meat Products including Poultry"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-07-04",
@@ -8150,7 +8281,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-03-13",
-        "sector": null,
+        "sector": "Commodity Chemicals",
         "holding_value_cr": 153.7,
         "ofs_cash_cr": 44.84
       }
@@ -8160,7 +8291,9 @@
     "holding_value_cr": 153.7,
     "city": null,
     "state": "West Bengal",
-    "sectors": [],
+    "sectors": [
+      "Commodity Chemicals"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2024-03-13",
@@ -8510,7 +8643,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-09-29",
-        "sector": null,
+        "sector": "Packaged Foods",
         "holding_value_cr": 416.85,
         "ofs_cash_cr": 43.18
       }
@@ -8520,7 +8653,9 @@
     "holding_value_cr": 416.85,
     "city": null,
     "state": "West Bengal",
-    "sectors": [],
+    "sectors": [
+      "Packaged Foods"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2025-09-29",
@@ -8697,7 +8832,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-08-14",
-        "sector": null,
+        "sector": "Houseware",
         "holding_value_cr": 421.22,
         "ofs_cash_cr": 40.2
       }
@@ -8707,7 +8842,9 @@
     "holding_value_cr": 421.22,
     "city": "Wadala",
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Houseware"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2025-08-14",
@@ -8722,7 +8859,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-08-14",
-        "sector": null,
+        "sector": "Houseware",
         "holding_value_cr": 421.22,
         "ofs_cash_cr": 40.2
       }
@@ -8732,7 +8869,9 @@
     "holding_value_cr": 421.22,
     "city": "Wadala",
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Houseware"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2025-08-14",
@@ -8747,7 +8886,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-08-14",
-        "sector": null,
+        "sector": "Houseware",
         "holding_value_cr": 421.22,
         "ofs_cash_cr": 40.2
       }
@@ -8757,7 +8896,9 @@
     "holding_value_cr": 421.22,
     "city": "Wadala",
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Houseware"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2025-08-14",
@@ -8799,7 +8940,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-12-01",
-        "sector": null,
+        "sector": "Stationary",
         "holding_value_cr": 251.8,
         "ofs_cash_cr": 39.65
       }
@@ -8809,7 +8950,9 @@
     "holding_value_cr": 251.8,
     "city": null,
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Stationary"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-12-01",
@@ -8824,7 +8967,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-02-16",
-        "sector": null,
+        "sector": "Pharmacy Retail",
         "holding_value_cr": 792.01,
         "ofs_cash_cr": 39.43
       }
@@ -8834,7 +8977,9 @@
     "holding_value_cr": 792.01,
     "city": null,
     "state": "Haryana",
-    "sectors": [],
+    "sectors": [
+      "Pharmacy Retail"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2024-02-16",
@@ -8957,7 +9102,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-01-23",
-        "sector": null,
+        "sector": "Industrial Gases",
         "holding_value_cr": 484.76,
         "ofs_cash_cr": 38.72
       }
@@ -8967,7 +9112,9 @@
     "holding_value_cr": 484.76,
     "city": "Mindspace",
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Industrial Gases"
+    ],
     "max_pledge_pct": null,
     "confidence": "HIGH",
     "latest_listing_date": "2025-01-23",
@@ -9328,7 +9475,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2026-08-25",
-        "sector": null,
+        "sector": "Film Production, Distribution & Exhibition",
         "holding_value_cr": 419.62,
         "ofs_cash_cr": 36.21
       }
@@ -9338,7 +9485,9 @@
     "holding_value_cr": 419.62,
     "city": null,
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Film Production, Distribution & Exhibition"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2026-08-25",
@@ -9650,7 +9799,7 @@
         "role": "Promoter",
         "exchange": "BSE SME",
         "listing_date": "2025-09-16",
-        "sector": null,
+        "sector": "Ferro & Silica Manganese",
         "holding_value_cr": 155.77,
         "ofs_cash_cr": 34
       }
@@ -9660,7 +9809,9 @@
     "holding_value_cr": 155.77,
     "city": null,
     "state": "Odisha",
-    "sectors": [],
+    "sectors": [
+      "Ferro & Silica Manganese"
+    ],
     "max_pledge_pct": null,
     "confidence": "MEDIUM",
     "latest_listing_date": "2025-09-16",
@@ -9756,7 +9907,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-12-26",
-        "sector": null,
+        "sector": "Microfinance Institutions",
         "holding_value_cr": 458.63,
         "ofs_cash_cr": 33.77
       }
@@ -9766,7 +9917,9 @@
     "holding_value_cr": 458.63,
     "city": "Bandra Kurla Complex",
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Microfinance Institutions"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-12-26",
@@ -9781,7 +9934,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-12-26",
-        "sector": null,
+        "sector": "Microfinance Institutions",
         "holding_value_cr": 458.63,
         "ofs_cash_cr": 33.74
       }
@@ -9791,7 +9944,9 @@
     "holding_value_cr": 458.63,
     "city": "Bandra Kurla Complex",
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Microfinance Institutions"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-12-26",
@@ -9860,7 +10015,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-12-26",
-        "sector": null,
+        "sector": "Microfinance Institutions",
         "holding_value_cr": 458.63,
         "ofs_cash_cr": 33.39
       }
@@ -9870,7 +10025,9 @@
     "holding_value_cr": 458.63,
     "city": "Bandra Kurla Complex",
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Microfinance Institutions"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-12-26",
@@ -9993,7 +10150,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-12-01",
-        "sector": null,
+        "sector": "Stationary",
         "holding_value_cr": 251.8,
         "ofs_cash_cr": 32.3
       }
@@ -10003,7 +10160,9 @@
     "holding_value_cr": 251.8,
     "city": null,
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Stationary"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-12-01",
@@ -10018,7 +10177,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-12-01",
-        "sector": null,
+        "sector": "Stationary",
         "holding_value_cr": 251.8,
         "ofs_cash_cr": 32.3
       }
@@ -10028,7 +10187,9 @@
     "holding_value_cr": 251.8,
     "city": null,
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Stationary"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-12-01",
@@ -10043,7 +10204,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-12-01",
-        "sector": null,
+        "sector": "Stationary",
         "holding_value_cr": 251.8,
         "ofs_cash_cr": 32.3
       }
@@ -10053,7 +10214,9 @@
     "holding_value_cr": 251.8,
     "city": null,
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Stationary"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-12-01",
@@ -10068,7 +10231,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-12-01",
-        "sector": null,
+        "sector": "Stationary",
         "holding_value_cr": 251.8,
         "ofs_cash_cr": 32.3
       }
@@ -10078,7 +10241,9 @@
     "holding_value_cr": 251.8,
     "city": null,
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Stationary"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-12-01",
@@ -10093,7 +10258,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-12-01",
-        "sector": null,
+        "sector": "Stationary",
         "holding_value_cr": 251.8,
         "ofs_cash_cr": 32.3
       }
@@ -10103,7 +10268,9 @@
     "holding_value_cr": 251.8,
     "city": null,
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Stationary"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-12-01",
@@ -10280,7 +10447,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-11-29",
-        "sector": null,
+        "sector": "Water Supply & Management",
         "holding_value_cr": 454.75,
         "ofs_cash_cr": 31.58
       }
@@ -10290,7 +10457,9 @@
     "holding_value_cr": 454.75,
     "city": "RG Metro Arcade",
     "state": "New Delhi",
-    "sectors": [],
+    "sectors": [
+      "Water Supply & Management"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2024-11-29",
@@ -10305,7 +10474,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-11-29",
-        "sector": null,
+        "sector": "Water Supply & Management",
         "holding_value_cr": 454.75,
         "ofs_cash_cr": 31.58
       }
@@ -10315,7 +10484,9 @@
     "holding_value_cr": 454.75,
     "city": "RG Metro Arcade",
     "state": "New Delhi",
-    "sectors": [],
+    "sectors": [
+      "Water Supply & Management"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2024-11-29",
@@ -10438,7 +10609,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2026-11-03",
-        "sector": null,
+        "sector": "Waste Management",
         "holding_value_cr": 802.51,
         "ofs_cash_cr": 30.82
       }
@@ -10448,7 +10619,9 @@
     "holding_value_cr": 802.51,
     "city": null,
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Waste Management"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2026-11-03",
@@ -10463,7 +10636,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-11-22",
-        "sector": null,
+        "sector": "Transport Related Services",
         "holding_value_cr": 430.87,
         "ofs_cash_cr": 30.29
       }
@@ -10473,7 +10646,9 @@
     "holding_value_cr": 430.87,
     "city": "Kadubeesanahalli",
     "state": "Karnataka",
-    "sectors": [],
+    "sectors": [
+      "Transport Related Services"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2024-11-22",
@@ -10488,7 +10663,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-11-22",
-        "sector": null,
+        "sector": "Transport Related Services",
         "holding_value_cr": 430.87,
         "ofs_cash_cr": 30.29
       }
@@ -10498,7 +10673,9 @@
     "holding_value_cr": 430.87,
     "city": "Kadubeesanahalli",
     "state": "Karnataka",
-    "sectors": [],
+    "sectors": [
+      "Transport Related Services"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2024-11-22",
@@ -10902,7 +11079,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-03-13",
-        "sector": null,
+        "sector": "Commodity Chemicals",
         "holding_value_cr": 153.7,
         "ofs_cash_cr": 27.85
       }
@@ -10912,7 +11089,9 @@
     "holding_value_cr": 153.7,
     "city": null,
     "state": "West Bengal",
-    "sectors": [],
+    "sectors": [
+      "Commodity Chemicals"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2024-03-13",
@@ -11700,7 +11879,7 @@
         "role": "Promoter",
         "exchange": "BSE",
         "listing_date": "2025-08-06",
-        "sector": null,
+        "sector": "Depositories, Clearing Houses and Other Intermediaries",
         "holding_value_cr": 5880,
         "ofs_cash_cr": 20.59
       }
@@ -11710,7 +11889,9 @@
     "holding_value_cr": 5880,
     "city": null,
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Depositories, Clearing Houses and Other Intermediaries"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2025-08-06",
@@ -11725,7 +11906,7 @@
         "role": "Promoter",
         "exchange": "BSE",
         "listing_date": "2025-08-06",
-        "sector": null,
+        "sector": "Depositories, Clearing Houses and Other Intermediaries",
         "holding_value_cr": 5880,
         "ofs_cash_cr": 20.59
       }
@@ -11735,7 +11916,9 @@
     "holding_value_cr": 5880,
     "city": null,
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Depositories, Clearing Houses and Other Intermediaries"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2025-08-06",
@@ -11777,7 +11960,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-10-24",
-        "sector": null,
+        "sector": "Granites & Marbles",
         "holding_value_cr": 1485.15,
         "ofs_cash_cr": 20
       }
@@ -11787,7 +11970,9 @@
     "holding_value_cr": 1485.15,
     "city": null,
     "state": "Telangana",
-    "sectors": [],
+    "sectors": [
+      "Granites & Marbles"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2025-10-24",
@@ -11937,7 +12122,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-03-23",
-        "sector": null,
+        "sector": "Granites & Marbles",
         "holding_value_cr": 217.64,
         "ofs_cash_cr": 19.6
       }
@@ -11947,7 +12132,9 @@
     "holding_value_cr": 217.64,
     "city": null,
     "state": "Rajasthan",
-    "sectors": [],
+    "sectors": [
+      "Granites & Marbles"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-03-23",
@@ -12151,7 +12338,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-10-30",
-        "sector": null,
+        "sector": "Diversified FMCG",
         "holding_value_cr": 1140.46,
         "ofs_cash_cr": 17.6
       }
@@ -12161,7 +12348,9 @@
     "holding_value_cr": 1140.46,
     "city": null,
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Diversified FMCG"
+    ],
     "max_pledge_pct": null,
     "confidence": "HIGH",
     "latest_listing_date": "2024-10-30",
@@ -12230,7 +12419,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-12-26",
-        "sector": null,
+        "sector": "Microfinance Institutions",
         "holding_value_cr": 458.63,
         "ofs_cash_cr": 16.38
       }
@@ -12240,7 +12429,9 @@
     "holding_value_cr": 458.63,
     "city": "Bandra Kurla Complex",
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Microfinance Institutions"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-12-26",
@@ -12255,7 +12446,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-12-26",
-        "sector": null,
+        "sector": "Microfinance Institutions",
         "holding_value_cr": 458.63,
         "ofs_cash_cr": 16.36
       }
@@ -12265,7 +12456,9 @@
     "holding_value_cr": 458.63,
     "city": "Bandra Kurla Complex",
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Microfinance Institutions"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-12-26",
@@ -12280,7 +12473,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-12-26",
-        "sector": null,
+        "sector": "Microfinance Institutions",
         "holding_value_cr": 458.63,
         "ofs_cash_cr": 16.36
       }
@@ -12290,7 +12483,9 @@
     "holding_value_cr": 458.63,
     "city": "Bandra Kurla Complex",
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Microfinance Institutions"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-12-26",
@@ -12332,7 +12527,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-08-12",
-        "sector": null,
+        "sector": "Road Assets–Toll, Annuity, Hybrid-Annuity",
         "holding_value_cr": 175.82,
         "ofs_cash_cr": 16.24
       }
@@ -12342,7 +12537,9 @@
     "holding_value_cr": 175.82,
     "city": "Pipliyahana Junction",
     "state": "Madhya Pradesh",
-    "sectors": [],
+    "sectors": [
+      "Road Assets–Toll, Annuity, Hybrid-Annuity"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2025-08-12",
@@ -12357,7 +12554,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-08-12",
-        "sector": null,
+        "sector": "Road Assets–Toll, Annuity, Hybrid-Annuity",
         "holding_value_cr": 175.82,
         "ofs_cash_cr": 16.24
       }
@@ -12367,7 +12564,9 @@
     "holding_value_cr": 175.82,
     "city": "Pipliyahana Junction",
     "state": "Madhya Pradesh",
-    "sectors": [],
+    "sectors": [
+      "Road Assets–Toll, Annuity, Hybrid-Annuity"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2025-08-12",
@@ -12409,7 +12608,7 @@
         "role": "Promoter",
         "exchange": "NSE SME",
         "listing_date": "2026-02-06",
-        "sector": null,
+        "sector": "Sugar",
         "holding_value_cr": 227.68,
         "ofs_cash_cr": 16.17
       }
@@ -12419,7 +12618,9 @@
     "holding_value_cr": 227.68,
     "city": null,
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Sugar"
+    ],
     "max_pledge_pct": null,
     "confidence": "MEDIUM",
     "latest_listing_date": "2026-02-06",
@@ -12461,7 +12662,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-12-01",
-        "sector": null,
+        "sector": "Stationary",
         "holding_value_cr": 251.8,
         "ofs_cash_cr": 16.15
       }
@@ -12471,7 +12672,9 @@
     "holding_value_cr": 251.8,
     "city": null,
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Stationary"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-12-01",
@@ -12486,7 +12689,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-12-01",
-        "sector": null,
+        "sector": "Stationary",
         "holding_value_cr": 251.8,
         "ofs_cash_cr": 16.15
       }
@@ -12496,7 +12699,9 @@
     "holding_value_cr": 251.8,
     "city": null,
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Stationary"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-12-01",
@@ -12511,7 +12716,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-12-01",
-        "sector": null,
+        "sector": "Stationary",
         "holding_value_cr": 251.8,
         "ofs_cash_cr": 16.15
       }
@@ -12521,7 +12726,9 @@
     "holding_value_cr": 251.8,
     "city": null,
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Stationary"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-12-01",
@@ -12563,7 +12770,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-03-23",
-        "sector": null,
+        "sector": "Granites & Marbles",
         "holding_value_cr": 217.64,
         "ofs_cash_cr": 16.1
       }
@@ -12573,7 +12780,9 @@
     "holding_value_cr": 217.64,
     "city": null,
     "state": "Rajasthan",
-    "sectors": [],
+    "sectors": [
+      "Granites & Marbles"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-03-23",
@@ -12588,7 +12797,7 @@
         "role": "Promoter",
         "exchange": "BSE SME",
         "listing_date": "2026-10-09",
-        "sector": null,
+        "sector": "Transport Related Services",
         "holding_value_cr": 296.55,
         "ofs_cash_cr": 15.71
       }
@@ -12598,7 +12807,9 @@
     "holding_value_cr": 296.55,
     "city": null,
     "state": "New Delhi",
-    "sectors": [],
+    "sectors": [
+      "Transport Related Services"
+    ],
     "max_pledge_pct": null,
     "confidence": "HIGH",
     "latest_listing_date": "2026-10-09",
@@ -12613,7 +12824,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2026-10-05",
-        "sector": null,
+        "sector": "Telecom - Equipment & Accessories",
         "holding_value_cr": 1796.2,
         "ofs_cash_cr": 15.7
       }
@@ -12623,7 +12834,9 @@
     "holding_value_cr": 1796.2,
     "city": null,
     "state": "New Delhi",
-    "sectors": [],
+    "sectors": [
+      "Telecom - Equipment & Accessories"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2026-10-05",
@@ -12665,7 +12878,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-09-16",
-        "sector": null,
+        "sector": "Tyres & Rubber Products",
         "holding_value_cr": 305.95,
         "ofs_cash_cr": 15
       }
@@ -12675,7 +12888,9 @@
     "holding_value_cr": 305.95,
     "city": "Kalady",
     "state": "Kerala",
-    "sectors": [],
+    "sectors": [
+      "Tyres & Rubber Products"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2024-09-16",
@@ -12690,7 +12905,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-09-16",
-        "sector": null,
+        "sector": "Tyres & Rubber Products",
         "holding_value_cr": 305.95,
         "ofs_cash_cr": 15
       }
@@ -12700,7 +12915,9 @@
     "holding_value_cr": 305.95,
     "city": "Kalady",
     "state": "Kerala",
-    "sectors": [],
+    "sectors": [
+      "Tyres & Rubber Products"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2024-09-16",
@@ -12834,7 +13051,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-07-04",
-        "sector": null,
+        "sector": "Meat Products including Poultry",
         "holding_value_cr": 408.23,
         "ofs_cash_cr": 14
       }
@@ -12844,7 +13061,9 @@
     "holding_value_cr": 408.23,
     "city": null,
     "state": "Uttar Pradesh",
-    "sectors": [],
+    "sectors": [
+      "Meat Products including Poultry"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-07-04",
@@ -12886,7 +13105,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-03-13",
-        "sector": null,
+        "sector": "Commodity Chemicals",
         "holding_value_cr": 153.7,
         "ofs_cash_cr": 13.48
       }
@@ -12896,7 +13115,9 @@
     "holding_value_cr": 153.7,
     "city": null,
     "state": "West Bengal",
-    "sectors": [],
+    "sectors": [
+      "Commodity Chemicals"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2024-03-13",
@@ -13613,7 +13834,7 @@
         "role": "Promoter",
         "exchange": "BSE SME",
         "listing_date": "2026-10-07",
-        "sector": null,
+        "sector": "Real Estate related services",
         "holding_value_cr": 150.98,
         "ofs_cash_cr": 10.99
       }
@@ -13623,7 +13844,9 @@
     "holding_value_cr": 150.98,
     "city": "C.S.C. AGCR Enclave",
     "state": "New Delhi",
-    "sectors": [],
+    "sectors": [
+      "Real Estate related services"
+    ],
     "max_pledge_pct": null,
     "confidence": "HIGH",
     "latest_listing_date": "2026-10-07",
@@ -13908,7 +14131,7 @@
         "role": "Promoter",
         "exchange": "BSE SME",
         "listing_date": "2026-09-08",
-        "sector": null,
+        "sector": "Shipping",
         "holding_value_cr": 71.57,
         "ofs_cash_cr": 10.2
       }
@@ -13918,7 +14141,9 @@
     "holding_value_cr": 71.57,
     "city": null,
     "state": "New Delhi",
-    "sectors": [],
+    "sectors": [
+      "Shipping"
+    ],
     "max_pledge_pct": null,
     "confidence": "HIGH",
     "latest_listing_date": "2026-09-08",
@@ -14284,7 +14509,7 @@
         "role": "Promoter",
         "exchange": "NSE SME",
         "listing_date": "2025-12-12",
-        "sector": null,
+        "sector": "Education",
         "holding_value_cr": 116.38,
         "ofs_cash_cr": 9.05
       }
@@ -14294,7 +14519,9 @@
     "holding_value_cr": 116.38,
     "city": "Begampur",
     "state": "Haryana",
-    "sectors": [],
+    "sectors": [
+      "Education"
+    ],
     "max_pledge_pct": null,
     "confidence": "HIGH",
     "latest_listing_date": "2025-12-12",
@@ -14687,7 +14914,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-10-03",
-        "sector": null,
+        "sector": "Dealers-Commercial Vehicles, Tractors, Construction Vehicles",
         "holding_value_cr": 116.09,
         "ofs_cash_cr": 7.51
       }
@@ -14697,7 +14924,9 @@
     "holding_value_cr": 116.09,
     "city": null,
     "state": "Chhattisgarh",
-    "sectors": [],
+    "sectors": [
+      "Dealers-Commercial Vehicles, Tractors, Construction Vehicles"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2025-10-03",
@@ -14712,7 +14941,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-11-29",
-        "sector": null,
+        "sector": "Water Supply & Management",
         "holding_value_cr": 454.75,
         "ofs_cash_cr": 7.4
       }
@@ -14722,7 +14951,9 @@
     "holding_value_cr": 454.75,
     "city": "RG Metro Arcade",
     "state": "New Delhi",
-    "sectors": [],
+    "sectors": [
+      "Water Supply & Management"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2024-11-29",
@@ -14737,7 +14968,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-11-29",
-        "sector": null,
+        "sector": "Water Supply & Management",
         "holding_value_cr": 454.75,
         "ofs_cash_cr": 7.4
       }
@@ -14747,7 +14978,9 @@
     "holding_value_cr": 454.75,
     "city": "RG Metro Arcade",
     "state": "New Delhi",
-    "sectors": [],
+    "sectors": [
+      "Water Supply & Management"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2024-11-29",
@@ -16733,7 +16966,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-09-29",
-        "sector": null,
+        "sector": "Packaged Foods",
         "holding_value_cr": 416.85,
         "ofs_cash_cr": 4.68
       }
@@ -16743,7 +16976,9 @@
     "holding_value_cr": 416.85,
     "city": null,
     "state": "West Bengal",
-    "sectors": [],
+    "sectors": [
+      "Packaged Foods"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2025-09-29",
@@ -17536,7 +17771,7 @@
         "role": "Promoter",
         "exchange": "NSE SME",
         "listing_date": "2026-10-07",
-        "sector": null,
+        "sector": "Seafood",
         "holding_value_cr": 54.2,
         "ofs_cash_cr": 3.65
       }
@@ -17546,7 +17781,9 @@
     "holding_value_cr": 54.2,
     "city": "Eluru District",
     "state": "Andhra Pradesh",
-    "sectors": [],
+    "sectors": [
+      "Seafood"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2026-10-07",
@@ -18047,7 +18284,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2023-11-07",
-        "sector": null,
+        "sector": "Personal Care",
         "holding_value_cr": 1828.48,
         "ofs_cash_cr": 3.24
       }
@@ -18057,7 +18294,9 @@
     "holding_value_cr": 1828.48,
     "city": null,
     "state": "New Delhi",
-    "sectors": [],
+    "sectors": [
+      "Personal Care"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2023-11-07",
@@ -18072,7 +18311,7 @@
         "role": "Promoter",
         "exchange": "NSE SME",
         "listing_date": "2026-10-07",
-        "sector": null,
+        "sector": "Seafood",
         "holding_value_cr": 54.2,
         "ofs_cash_cr": 3.23
       }
@@ -18082,7 +18321,9 @@
     "holding_value_cr": 54.2,
     "city": "Eluru District",
     "state": "Andhra Pradesh",
-    "sectors": [],
+    "sectors": [
+      "Seafood"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2026-10-07",
@@ -18745,7 +18986,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-10-03",
-        "sector": null,
+        "sector": "Dealers-Commercial Vehicles, Tractors, Construction Vehicles",
         "holding_value_cr": 116.09,
         "ofs_cash_cr": 2.64
       }
@@ -18755,7 +18996,9 @@
     "holding_value_cr": 116.09,
     "city": null,
     "state": "Chhattisgarh",
-    "sectors": [],
+    "sectors": [
+      "Dealers-Commercial Vehicles, Tractors, Construction Vehicles"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2025-10-03",
@@ -19985,7 +20228,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-10-03",
-        "sector": null,
+        "sector": "Dealers-Commercial Vehicles, Tractors, Construction Vehicles",
         "holding_value_cr": 116.09,
         "ofs_cash_cr": 1.47
       }
@@ -19995,7 +20238,9 @@
     "holding_value_cr": 116.09,
     "city": null,
     "state": "Chhattisgarh",
-    "sectors": [],
+    "sectors": [
+      "Dealers-Commercial Vehicles, Tractors, Construction Vehicles"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2025-10-03",
@@ -20658,7 +20903,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-07-30",
-        "sector": null,
+        "sector": "Computers Hardware & Equipments",
         "holding_value_cr": 1063.4,
         "ofs_cash_cr": 0.83
       }
@@ -20668,7 +20913,9 @@
     "holding_value_cr": 1063.4,
     "city": null,
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Computers Hardware & Equipments"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2025-07-30",
@@ -20683,7 +20930,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2025-07-30",
-        "sector": null,
+        "sector": "Computers Hardware & Equipments",
         "holding_value_cr": 1063.4,
         "ofs_cash_cr": 0.83
       }
@@ -20693,7 +20940,9 @@
     "holding_value_cr": 1063.4,
     "city": null,
     "state": "Maharashtra",
-    "sectors": [],
+    "sectors": [
+      "Computers Hardware & Equipments"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2025-07-30",
@@ -20978,7 +21227,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-01-31",
-        "sector": null,
+        "sector": "Fertilizers",
         "holding_value_cr": 56.32,
         "ofs_cash_cr": 0.31
       }
@@ -20988,7 +21237,9 @@
     "holding_value_cr": 56.32,
     "city": "Mulugu Mandal",
     "state": "Telangana",
-    "sectors": [],
+    "sectors": [
+      "Fertilizers"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2024-01-31",
@@ -21003,7 +21254,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-01-31",
-        "sector": null,
+        "sector": "Fertilizers",
         "holding_value_cr": 56.32,
         "ofs_cash_cr": 0.31
       }
@@ -21013,7 +21264,9 @@
     "holding_value_cr": 56.32,
     "city": "Mulugu Mandal",
     "state": "Telangana",
-    "sectors": [],
+    "sectors": [
+      "Fertilizers"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2024-01-31",
@@ -21163,7 +21416,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-03-13",
-        "sector": null,
+        "sector": "Commodity Chemicals",
         "holding_value_cr": 153.7,
         "ofs_cash_cr": 0.02
       }
@@ -21173,7 +21426,9 @@
     "holding_value_cr": 153.7,
     "city": null,
     "state": "West Bengal",
-    "sectors": [],
+    "sectors": [
+      "Commodity Chemicals"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2024-03-13",
@@ -21188,7 +21443,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-01-31",
-        "sector": null,
+        "sector": "Fertilizers",
         "holding_value_cr": 56.32,
         "ofs_cash_cr": 0.01
       }
@@ -21198,7 +21453,9 @@
     "holding_value_cr": 56.32,
     "city": "Mulugu Mandal",
     "state": "Telangana",
-    "sectors": [],
+    "sectors": [
+      "Fertilizers"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2024-01-31",
@@ -21213,7 +21470,7 @@
         "role": "Promoter",
         "exchange": "NSE",
         "listing_date": "2024-01-31",
-        "sector": null,
+        "sector": "Fertilizers",
         "holding_value_cr": 56.32,
         "ofs_cash_cr": 0.01
       }
@@ -21223,7 +21480,9 @@
     "holding_value_cr": 56.32,
     "city": "Mulugu Mandal",
     "state": "Telangana",
-    "sectors": [],
+    "sectors": [
+      "Fertilizers"
+    ],
     "max_pledge_pct": null,
     "confidence": "LOW",
     "latest_listing_date": "2024-01-31",

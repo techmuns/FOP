@@ -161,9 +161,11 @@ async function run() {
   const provenance = { screener: 0, munshot: 0, munshotFail: 0, detailOk: 0, detailFail: 0 };
   const blocked = [];
 
-  // ---- load existing (universe base + resumable detail cache) ----
+  // ---- load existing (universe base + resumable detail cache + enrich cursor) ----
   const existing = existsSync(IPOS_PATH) ? JSON.parse(readFileSync(IPOS_PATH, 'utf8')) : [];
   const byId = new Map(existing.map((i) => [i.id, i]));
+  const META_PATH = path.join(DATA, 'meta.json');
+  const prevMeta = existsSync(META_PATH) ? JSON.parse(readFileSync(META_PATH, 'utf8')) : {};
 
   // ---- 1. universe ----
   const skipCrawl = process.env.FORCE_CRAWL === '1' ? false : process.env.SKIP_CRAWL === '1' || MODE === 'rollup' || (MODE === 'seed' && existing.length > 0);
@@ -209,12 +211,27 @@ async function run() {
   }
   log(`   detail ok=${provenance.detailOk} fail=${provenance.detailFail}\n`);
 
-  // ---- 3. enrich ALL listed tickers (Screener + Munshot) ----
+  // ---- 3. enrich listed tickers (Screener + Munshot) ----
   const ENRICH_CAP = envInt('ENRICH_CAP', Number.MAX_SAFE_INTEGER);
   let toEnrich = MODE === 'rollup' ? [] : [...byId.values()].filter((i) => i.ticker && isListed(i));
-  toEnrich.sort((a, b) => (Date.parse(b.listing_date || 0) || 0) - (Date.parse(a.listing_date || 0) || 0));
-  if (toEnrich.length > ENRICH_CAP) toEnrich = toEnrich.slice(0, ENRICH_CAP);
-  log(`③ Enriching ${toEnrich.length} listed tickers (Screener + Munshot live)…`);
+  // stable order so the refresh cursor advances deterministically across runs
+  toEnrich.sort((a, b) => String(a.ticker).localeCompare(String(b.ticker)));
+  let enrichCursor = prevMeta.enrich_cursor || null;
+  if (MODE === 'refresh' && toEnrich.length) {
+    // batched + resumable: each weekly run enriches a slice from a cursor stored in meta.json,
+    // so holdings converge to live caps over successive runs as the Screener rate-limit resets.
+    const BATCH = envInt('ENRICH_BATCH', 300);
+    const total = toEnrich.length;
+    const start = (((enrichCursor?.offset ?? 0) % total) + total) % total;
+    const slice = [];
+    for (let k = 0; k < Math.min(BATCH, total); k++) slice.push(toEnrich[(start + k) % total]);
+    toEnrich = slice;
+    enrichCursor = { offset: (start + slice.length) % total, total, updated: nowISO() };
+    log(`③ Refresh enrich (batched/resumable): ${slice.length} of ${total} tickers, cursor ${start} → ${enrichCursor.offset}…`);
+  } else {
+    if (toEnrich.length > ENRICH_CAP) toEnrich = toEnrich.slice(0, ENRICH_CAP);
+    log(`③ Enriching ${toEnrich.length} listed tickers (Screener + Munshot live)…`);
+  }
   let en = 0;
   for (const ipo of toEnrich) {
     await enrich(ipo, { provenance });
@@ -259,6 +276,8 @@ async function run() {
       qualifying: thresholds['150'],
       thresholds,
     },
+    enrich_cursor: enrichCursor || undefined,
+    live_mcap: { screener: screenerCount, munshot: munshotCount, offer: ipos.filter((i) => i.data_flags && i.data_flags.market_cap === 'offer').length },
     data_sources: [
       { name: 'Chittorgarh', url: 'https://www.chittorgarh.com', status: detailedTotal > 0 ? 'real' : 'partial', note: 'IPO universe, promoters, pre/post shareholding %, Offer-for-Sale per-seller table' },
       { name: 'Screener.in', url: 'https://www.screener.in', status: screenerCount > 0 ? 'real' : 'blocked', note: "Today's promoter holding %, pledged %, market cap" },
