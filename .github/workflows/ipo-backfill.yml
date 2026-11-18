@@ -1,0 +1,63 @@
+name: IPO backfill (full universe + promoter/OFS)
+
+# Full detail-page backfill across the 3-year IPO universe (mainboard + SME).
+# FREE: curl + cheerio, Playwright only as a fallback. Commits the rebuilt data JSON;
+# Cloudflare then redeploys automatically (no [skip ci] in the commit message).
+# Manual trigger only — the universe is large and immutable once listed.
+
+on:
+  workflow_dispatch:
+    inputs:
+      mb_pages:
+        description: 'Max list pages per mainboard financial year'
+        default: '400'
+      sme_pages:
+        description: 'Max list pages per SME financial year'
+        default: '400'
+      enrich_cap:
+        description: 'Max listed names to enrich live (Screener/Munshot)'
+        default: '250'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ipo-backfill
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Enable Playwright fallback (best-effort)
+        continue-on-error: true
+        run: npx --yes playwright@1.48.2 install --with-deps chromium
+
+      - name: Backfill IPO universe + promoter/OFS + prospects
+        env:
+          MB_PAGES: ${{ github.event.inputs.mb_pages }}
+          SME_PAGES: ${{ github.event.inputs.sme_pages }}
+          ENRICH_CAP: ${{ github.event.inputs.enrich_cap }}
+        run: npm run backfill
+
+      - name: Commit refreshed data if changed
+        run: |
+          git config user.name  "munshot-data-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/data/ipos.json public/data/prospects.json public/data/meta.json
+          if git diff --cached --quiet; then
+            echo "No data changes."
+          else
+            git commit -m "chore(data): IPO universe backfill (promoters, OFS, wealth)"
+            git push
+          fi

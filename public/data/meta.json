@@ -1,0 +1,54 @@
+{
+  "generated_at": "2026-11-18T08:39:48.407Z",
+  "mode": "seed",
+  "universe": {
+    "mainboard": 362,
+    "sme": 444,
+    "years": [
+      2023,
+      2024,
+      2025,
+      2026
+    ]
+  },
+  "counts": {
+    "ipos": 806,
+    "prospects": 68,
+    "qualifying": 68
+  },
+  "data_sources": [
+    {
+      "name": "Chittorgarh",
+      "url": "https://www.chittorgarh.com",
+      "status": "real",
+      "note": "IPO universe, promoters, pre/post shareholding %, Offer-for-Sale per-seller table"
+    },
+    {
+      "name": "Screener.in",
+      "url": "https://www.screener.in",
+      "status": "real",
+      "note": "Today's promoter holding %, pledged %, market cap"
+    },
+    {
+      "name": "Munshot API",
+      "url": "https://fastapi.muns.io/stock-data",
+      "status": "blocked",
+      "note": "Live price & market cap"
+    }
+  ],
+  "seeding": {
+    "mode": "seed",
+    "real": [
+      "Chittorgarh universe + promoter/OFS disclosures (50 detail pages)",
+      "Screener.in promoter% / pledge / market cap (36 companies)"
+    ],
+    "blocked": [
+      "Munshot live API (HTTP 502 / unreachable)"
+    ],
+    "notes": [
+      "50 IPOs deep-scraped for promoter/OFS; 756 list-level only.",
+      "Market cap source per IPO is flagged in data_flags (munshot-live / screener / offer)."
+    ]
+  },
+  "took_seconds": 523
+}
