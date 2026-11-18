@@ -72,6 +72,12 @@ export function computeCompanyWealth(ipo) {
     if (pct != null) flags.current_promoter_pct = 'post_issue';
   }
 
+  // fall back to the at-offer valuation when there's no live (Screener/Munshot) market cap
+  if (ipo.market_cap_cr == null && ipo.offer_market_cap_cr != null) {
+    ipo.market_cap_cr = ipo.offer_market_cap_cr;
+    flags.market_cap = 'offer';
+  }
+
   const mcap = ipo.market_cap_cr;
   ipo.holding_value_cr = pct != null && mcap != null ? round((pct / 100) * mcap) : null;
 

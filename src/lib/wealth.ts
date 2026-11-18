@@ -43,6 +43,11 @@ function weakest(a: Confidence | null, b: Confidence): Confidence {
 export function computeCompanyWealth(ipo: IPO): IPO {
   let pct = ipo.current_promoter_pct;
   if (pct == null) pct = ipo.post_promoter_pct;
+  // fall back to the at-offer valuation when there's no live market cap
+  if (ipo.market_cap_cr == null && ipo.offer_market_cap_cr != null) {
+    ipo.market_cap_cr = ipo.offer_market_cap_cr;
+    ipo.data_flags = { ...(ipo.data_flags || {}), market_cap: 'offer' };
+  }
   const mcap = ipo.market_cap_cr;
   ipo.holding_value_cr = pct != null && mcap != null ? round((pct / 100) * mcap) : null;
   const sellers = ipo.promoters || [];

@@ -29,6 +29,8 @@ export interface IPO {
   current_promoter_pct: number | null;
   pledge_pct: number | null;
   market_cap_cr: number | null;
+  /** at-offer market cap from the prospectus — a flagged fallback when there's no live cap */
+  offer_market_cap_cr: number | null;
   current_price: number | null;
   sector: string | null;
   city: string | null;
